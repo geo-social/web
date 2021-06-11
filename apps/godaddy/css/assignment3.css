@@ -1,0 +1,45 @@
+body {
+  font-family: 'Raleway';
+}
+.container {
+  padding: 25px;
+}
+.content {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  background: #f3f3f3;
+  border: thin black solid;
+}
+.mapButtons {
+  vertical-align: middle;
+}
+.mapTitle h3 {
+  display: inline;
+}
+.bar {
+  stroke: #ffffff;
+  stroke-width: 1px;
+}
+.polygons {
+  fill: #e6e6e6;
+  stroke: #ffffff;
+  stroke-width: 0px;
+  opacity: 0.85;
+}
+.axes {
+  font-family: 'sans-serif';
+}
+.tooltipD3 {
+  position: absolute;
+  z-index: 10;
+}
+.tooltipD3 p {
+  background-color: #cccccc;
+  border: thin solid black;
+  padding: 2px;
+  margin: 2px;
+}
+.legendQuant {
+  font-weight: normal;
+}

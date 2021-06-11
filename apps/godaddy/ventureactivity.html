@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Coordinated Views</title>
+
+	<!-- CSS -->
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<!-- import google 'Raleway' font -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,900" rel="stylesheet">
+	<link rel="stylesheet" href="css/assignment3.css">
+
+	<!-- D3.js-->
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://d3js.org/colorbrewer.v1.min.js"></script>
+
+	<!-- D3 legend to make it easier -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.21.0/d3-legend.min.js"></script>
+	<!-- Simple statistics for Jenks natural breaks -->
+	<script src="https://unpkg.com/simple-statistics@2.3.0/dist/simple-statistics.min.js"></script>
+	<script src="js/jenks.js"></script>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="content">
+
+
+			<div class="row">
+				<div class="col-sm-4">
+					<h1>Venture Activity</h1>
+				</div>
+			</div>
+			<hr />
+			<div class="row">
+				<div class="col-sm-4">
+					<p>Data from <a href="godaddy.com">GoDaddy</a>, maps by Caglar Koylu.</p>
+				</div>
+				<div class='col-sm-8 mapButtons'>
+					<span class="pull-right">
+						<b>Classes:  </b>
+						<select id="classDropdown">
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5" selected>5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+						</select>
+						&nbsp
+						<b>Scales:  </b>
+						<!--<button id='linearButton' class="btn btn-sm">Unclassed</button>-->
+						<button id='ckmButton' class="btn btn-sm active">Jenks Natural Breaks</button>
+						<button id='quantileButton' class="btn btn-sm" aria-pressed="true">Quantile</button>
+						<button id='eqIntButton' class="btn btn-sm">Equal Interval</button>
+					</span>
+				</div>
+			</div>
+			<br />
+			<div class="row">
+				<div class="col-sm-6">
+					<span><p><h3 class='mapTitle'>High activity</h3></p></span>
+					<div id="topLeftMap"></div>
+					<div id="topLeftHist"></div>
+				</div>
+				<div class="col-sm-6">
+					<h3 class='mapTitle'>Moderate/high activity</h3><p></p>
+					<div id="topRightMap"></div>
+					<div id="topRightHist"></div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<h3 class='mapTitle'>Low/moderate activity</h3><p></p>
+					<div id="bottomLeftMap"></div>
+					<div id="bottomLeftHist"></div>
+				</div>
+				<div class="col-sm-6">
+					<h3 class='mapTitle'>Low Activity</h3><p></p>
+					<div id="bottomRightMap"></div>
+					<div id="bottomRightHist"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	///////////////////////////////////
+	// Global variables for the chart
+	///////////////////////////////////
+
+	// Height, width, margins
+	var chartWidth = d3.select('#topLeftMap')
+	.node().getBoundingClientRect().width,
+	chartHeight = chartWidth / 2.5;
+	var margin = {top: 10, right: 20, bottom: 10, left:20},
+	width = chartWidth - margin.right - margin.left,
+	height = chartHeight - margin.top - margin.bottom,
+	histHeight = (chartHeight * .25);
+
+	// Geographic projection + scales
+	var proj = d3.geoPath().pointRadius(2);
+	var color_scale = colorbrewer.GnBu[5];
+
+	// linear_scale = d3.scaleLinear().domain([0, 100]).range(color_scale),
+	// quantile_scale = d3.scaleQuantize().domain([0, 100]).range(color_scale),
+	// jenks_scale = d3.scaleThreshold().range(color_scale),
+	// equal_interval_scale = d3.scaleThreshold().range(color_scale),	// interval
+	// hist_scale = d3.scaleLinear().domain([0, 100]).range([0, width]), // hist X
+	// hist_y = d3.scaleLinear().range([histHeight, 0]);	// hist Y
+	// current_scale = linear_scale;	// Save scales as global scale variable
+	linear_scale = d3.scaleLinear().range(color_scale),
+	// linear_histscale = d3.scaleLinear().range(color_scale),
+	quantile_scale = d3.scaleQuantile().range(color_scale),
+	jenks_scale = d3.scaleThreshold().range(color_scale),
+	equal_interval_scale = d3.scaleThreshold().range(color_scale),	// interval
+	hist_scale = d3.scaleLinear().range([0, width]), // hist X
+	hist_y = d3.scaleLinear().range([histHeight, 0]);	// hist Y
+
+	current_scale = quantile_scale;	// Save scales as global scale variable
+
+	//TODO: change the chart variables and formats based on the divs defined above
+	// Chart variables - this is the place you will need to replace the variable names
+	var charts = [
+		{'map': '#topLeftMap', 'hist': '#topLeftHist', 'form': '',
+		'var': 'clus4_100', 'ax': 'High activity'},
+		{'map': '#topRightMap', 'hist': '#topRightHist', 'form': '%',
+		'var': 'clus3_100', 'ax': 'Moderate/high activity'},
+		{'map': '#bottomLeftMap', 'hist': '#bottomLeftHist', 'form': '$',
+		'var': 'clus2_100', 'ax': 'Low/moderate activity'},
+		{'map': '#bottomRightMap', 'hist': '#bottomRightHist', 'form': '%',
+		'var': 'clus1_100', 'ax': 'Low activity'}],
+		buttons = [
+			{'btn': '#linearButton', 'scale': linear_scale},
+			{'btn': '#ckmButton', 'scale': jenks_scale},
+			{'btn': '#quantileButton', 'scale': quantile_scale},
+			{'btn': '#eqIntButton', 'scale': equal_interval_scale}
+		],
+		bins = d3.histogram()
+		.domain(hist_scale.domain())
+		.thresholds(10);
+
+		///////////////////////////////////
+		// Functions for the chart
+		///////////////////////////////////
+		d3.selection.prototype.moveToFront = function() {
+			return this.each(function(){
+				this.parentNode.appendChild(this);
+			});
+		}
+		d3.selection.prototype.moveToBack = function() {
+			return this.each(function(){
+				this.parentNode.appendChild(this).style('z-index', 1);
+			});
+		}
+
+		function notInfinity(p, n) {
+			// Function to catch errors when normalizing an attribute
+			// console.log(p, n);
+			if (!+n) {
+				return 0;
+			} else {
+				return +p / +n;
+			}
+		}
+
+		function classPolygon(county, map) {
+			// Function to create the correct county name.
+			// (e.g. Johsnon county, FIPS 19) >> 'counties.lung.county19'
+			return 'polygons ' + map + ' county' + county.properties.fips;
+		}
+
+		function getBoundingBoxCenter (selection) {
+			// get the DOM element from a D3 selection
+			var element = selection.node();
+			// use the native SVG interface to get the bounding box
+			var bbox = element.getBBox();
+			// return the center of the bounding box
+			return [bbox.x + bbox.width/2, bbox.y + bbox.height/2];
+		}
+
+		function mouseOver2(county, attr) {
+			/* Mouse over routine
+			Highlight the county on all maps, adjust the tooltip */
+			var fips = county.properties.fips,
+			name = county.properties.fips;
+
+			return charts.forEach(function(d) {
+
+				var map = d3.select(d.map);
+				var tip = d.map + '-tooltip';
+
+				// county polygon
+				map.select('.county'+fips)
+				.moveToFront()
+				.style('stroke', 'black')
+				.style('opacity', '1');
+				// map tooltip
+				d3.select(tip)
+				.style('display', null)
+				.html("<p><b>" + name + "</b><br/>" + d.var +
+				": " + county.properties[d.var] + "</p>");
+			});
+		}
+
+		function mousemoveFunc(county) {
+			/* Moves tooltip */
+			var fips = '.county' + county.properties.fips;
+
+			charts.forEach(function(d) {
+				var map = d3.select(d.map),
+				countyOnMap = getBoundingBoxCenter(map.select(fips));
+
+				var tip = d.map + '-tooltip';
+				d3.select(tip)
+				.style("top", (countyOnMap[1] + 35) + "px" )
+				.style("left", (countyOnMap[0] + 10) + "px");
+			});
+		}
+
+		// Resets county polygon after mouseout
+		function mouseOut(polygon) {
+
+			//TODO: change the id (FIPS) and name (County) attribute of the file
+			var fips = polygon.properties.fips,
+			name = polygon.properties.fips;
+
+			charts.forEach(function(d) {
+
+				var map = d3.select(d.map);
+				var tip = d.map + '-tooltip';
+
+				// county polygon
+				map.select(('.county'+fips))
+				.style('stroke', 'white')
+				.style('opacity', '0.85');
+				// map tooltip
+				d3.select(tip)
+				.style('display', "none");
+			});
+		}
+
+		function setScales(data) {
+			// Function to set scales depending on the attribute
+
+			//grab the number of classes from the dropdown
+			var numClasses = d3.select('#classDropdown').node().value;
+			color_scale = colorbrewer.GnBu[numClasses];
+			current_scale.range(color_scale);
+			var max = d3.max(data, function(d) { return d; }),
+			min = d3.min(data, function(d) { return d; });
+
+			var jenksNaturalBreaks = jenks(data, numClasses);
+			console.log(jenksNaturalBreaks);
+			// console.log('jenksNaturalBreaks', jenksNaturalBreaks);
+			jenks_scale.domain(jenksNaturalBreaks).range(color_scale);
+
+			hist_scale.domain([min, max]);			// set the histogram up dynamically
+			// Classification scales.
+			linear_scale.domain([min, max]).range(color_scale);
+
+			quantile_scale
+			.range(color_scale)
+			.domain(data);
+
+			equal_interval_scale
+			.domain(ss.equalIntervalBreaks(data, numClasses))
+			.range(color_scale);
+		}
+
+		function fillHist(bar, attr) {
+			// Function to return the average value for a given bar
+			var mean = d3.mean(bar, function(d) { return +d; });
+			var med = d3.mean(bar, function(d) { return +d; });
+			return med;
+		}
+
+		function rescale(new_scale, data) {
+			// function to restyle all of the maps
+			charts.forEach(function(d) {
+				var hist_var = data.features.filter(function(e) { return +e.properties[d.var]; })
+				.map(function(e) { return +e.properties[d.var]; });
+
+				// Set scale for each chart (diff vars)
+				setScales(hist_var);
+				// map polygons
+				var map = d3.select(d.map).selectAll('.polygons')
+				.transition(250)
+				.style('fill', function(e) { return current_scale(+e.properties[d.var]); });
+				// histogram
+				var hist = d3.select(d.hist).selectAll('.bar')
+				.transition(250)
+				.style('fill', function(e) { return current_scale(fillHist(e, d.var));
+				});
+
+				d3.select(d.map).select('.legendQuant').call(holdLegend.scale(current_scale));
+			});
+		} // end rescale, apply to buttons
+
+		// Legend
+		var holdLegend = d3.legendColor()
+		.shapeWidth(15)
+		.shapeHeight(5)
+		.shapePadding(10)
+		.orient('vertical')
+		.labelFormat(d3.format(".0f"))
+		.useClass(false)
+		.scale(current_scale);
+
+		// mapping
+		d3.json('data/cnty_godaddy_wgs84.geojson', function(data) {
+			// set up the projection
+			var polygons = data;
+			proj.projection(d3.geoAlbers().fitSize([width, height], polygons));
+
+			////////////////////////////////////////////////////
+			// EDIT FOR CLASS
+			// Normalize based on the population of each county
+			// setting the necc. attributes to density as opposed to raw
+			//TODO: change the variable name
+			polygons.features.forEach(function(c) {
+				['lungDeathPerYear', 'numSr'].forEach(function(d) {
+					c.properties[d] = notInfinity(c.properties.Population, c.properties[d]);
+				});
+			});
+
+			// Set the buttons up for interactivity
+			buttons.forEach(function(d) {
+				d3.select(d.btn).on('click', function() {
+					d3.selectAll('.btn').classed('active', false);
+					d3.select(this).classed('active', true);
+					current_scale = d.scale;
+					rescale(d.scale, polygons);
+				});
+			});
+			d3.select('#classDropdown').on('input', function() {
+				rescale(current_scale, polygons);
+			});
+
+			// For each var make a chart
+			charts.forEach(function(d) {
+				// Set scales + variable for each map
+				var dependent = d.var;
+
+				var hist_var = polygons.features.filter(function(e) { return +e.properties[dependent]; })
+				.map(function(e) { return +e.properties[dependent]; });
+				setScales(hist_var);
+
+				// set histogram
+				var currentBins = bins.domain(linear_scale.domain())(hist_var);
+				var y = hist_y.domain([0, d3.max(currentBins, function(e) { return e.length; })]);
+
+				// Draw histogram
+				var hist = d3.select(d.hist).append("svg")
+				.attr("width", width + margin.left + margin.right)
+				.attr("height", histHeight + margin.top + margin.bottom + 30)
+				.append("g")
+				.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+				var bar = hist.selectAll('.bar')
+				.data(currentBins)
+				.enter().append('g')
+				.attr("transform", function(e) {
+					return "translate(" + hist_scale(e.x0) + "," + y(e.length) + ")";
+				});
+
+				// hist bars
+				bar.append("rect")
+				.attr('class', 'bar')
+				.attr("x", 1)
+				.attr("width", function(e) { return hist_scale(e.x1) - hist_scale(e.x0); })
+				.attr("height", function(e) { return histHeight - y(e.length); })
+				.style('fill', function(e) { return current_scale(fillHist(e, d.var)); });
+
+				// Hist axes
+				hist.append("g")
+				.attr("class", "axis axis--x")
+				.attr("transform", "translate(0," + histHeight + ")")
+				.call(d3.axisBottom(hist_scale)
+				.ticks(6)
+				.tickFormat(function(e) {
+					if (d.form === '$') {
+						return d.form + e; }
+						else {
+							return e + d.form; };
+						}));
+
+						// hist axis label
+						hist.append('text')
+						.attr('transform', 'translate(' + (width/2) + ',' +
+						(histHeight + 35) + ')')
+						.style('font-family', 'sans-serif')
+						.style('text-anchor', 'middle')
+						.text(d.ax);
+
+						// tooltip for maps
+						var tooltipD3 = d3.select(d.map)
+						.append("div")
+						.attr("class", "tooltipD3")
+						.attr("id", function() { return d.map.substr(1) + '-tooltip'; })
+						.style('display', 'none');
+
+						// Set up map
+						var chart = d3.select(d.map).append("svg")
+						.attr("width", width + margin.left + margin.right)
+						.attr("height", height + margin.top + margin.bottom)
+						.append("g")
+						.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+						// append the basemap
+						var map = chart.selectAll('.path')
+						.data(polygons.features)
+						.enter().append('g');
+						map.append('path')
+						.attr("class", function(e) { return classPolygon(e, d.map); })
+						.on('mouseover', function(e) { return mouseOver2(e, dependent); })
+						.on('mouseout', mouseOut)
+						.on('mousemove', mousemoveFunc)
+						.attr("d", proj)
+						.style('fill', function(c) {
+									return current_scale(+c.properties[d.var]);
+						});
+
+						// add legend
+						chart.append('g')
+						.attr("class", "legendQuant")
+						.attr("transform", "translate(" + (width * .85) + "," + (height*.5) + ")");
+						chart.select('.legendQuant').call(holdLegend.scale(current_scale));
+					}); // end for each
+				});
+			</script>
+			<!-- javascript -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		</body>

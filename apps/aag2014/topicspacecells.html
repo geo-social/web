@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no"
+	charset="utf-8" />
+<script type="text/javascript"
+	src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript"
+	src="http://cdnjs.cloudflare.com/ajax/libs/d3/2.10.0/d3.v2.min.js"></script>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/d3.parcoords.css">
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="js/d3.parcoords.js"></script>
+<script src="js/d3.layout.cloud.js"></script>
+<style type="text/css">
+html,body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	margin: 0;
+}
+
+#map {
+	width: 100%;
+	height: 500px;
+}
+
+.SvgOverlay {
+	
+}
+
+.SvgOverlay,.SvgOverlay svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.SvgOverlay path {
+	stroke: Orange;
+	stroke-width: 0px;
+	fill: Red;
+	/* 	fill-opacity: .3; */
+}
+
+.wrapper {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+
+#time {
+	font-family: "Times New Roman";
+	font-size: 30px;
+}
+
+#topicmodel {
+	/* 	border: 1px #888888 solid; */
+	/* 	width: 320px; */
+	/* 	height: 280px; */
+	/* 	float: left; */
+	margin-left: 10px;
+	width: 320px;
+	height: 280px;
+	text-decoration: none;
+	color: #000;
+	background: #F6F6F6;
+	display: block;
+	float: left;
+}
+
+#topicwords {
+	height: 190px;
+	background: #F6F6F6;
+}
+</style>
+</head>
+<body>
+	<div style="margin-top: 20px">
+		<div id="topicmodel">
+			<div id="topics"></div>
+			<span id="topwords"></span>
+			<div id="topicwords"></div>
+		</div>
+
+		<div id="map" style="width: 900px; float: right; margin-right: 20px;"></div>
+		<div id="timeslider" class="wrapper">
+			<span id="slidertext">0</span>
+		</div>
+	</div>
+
+	<div id="pcp" class="parcoords"
+		style="width: 98%; height: 300px; float: left; margin-top: 20px; margin-left: 20px; margin-right: 20px;"></div>
+
+	<script type="text/javascript">
+		// Create the Google Mapâ€¦
+		var myStyle = [ {
+			featureType : "administrative",
+			elementType : "labels",
+			stylers : [ {
+				visibility : "off"
+			} ]
+		}, {
+			"featureType" : "administrative",
+			"elementType" : "geometry.stroke",
+			"stylers" : [ {
+				"visibility" : "on"
+			}, {
+				"lightness" : 50
+			} ]
+		}, {
+			featureType : "poi",
+			elementType : "labels",
+			stylers : [ {
+				visibility : "off"
+			} ]
+		}, {
+			featureType : "water",
+			elementType : "labels",
+			stylers : [ {
+				visibility : "off"
+			} ]
+		}, {
+			featureType : "road",
+			elementType : "labels",
+			stylers : [ {
+				visibility : "off"
+			} ]
+		}, {
+			"featureType" : "road",
+			"elementType" : "geometry.fill",
+			"stylers" : [ {
+				"visibility" : "off"
+			} ]
+		} ];
+		var $map = $("#map");
+		var map = new google.maps.Map(d3.select("#map").node(), {
+			mapTypeControlOptions : {
+				mapTypeIds : [ 'mystyle', google.maps.MapTypeId.TERRAIN ]
+			},
+			center : new google.maps.LatLng(39, 35),
+			zoom : 6,
+			mapTypeId : 'mystyle'
+		});
+
+		map.mapTypes.set('mystyle', new google.maps.StyledMapType(myStyle, {
+			name : 'My Style'
+		}));
+
+		map.controls[google.maps.ControlPosition.TOP_CENTER].push(timeslider);
+
+		//map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(pcp);
+
+		var time = 0;
+		var att = "h";
+		var attributes = [];
+
+		var cellColor = d3.scale.linear().domain(
+				[ 0, 0.1, 0.2, 0.4, 0.6, 0.8, 1 ]).range(
+				[ "blue", "green", "orange", "red" ]);
+		
+		var opacityScale = 	d3.scale.linear().domain([ 0, 1, 2, 3, 4, 5])
+		.range([ 0, 0.2, 0.4, 0.6, 0.8, 1.0 ]).clamp(true);
+
+		// Load the station data. When the data comes back, create an overlay.
+		d3.json("data/geomvtimetwtcells.json", function(data) {
+			var overlay = new google.maps.OverlayView();
+			overlay.onAdd = function() {
+
+				var layer = d3.select(this.getPanes().overlayLayer).append(
+						"div").attr("class", "SvgOverlay");
+				var svg = layer.append("svg").attr("width", $map.width()).attr(
+						"height", $map.height())
+				var adminDivisions = svg.append("g").attr("class",
+						"AdminDivisions");
+
+				overlay.draw = function() {
+					var markerOverlay = this;
+					var overlayProjection = markerOverlay.getProjection();
+
+					// Turn the overlay projection into a d3 projection
+					var googleMapProjection = function(coordinates) {
+						var googleCoordinates = new google.maps.LatLng(
+								coordinates[1], coordinates[0]);
+						var pixelCoordinates = overlayProjection
+								.fromLatLngToDivPixel(googleCoordinates);
+						return [ pixelCoordinates.x, pixelCoordinates.y ];
+					}
+
+					path = d3.geo.path().projection(googleMapProjection);
+					adminDivisions.selectAll("path").data(data.features).attr(
+							"d", path)
+					// update existing paths
+					.enter().append("svg:path").attr("d", path).attr(
+							"fill-opacity", function(d) {
+								return getOpacity(d);
+							});
+				};
+			};
+			overlay.setMap(map);
+
+			// PCP
+			// 							var cnt = 0;
+			// 							var pcpdata = d3.entries(data.features).map(
+			// 									function(d) {
+			// 										var val = d.value.properties;
+			// 										val.key = d.key;
+			// 										return val;
+			// 									});
+
+			// 							var parcoords = d3
+			// 									.parcoords()
+			// 									("#pcp")
+			// 									.data(pcpdata)
+			// 									.color("Red")
+			// 									.render()
+			// 									.brushable()
+			// 									.on(
+			// 											"brush",
+			// 											function(items) {
+			// 												var selected = items
+			// 														.map(function(d) {
+			// 															return d.key;
+			// 														});
+			// 												d3
+			// 														.selectAll("path")
+			// 														.style("fill-opacity",
+			// 																0)
+			// 														.filter(
+			// 																function(d) {
+			// 																	return selected
+			// 																			.indexOf(d.key) > -1;
+			// 																})
+			// 														.style(
+			// 																"fill-opacity",
+			// 																function(d) {
+			// 																	return getOpacity(d);
+			// 																});
+			// 											});
+
+		});
+
+		$("#timeslider").slider({
+			min : 0, // there are 71 months between 1/1/04 and 12/31/09, 0 is all events
+			max : 16,
+			value : 0, //default slider value
+			step : 1, // step is the allow increments the slider can move. 1 = one month
+			slide : function(event, ui) {
+				d3.select("#slidertext").text(ui.value);
+				time = ui.value;
+				d3.selectAll('path').each(transform);
+			}
+		});
+
+		// 		var fill = d3.scale.category20();
+		// 		d3.layout.cloud().size([ 300, 300 ]).words(
+		// 				[ "Hello", "world", "normally", "you", "want", "more", "words",
+		// 						"than", "this" ].map(function(d) {
+		// 					return {
+		// 						text : d,
+		// 						size : 10 + Math.random() * 90
+		// 					};
+		// 				})).padding(5).rotate(function() {
+		// 			return ~~(Math.random() * 2) * 90;
+		// 		}).font("Impact").fontSize(function(d) {
+		// 			return d.size;
+		// 		}).on("end", draw).start();
+
+		// 		function draw(words) {
+		// 			d3.select("#wordcloud").append("svg").attr("width", 300).attr(
+		// 					"height", 300).append("g").attr("transform",
+		// 					"translate(150,150)").selectAll("text").data(words).enter()
+		// 					.append("text").style("font-size", function(d) {
+		// 						return d.size + "px";
+		// 					}).style("font-family", "Impact").style("fill",
+		// 							function(d, i) {
+		// 								return fill(i);
+		// 							}).attr("text-anchor", "middle").attr(
+		// 							"transform",
+		// 							function(d) {
+		// 								return "translate(" + [ d.x, d.y ] + ")rotate("
+		// 										+ d.rotate + ")";
+		// 							}).text(function(d) {
+		// 						return d.text;
+		// 					});
+		// 		}
+
+		//topic cloud
+		var wordScale = d3.scale.linear().domain([ 0.001, 0.005, 0.05, 0.5 ])
+				.range([ 13, 18, 25, 50 ]).clamp(true);
+		//var fill = d3.scale.category10();
+		var wordColor = d3.scale.linear().domain([ 13, 18, 25, 50 ]).range(
+				[ "blue", "green", "orange", "red" ]);
+		var viz = d3.select("#topics").append("svg").attr("width", 330).attr(
+				"height", 280);
+		d3.json("data/topics.json", function(topic) {
+			$.each(topic, function(i, myatt) {
+				attributes.push(myatt.id);
+			});
+
+			d3.layout.cloud().size([ 330, 280 ])
+			// .words([{"text":"test","size":wordScale(.01)},{"text":"bad","size":wordScale(1)}])
+			.words(topic).rotate(function() {
+				return ~~(Math.random() * 2) * 5;
+			}).fontSize(function(d) {
+				return wordScale(d.size);
+			}).on("end", draw).start();
+
+			function draw(words) {
+
+				viz.append("g").attr("transform", "translate(160,150)")
+						.selectAll("text").data(words).enter().append("text")
+						.style("font-size", function(d) {
+							return d.size + "px";
+						}).style("fill", function(d, i) {
+							//return fill(i);
+							return wordColor(d.size);
+						}).style("opacity", .75).attr("text-anchor", "middle")
+						.attr(
+								"transform",
+								function(d) {
+									return "translate(" + [ d.x, d.y ]
+											+ ")rotate(" + d.rotate + ")";
+								}).text(function(d) {
+							return d.text;
+						}).on("click", function(d) {
+							drawTopicWords(d.text);
+							att = d.id;
+							d3.selectAll('path').each(transform);
+						}).style("opacity", 1e-6).transition().duration(1000)
+						.style("opacity", 1);
+
+				// viz.append("text").data([ topic[0] ]).style("font-size", 20)
+				// .style("font-weight", 900).attr("x", 100).attr("y", 20)
+				// .text(function(d) {
+				// return "Elections";
+				// })
+
+				// d3.select("#svg"+x).append("svg:text").text("Topic " + x);
+				// viz.enter().append("svg:text").text("Topic " + x);
+
+			}
+
+		});
+
+		//topic words cloud
+		var wordScale2 = d3.scale.linear().domain([ 0, 1000, 3000, 6000 ])
+				.range([ 13, 18, 25, 50 ]).clamp(true);
+		//var fill = d3.scale.category10();
+		var wordColor2 = d3.scale.linear().domain([ 13, 18, 25, 50 ]).range(
+				[ "blue", "green", "orange", "red" ]);
+		var viz2 = d3.select("#topicwords").append("svg").attr("width", 330)
+				.attr("height", 200);
+
+		var topicwords = [];
+
+		d3.json("data/topicwords.json", function(topwords) {
+			topicwords = topwords;
+		});
+
+		function drawTopicWords(topicname) {
+
+			d3.layout.cloud().size([ 330, 200 ])
+			// .words([{"text":"test","size":wordScale(.01)},{"text":"bad","size":wordScale(1)}])
+			.words(topicwords[0][topicname]).rotate(function() {
+				return ~~(Math.random() * 2) * 5;
+			}).fontSize(function(d) {
+				return wordScale2(d.size);
+			}).on("end", draw).start();
+
+			function draw(words) {
+
+				viz2.selectAll("text").remove();
+				viz2.append("g").attr("transform", "translate(130,110)")
+						.selectAll("text").data(words).enter().append("text")
+						.style("font-size", function(d) {
+							return d.size + "px";
+						}).style("fill", function(d, i) {
+							//return fill(i);
+							return wordColor2(d.size);
+						}).style("opacity", .75).attr("text-anchor", "middle")
+						.attr(
+								"transform",
+								function(d) {
+									return "translate(" + [ d.x, d.y ]
+											+ ")rotate(" + d.rotate + ")";
+								}).text(function(d) {
+							return d.text;
+						}).on("click", function(d) {
+							console.log(d.text);
+						}).style("opacity", 1e-6).transition().duration(1000)
+						.style("opacity", 1);
+			}
+
+			d3.select("#topwords").text("Top words in topic: " + topicname);
+
+		}
+
+		function getOpacity(value) {
+
+			var opacity = 0;
+			var total = 0;
+			for ( var i = 0; i < attributes.length; i++) {
+				total += value.properties[time][attributes[i]];
+			}
+			if (total > 0)
+				opacity = value.properties[time][att] / Math.sqrt(total);
+			//opacity = value.properties[time][att] / 1000;
+			if(opacity > 1)
+				console.log(opacity);
+			return opacityScale(opacity);
+		}
+
+		function transform(d) {
+			if (typeof d === undefined) {
+				return null;
+			} else {
+				return d3.select(this).attr("fill-opacity", getOpacity(d));
+			}
+		}
+	</script>
+</body>
+</html>

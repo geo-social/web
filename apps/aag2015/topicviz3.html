@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no"
+	charset="utf-8" />
+<link rel="stylesheet"
+	href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+<script src="http://d3js.org/d3.v3.min.js" type="text/javascript"></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css'
+	rel='stylesheet' />
+<script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="js/d3.parcoords.js"></script>
+<script src="js/d3.layout.cloud.js"></script>
+<style type="text/css">
+html,body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	margin: 0;
+}
+
+#map {
+	width: 400px;
+	height: 240px;
+	margin-left: 10px;
+}
+
+.SvgOverlay {
+	
+}
+
+.SvgOverlay,.SvgOverlay svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.SvgOverlay path {
+	stroke: Orange;
+	stroke-width: 0px;
+	fill: Red;
+	/* 	fill-opacity: .3; */
+}
+
+.wrapper {
+	width: 600px;
+	margin-left: 40px;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+#time {
+	font-family: "Times New Roman";
+	font-size: 30px;
+}
+
+#topics {
+	/* 	border: 1px #888888 solid; */
+	width: 280px;
+	height: 240px;
+	/* 	float: left; */
+	text-decoration: none;
+	color: #000;
+	background: #F6F6F6;
+	display: table-cell;
+	float: left;
+}
+
+#topicwords {
+	background: #000000;
+	margin-top: 10px;
+	width: 47%;
+	float: right;
+	display: block;
+}
+
+.axis path,.axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.x.axis path {
+	
+}
+
+.line {
+	fill: none;
+	stroke: steelblue;
+	stroke-width: 1px;
+}
+
+.Row {
+	display: table-row;
+}
+
+.Col1 {
+	position: absolute;
+	display: block;
+	width: 50%;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.d3-tip {
+	line-height: 1;
+	font-weight: bold;
+	padding: 12px;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	border-radius: 2px;
+}
+
+table {
+	border-collapse: collapse;
+	font: 9px sans-serif;
+}
+
+th {
+	font-weight: normal;
+	text-align: right;
+	padding-right: 6px;
+	min-width: 43px;
+}
+
+thead td {
+	cursor: s-resize;
+}
+
+tbody tr:first-child td {
+	padding-top: 2px;
+}
+
+tbody td {
+	padding: 0;
+	border-left: solid 1px #000;
+}
+
+tbody rect {
+	fill: steelblue;
+}
+
+tbody tr:hover rect {
+	fill: brown;
+}
+</style>
+</head>
+<body>
+	<div>
+		<div class="Col1">
+			<div class="Row">
+				<div id="topics">
+					<table>
+						<thead>
+							<tr>
+								<th>topic</th>
+								<td>prob</td>
+								<td>corpusdist</td>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+				<div id="map"></div>
+
+			</div>
+			<div class="Row">
+				<div>
+					<div id="timeslider" class="wrapper">
+						<span id="slidertext" class="wrapper">0</span>
+					</div>
+					<div id="timeseries"></div>
+				</div>
+			</div>
+		</div>
+		<div id="topicwords"></div>
+	</div>
+
+	<script type="text/javascript">
+		//dimension of the word clouds
+		var width_ = 150;
+
+		var southWest = L.latLng(25, -124.5), northEast = L.latLng(49, -69.5), bounds = L
+				.latLngBounds(southWest, northEast);
+
+		var map = L.map('map').fitBounds(bounds);//.setView([ 39, -97 ], 4)
+
+		var blackwhite = "http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/{z}/{x}/{y}.png";
+		var whiteblack = "http://{s}.sm.mapstack.stamen.com/((naip,$fff[difference],$fff[@60],$fff[hsl-saturation@90])[multiply],(mapbox-water,$fff[difference],$000[@60],$090d11[hsl-color]))/{z}/{x}/{y}.png"
+		var whiteblue = "http://{s}.sm.mapstack.stamen.com/(toner-lite,(watercolor,$fff%5B@0%5D,$fff%5Bhsl-saturation@50%5D,mapbox-water%5Bdestination-in%5D)%5B@50%5D/{z}/{x}/{y}.png";
+		var mapboxTiles = L.tileLayer(blackwhite).addTo(map);
+
+		// we will be appending the SVG to the Leaflet map pane
+		// g (group) element will be inside the svg 
+		var svg = d3.select(map.getPanes().overlayPane).append("svg");
+
+		// if you don't include the leaflet-zoom-hide when a 
+		// user zooms in or out you will still see the phantom
+		// original SVG 
+		var g = svg.append("g").attr("class", "leaflet-zoom-hide");
+
+		var time = 0;
+		var selectedtopic = 0;
+
+		var timeScale = d3.time.scale().domain([ 0, 67 ]).range(
+				[ new Date('2014-12-02'), new Date('2015-02-07') ]).clamp(true);
+		var formatDate = d3.time.format("%b %d");
+
+		//topic cloud
+		var wordScale = d3.scale.linear().domain([ 0.001, 0.1, 0.3, 0.5 ])
+				.range([ 10, 13, 16, 19 ]).clamp(true);
+
+		var c10 = d3.scale.category10();
+		var c20 = d3.scale.category20();
+
+		// 		var colors = ["#6363FF", "#6373FF", "#63A3FF", "#63E3FF", "#63FFFB", "#63FFCB",
+		//                "#63FF9B", "#63FF6B", "#7BFF63", "#BBFF63", "#DBFF63", "#FBFF63", 
+		//                "#FFD363", "#FFB363", "#FF8363", "#FF7363", "#FF6364"];
+		// 		var topiccolor = d3.scale.linear().domain(d3.range(0, 1, 1.0 / (colors.length - 1))).range(colors);
+		// 		var opacity = d3.scale.linear().domain(
+		// 				[ 0, 0.1, 0.2, 0.4, 0.6, 0.8, 1 ]).range(
+		// 				[ 0, 0.7, 0.75, 0.8, 0.85, 0.9, 1 ]);
+		var opacity = d3.scale.linear().domain([ 0, 49 ]).range([ 1 ]);
+
+		//var fill = d3.scale.category10();
+
+		//topic words cloud
+		//var fill = d3.scale.category10();
+		var wordColor2 = d3.scale.linear().domain([ 1, 5, 10, 20 ]).range(
+				[ "red", "orange", "blue", "green" ]);
+
+		//streamgraph
+		var datearray = [];
+		var colorrange = [];
+		var color = "heatmap";
+		if (color == "blue") {
+			colorrange = [ "#045A8D", "#2B8CBE", "#74A9CF", "#A6BDDB",
+					"#D0D1E6", "#F1EEF6" ];
+		} else if (color == "pink") {
+			colorrange = [ "#980043", "#DD1C77", "#DF65B0", "#C994C7",
+					"#D4B9DA", "#F1EEF6" ];
+		} else if (color == "orange") {
+			colorrange = [ "#B30000", "#E34A33", "#FC8D59", "#FDBB84",
+					"#FDD49E", "#FEF0D9" ];
+		} else if (color == "heatmap") {
+			colorrange = [ "#6363FF", "#6373FF", "#63A3FF", "#63E3FF",
+					"#63FFFB", "#63FFCB", "#63FF9B", "#63FF6B", "#7BFF63",
+					"#BBFF63", "#DBFF63", "#FBFF63", "#FFD363", "#FFB363",
+					"#FF8363", "#FF7363", "#FF6364" ];
+		}
+		strokecolor = colorrange[0];
+
+		var autocorrelated = [ 25, 14, 3, 11, 49, 15,9, 18, 23, 32, 36, 39, 42,
+				2 ];
+		var colarr = [ "#6363FF", "#63A3FF", "#63E3FF", "#63FFFB", "#63FFCB",
+				"#63FF9B", "#7BFF63", "#BBFF63", "#DBFF63", "#FBFF63",
+				"#FFD363", "#FFB363", "#FF8363", "#FF6364" ];
+
+		var topiccolor = d3.scale.ordinal().domain([ 0, 49 ]).range(colorrange);
+
+		d3
+				.json(
+						"data50/polygoncubes.json",
+						function(geoShape) {
+
+							d3
+									.json(
+											"data50/wordtopic.json",
+											function(data) {
+
+												var scale_corspusdist = d3.scale
+														.linear().domain(
+																[ 0, 6.6 ])
+														.range([ 0, 1 ]);
+
+												var atts = d3
+														.keys(data[0])
+														.filter(
+																function(key) {
+																	return key != "words"
+																			&& key != "id";
+																});
+
+												var data = data
+														.filter(function(d) {
+															var pass = false;
+															autocorrelated
+																	.forEach(function(
+																			t) {
+																		if (+d.id == +t) {
+																			pass = true;
+																		}
+																	});
+															return pass;
+														});
+
+												d3.selectAll("thead td").data(
+														atts).on(
+														"click",
+														function(k) {
+															tr.sort(function(a,
+																	b) {
+																return b[k]
+																		- a[k];
+															});
+														});
+
+												var tr = d3
+														.select("tbody")
+														.selectAll("tr")
+														.data(data)
+														.enter()
+														.append("tr")
+														.on(
+																"click",
+																function(d) {
+																	console
+																			.log(d);
+																	//drawTopicWords(d.words);
+																	selectedtopic = +d.id;
+																	reset();
+																});
+
+												tr
+														.append("th")
+														.text(
+																function(d) {
+																	var words = d.words;
+																	var txt = " ";
+																	for ( var i = 0; i < 3; i++) {
+																		txt += words[i].text
+																				+ " ";
+																	}
+																	txt += d.id;
+																	return txt;
+																});
+
+												tr
+														.selectAll("td")
+														.data(
+																function(d) {
+																	return atts
+																			.map(function(
+																					k) {
+																				if (k == "corpusdist")
+																					return scale_corspusdist(d[k]);
+																				else
+																					return d[k]
+																			});
+																})
+														.enter()
+														.append("td")
+														.append("svg")
+														.attr("width", 51)
+														.attr("height", 12)
+														.append("rect")
+														.attr("height", 12)
+														.attr(
+																"width",
+																function(d) {
+																	return d * 51;
+																});
+
+												data
+														.forEach(function(t) {
+															var wcloud = d3
+																	.select(
+																			"#topicwords")
+																	.append(
+																			"svg")
+																	.attr(
+																			"width",
+																			width_)
+																	.attr(
+																			"height",
+																			width_);
+															var idx = -1;
+															for ( var j = 0; j < autocorrelated.length; j++) {
+																if (t.id == autocorrelated[j]) {
+																	idx = j;
+																	break;
+																}
+															}
+															console
+																	.log(colarr[idx]);
+															drawTopicWords(
+																	wcloud,
+																	t.words,
+																	colarr[idx])
+														});
+
+												function drawTopicWords(wcloud,
+														wrds, clr) {
+
+													var wmaxsize = 24;
+													d3.layout
+															.cloud()
+															.size(
+																	[ width_,
+																			width_ ])
+															// .words([{"text":"test","size":wordScale(.01)},{"text":"bad","size":wordScale(1)}])
+															.words(wrds)
+															.rotate(
+																	function() {
+																		return ~~(Math
+																				.random() * 2) * 5;
+																	})
+															.fontSize(
+																	function(d) {
+																		return wmaxsize
+																				- (d.rank - 1);
+																	})
+															.on("end", draw)
+															.start();
+
+													function draw(words) {
+														wcloud
+																.append("g")
+																.attr(
+																		"transform",
+																		function(
+																				d) {
+																			var ratio = width_ * 0.5;
+																			return "translate("
+																					+ ratio
+																					+ ","
+																					+ ratio
+																					+ ")";
+																		})
+																.selectAll(
+																		"text")
+																.data(words)
+																.enter()
+																.append("text")
+																.style(
+																		"font-size",
+																		function(
+																				d) {
+																			return wmaxsize
+																					- (d.rank - 1)
+																					+ "px";
+																		})
+																.style(
+																		"fill",
+																		function(
+																				d,
+																				i) {
+																			//return fill(i);
+																			return clr;
+																		})
+																.style(
+																		"opacity",
+																		.75)
+																.attr(
+																		"text-anchor",
+																		"middle")
+																.attr(
+																		"transform",
+																		function(
+																				d) {
+																			return "translate("
+																					+ [
+																							d.x,
+																							d.y ]
+																					+ ")rotate("
+																					+ d.rotate
+																					+ ")";
+																		})
+																.text(
+																		function(
+																				d) {
+																			return d.text;
+																		})
+																.on(
+																		"click",
+																		function(
+																				d) {
+																			console
+																					.log(d.text);
+																		})
+																.style(
+																		"opacity",
+																		1e-6)
+																.transition()
+																.duration(1000)
+																.style(
+																		"opacity",
+																		1);
+													}
+												}
+											});
+
+							// time slider
+							$("#timeslider")
+									.slider(
+											{
+												min : 0, // there are 71 months between 1/1/04 and 12/31/09, 0 is all events
+												max : 67,
+												value : 0, //default slider value
+												step : 1, // step is the allow increments the slider can move. 1 = one month
+												slide : function(event, ui) {
+													d3
+															.select(
+																	"#slidertext")
+															.text(
+																	formatDate(new Date(
+																			timeScale(ui.value))));
+													time = ui.value;
+													reset();
+												}
+											});
+
+							//  create a d3.geo.path to convert GeoJSON to SVG
+							var transform = d3.geo.transform({
+								point : projectPoint
+							}), path = d3.geo.path().projection(transform)
+									.pointRadius(6);
+
+							// create path elements for each of the features
+							d3_features = g.selectAll("path").data(
+									geoShape.features).enter().append("path");
+
+							map.on("viewreset", reset);
+
+							reset();
+
+							// fit the SVG element to leaflet's map layer
+							function reset() {
+
+								bounds = path.bounds(geoShape);
+
+								var topLeft = bounds[0], bottomRight = bounds[1];
+
+								svg.attr("width", bottomRight[0] - topLeft[0])
+										.attr("height",
+												bottomRight[1] - topLeft[1])
+										.style("left", topLeft[0] + "px")
+										.style("top", topLeft[1] + "px");
+
+								g.attr("transform", "translate(" + -topLeft[0]
+										+ "," + -topLeft[1] + ")");
+
+								// initialize the path data	
+								d3_features
+										.attr("d", path)
+										.style("fill-opacity", 1)
+										.attr(
+												'fill',
+												function(d) {
+													try {
+														var topicarr = d.properties[time];
+														var idx = -1;
+														if (topicarr) {
+															for ( var j = 0; j < autocorrelated.length; j++) {
+																var i = 0;
+																var brk = false;
+																while (i < topicarr.length) {
+																	if (topicarr[i][0] == autocorrelated[j]) {
+																		idx = j;
+																		brk = true;
+																	}
+																	i++;
+																}
+																if (brk)
+																	break;
+															}
+															if (brk)
+																return colarr[idx];
+															else
+																return 0;
+														} else
+															return 0;
+													} catch (err) {
+														return 0;
+													}
+												}).attr('opacity', 1);
+							}
+
+							// Use Leaflet to implement a D3 geometric transformation.
+							function projectPoint(x, y) {
+								var point = map
+										.latLngToLayerPoint(new L.LatLng(y, x));
+								this.stream.point(point.x, point.y);
+							}
+
+							chart("data50/topfreqmelt.csv");
+						});
+
+		//streamgraph
+		function chart(csvpath) {
+			var format = d3.time.format("%m/%d/%y");
+
+			var margin = {
+				top : 20,
+				right : 40,
+				bottom : 30,
+				left : 40
+			};
+			var width = 600; //document.body.clientWidth - margin.left - margin.right;
+			var height = 200 - margin.top - margin.bottom;
+
+			var tooltip = d3.select("#timeseries").append("div").attr("class",
+					"remove").style("position", "absolute").style("z-index",
+					"20").style("visibility", "hidden").style("top", "280px")
+					.style("left", "55px");
+
+			var x = d3.time.scale().range([ 0, width ]);
+
+			var y = d3.scale.linear().range([ height - 10, 0 ]);
+
+			var z = d3.scale.ordinal().range(colorrange);
+
+			var xAxis = d3.svg.axis().scale(x).orient("bottom").ticks(
+					d3.time.weeks);
+
+			var yAxis = d3.svg.axis().scale(y);
+
+			var yAxisr = d3.svg.axis().scale(y);
+
+			var stack = d3.layout.stack().offset("silhouette").values(
+					function(d) {
+						return d.values;
+					}).x(function(d) {
+				return d.date;
+			}).y(function(d) {
+				return d.value;
+			});
+
+			var nest = d3.nest().key(function(d) {
+				return d.key;
+			});
+
+			var area = d3.svg.area().interpolate("cardinal").x(function(d) {
+				return x(d.date);
+			}).y0(function(d) {
+				return y(d.y0);
+			}).y1(function(d) {
+				return y(d.y0 + d.y);
+			});
+
+			var svg = d3.select("#timeseries").append("svg").attr("width",
+					width + margin.left + margin.right).attr("height",
+					height + margin.top + margin.bottom).append("g").attr(
+					"transform",
+					"translate(" + margin.left + "," + margin.top + ")");
+
+			d3.csv(csvpath, function(error, alldata) {
+
+				var data = alldata.filter(function(d) {
+					var pass = false;
+					autocorrelated.forEach(function(t) {
+						if (+d.key == +t) {
+							pass = true;
+						}
+					});
+					return pass;
+				});
+
+				data.forEach(function(d) {
+					d.date = format.parse(d.date);
+					d.value = +d.value;
+				});
+
+				var layers = stack(nest.entries(data));
+
+				x.domain(d3.extent(data, function(d) {
+					return d.date;
+				}));
+				y.domain([ 0, d3.max(data, function(d) {
+					return d.y0 + d.y;
+				}) ]);
+
+				svg.selectAll(".layer").data(layers).enter().append("path")
+						.attr("class", "layer").attr("d", function(d) {
+							return area(d.values);
+						}).style("fill", function(d, i) {
+							var j=0;
+							while (j < autocorrelated.length) {
+								if (d.key == autocorrelated[j]) {
+									return colarr[j];
+								}
+								j++;
+							}//z(i);
+						});
+
+				svg.append("g").attr("class", "x axis").attr("transform",
+						"translate(0," + height + ")").call(xAxis);
+
+				svg.append("g").attr("class", "y axis").attr("transform",
+						"translate(" + width + ", 0)").call(
+						yAxis.orient("right"));
+
+				svg.append("g").attr("class", "y axis").call(
+						yAxis.orient("left"));
+
+				svg.selectAll(".layer").attr("opacity", 1).on(
+						"mouseover",
+						function(d, i) {
+							svg.selectAll(".layer").transition().duration(250)
+									.attr("opacity", function(d, j) {
+										return j != i ? 0.6 : 1;
+									})
+						})
+
+				.on(
+						"mousemove",
+						function(d, i) {
+							mousex = d3.mouse(this);
+							mousex = mousex[0];
+							var invertedx = x.invert(mousex);
+							invertedx = invertedx.getMonth()
+									+ invertedx.getDate();
+							var selected = (d.values);
+							for ( var k = 0; k < selected.length; k++) {
+								datearray[k] = selected[k].date
+								datearray[k] = datearray[k].getMonth()
+										+ datearray[k].getDate();
+							}
+
+							mousedate = datearray.indexOf(invertedx);
+							pro = d.values[mousedate].value;
+
+							d3.select(this).classed("hover", true).attr(
+									"stroke", strokecolor).attr("stroke-width",
+									"0.5px"), tooltip.html(
+									"<p>" + d.key + "<br>" + pro + "</p>")
+									.style("visibility", "visible");
+
+						}).on(
+						"mouseout",
+						function(d, i) {
+							svg.selectAll(".layer").transition().duration(250)
+									.attr("opacity", "1");
+							d3.select(this).classed("hover", false).attr(
+									"stroke-width", "0px"), tooltip.html(
+									"<p>" + d.key + "<br>" + pro + "</p>")
+									.style("visibility", "hidden");
+						})
+
+				var vertical = d3.select(".chart").append("div").attr("class",
+						"remove").style("position", "absolute").style(
+						"z-index", "19").style("width", "1px").style("height",
+						"380px").style("top", "10px").style("bottom", "30px")
+						.style("left", "0px").style("background", "#fff");
+
+				d3.select(".chart").on("mousemove", function() {
+					mousex = d3.mouse(this);
+					mousex = mousex[0] + 5;
+					vertical.style("left", mousex + "px")
+				}).on("mouseover", function() {
+					mousex = d3.mouse(this);
+					mousex = mousex[0] + 5;
+					vertical.style("left", mousex + "px")
+				});
+			});
+		}
+	</script>
+</body>
+</html>

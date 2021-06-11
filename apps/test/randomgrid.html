@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body {
+	font-family: Helvetica;
+	font-size: 18px;
+}
+
+.point {
+	
+}
+</style>
+<body>
+	<div id="gridstats"></div>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="d3-grid.js"></script>
+	<script>
+		var points = [];
+		var probArray = [ 0.4, 0.3, 0.3 ];
+
+		var category = [];
+		var categorycount = [];
+		var cnt = 1;
+		for ( var i = 0; i < probArray.length; i++) {
+			category[i] = cnt++;
+			categorycount[i] = 0;
+		}
+		var categorycounttotal = 0;
+
+		var extent = 360;
+		var numOfPnts = 144;
+
+		var width = 960, height = 500;
+
+		var pointGrid = d3.layout.grid().points().size([ extent, extent ]);
+		//create the points
+		for ( var i = 0; i < numOfPnts; i++) {
+			points.push({});
+		}
+
+		//for each point randomly assign the classes
+		points.forEach(function(d) {
+			var minprob = 0, maxprob = 0;
+			var randomnum = Math.random();
+			for ( var k = 0; k < probArray.length; k++) {
+				maxprob += probArray[k];
+				if (randomnum > minprob && randomnum <= maxprob) {
+					d.value = category[k];
+					categorycount[k]++;
+					categorycounttotal++;
+					break;
+				} else {
+					minprob = maxprob;
+				}
+			}
+		});
+
+		var catprob = "";
+		for ( var i = 0; i < category.length; i++) {
+			catprob += i + 1 + ": %"
+					+ d3.round(100 * ((1.0 * categorycount[i]) / (1.0 * categorycounttotal)))
+					+ "\t\t";
+		}
+		d3.select("#gridstats").text(catprob);
+
+		var svg = d3.select("body").append("svg").attr({
+			width : width,
+			height : height
+		}).append("g").attr("transform", "translate(70,70)");
+
+		var color = d3.scale.linear().domain([ 1, 2, 3 ]).range(
+				[ "red", "blue", "green" ]);
+		var opacity = d3.scale.linear().domain([ 1, 2, 3 ]).range(
+				[ 1, 0.6, 0.3]);
+		var size = d3.scale.linear().domain([ 1, 2, 3 ]).range(
+				[ 6, 4, 2 ]);
+		
+		createPointGrid();
+
+		function createPointGrid() {
+			var point = svg.selectAll(".point").data(pointGrid(points));
+			point.enter().append("circle").attr("r", function(d) {
+				return size(d.value);
+			}).attr('fill',function(d) {
+				return "black";
+			}).attr('opacity', 
+					function(d) {
+							return opacity(d.value);
+					}).attr("transform", function(d) {
+						return "translate(" + d.x + "," + d.y + ")";
+					});
+		}
+	</script>

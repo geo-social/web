@@ -1,0 +1,153 @@
+source,target
+"Aerts, et al. (2003)",Attribute
+"Aerts, et al. (2003)",Color Lightness
+"Aerts, et al. (2003)",Intrinsic
+"Aerts, et al. (2003)",Dynamic
+"Aerts, et al. (2003)",Coincident
+"Aerts, et al. (2003)",Adjacent
+"Aerts, et al. (2003)",Raster
+"Aerts, et al. (2003)",Raster
+"Aerts, et al. (2003)",Univariate
+Alberti (2013),Attribute
+Alberti (2013),Size
+Alberti (2013),Intrinsic
+Alberti (2013),Coincident
+Alberti (2013),Adjacent
+Alberti (2013),Raster
+Alberti (2013),Vector
+Alberti (2013),Univariate
+"Bisantz, et al. (2009)",Attribute
+"Bisantz, et al. (2009)",Color Hue
+"Bisantz, et al. (2009)",Color Saturation
+"Bisantz, et al. (2009)",Color Brightness
+"Bisantz, et al. (2009)",Transparency
+"Bisantz, et al. (2009)",Intrinsic
+"Bisantz, et al. (2009)",Static
+"Bisantz, et al. (2009)",Coincident
+"Bisantz, et al. (2009)",Raster
+"Bisantz, et al. (2009)",Raster
+"Bisantz, et al. (2009)",Univariate
+"Boukhelifa, et al. (2012)",Attribute
+"Boukhelifa, et al. (2012)",Blur
+"Boukhelifa, et al. (2012)",Dashing
+"Boukhelifa, et al. (2012)",Greyscale
+"Boukhelifa, et al. (2012)",Sketchiness
+"Boukhelifa, et al. (2012)",Extrinsic
+"Boukhelifa, et al. (2012)",Static
+"Boukhelifa, et al. (2012)",Coincident
+"Boukhelifa, et al. (2012)",Vector
+"Boukhelifa, et al. (2012)",Univariate
+Deitrick (2012),Attribute
+Deitrick (2012),Transparency
+Deitrick (2012),Extrinsic
+Deitrick (2012),Intrinsic
+Deitrick (2012),Static
+Deitrick (2012),Coincident
+Deitrick (2012),Vector
+Deitrick (2012),Univariate
+Edward and Nelson (2001),Attribute
+Edward and Nelson (2001),Focus
+Edward and Nelson (2001),Color Value
+Edward and Nelson (2001),Size
+Edward and Nelson (2001),Intrinsic
+Edward and Nelson (2001),Static
+Edward and Nelson (2001),Coincident
+Edward and Nelson (2001),Adjacent
+Edward and Nelson (2001),Vector
+Edward and Nelson (2001),Vector
+Edward and Nelson (2001),Bivariate
+Edward and Nelson (2001),Univariate
+Gerharz and Pebesma (2009),Attribute
+Gerharz and Pebesma (2009),Whitening
+Gerharz and Pebesma (2009),Intrinsic
+Gerharz and Pebesma (2009),Static
+Gerharz and Pebesma (2009),Dynamic
+Gerharz and Pebesma (2009),Coincident
+Gerharz and Pebesma (2009),Adjacent
+Gerharz and Pebesma (2009),Raster
+Gerharz and Pebesma (2009),Raster
+Gerharz and Pebesma (2009),Bivariate
+Gerharz and Pebesma (2009),Univariate
+"Kardos, et al. (2007)",Attribute
+"Kardos, et al. (2007)",Positional
+"Kardos, et al. (2007)",Transparency
+"Kardos, et al. (2007)",Blinking
+"Kardos, et al. (2007)",Extrinsic
+"Kardos, et al. (2007)",Dynamic
+"Kardos, et al. (2007)",Coincident
+"Kardos, et al. (2007)",Adjacent
+"Kardos, et al. (2007)",Vector
+"Kardos, et al. (2007)",HoR Trustree
+"Kardos, et al. (2007)",Univariate
+Kinkeldey (2014),Attribute
+Kinkeldey (2014),Width
+Kinkeldey (2014),Grain
+Kinkeldey (2014),Extrinsic
+Kinkeldey (2014),Static
+Kinkeldey (2014),Coincident
+Kinkeldey (2014),Raster
+Kinkeldey (2014),Vector
+Kinkeldey (2014),Univariate
+Kubicek and Sasinka (2011),Attribute
+Kubicek and Sasinka (2011),Color Hue
+Kubicek and Sasinka (2011),Color Saturation
+Kubicek and Sasinka (2011),Whitening
+Kubicek and Sasinka (2011),Intrinsic
+Kubicek and Sasinka (2011),Static
+Kubicek and Sasinka (2011),Coincident
+Kubicek and Sasinka (2011),Adjacent
+Kubicek and Sasinka (2011),Raster
+Kubicek and Sasinka (2011),Raster
+Kubicek and Sasinka (2011),Univariate
+Leitner and Buttenfield (2000),Attribute
+Leitner and Buttenfield (2000),Color Saturation
+Leitner and Buttenfield (2000),Color Value
+Leitner and Buttenfield (2000),Texture
+Leitner and Buttenfield (2000),Intrinsic
+Leitner and Buttenfield (2000),Static
+Leitner and Buttenfield (2000),Coincident
+Leitner and Buttenfield (2000),Vector
+Leitner and Buttenfield (2000),Vector
+Leitner and Buttenfield (2000),Univariate
+"MacEachren, et al. (1998)",Attribute
+"MacEachren, et al. (1998)",Color
+"MacEachren, et al. (1998)",Texture
+"MacEachren, et al. (1998)",Intrinsic
+"MacEachren, et al. (1998)",Static
+"MacEachren, et al. (1998)",Coincident
+"MacEachren, et al. (1998)",Coincident
+"MacEachren, et al. (1998)",Vector
+"MacEachren, et al. (1998)",Vector
+"MacEachren, et al. (1998)",Univariate
+"MacEachren, et al. (1998)",Bivariate
+"Nadav-Greenburg, et al. (2008)",Attribute
+"Nadav-Greenburg, et al. (2008)",Color
+"Nadav-Greenburg, et al. (2008)",Intrinsic
+"Nadav-Greenburg, et al. (2008)",Static
+"Nadav-Greenburg, et al. (2008)",Adjacent
+"Nadav-Greenburg, et al. (2008)",Raster
+"Nadav-Greenburg, et al. (2008)",Raster
+"Nadav-Greenburg, et al. (2008)",Univariate
+"Sanyal, et al. (2009)",Attribute
+"Sanyal, et al. (2009)",Color Saturation
+"Sanyal, et al. (2009)",Size
+"Sanyal, et al. (2009)",Error bars
+"Sanyal, et al. (2009)",Intrinsic
+"Sanyal, et al. (2009)",Extrinsic
+"Sanyal, et al. (2009)",Static
+"Sanyal, et al. (2009)",Adjacent
+"Sanyal, et al. (2009)",Raster
+"Sanyal, et al. (2009)",Vector
+"Sanyal, et al. (2009)",Univariate
+"Sanyal, et al. (2009)",Univariate
+Viard (2011),Attribute
+Viard (2011),Transparency
+Viard (2011),Error bars
+Viard (2011),Intrinsic
+Viard (2011),Extrinsic
+Viard (2011),Static
+Viard (2011),Adjacent
+Viard (2011),Raster
+Viard (2011),Vector
+Viard (2011),Univariate
+Viard (2011),Univariate

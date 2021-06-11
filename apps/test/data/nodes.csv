@@ -1,0 +1,50 @@
+name,group
+Positional,Uncertainty Category
+Attribute,Uncertainty Category
+Color Lightness,Visual Variable
+Size,Visual Variable
+Color Hue,Visual Variable
+Color Saturation,Visual Variable
+Color Brightness,Visual Variable
+Transparency,Visual Variable
+Blur,Visual Variable
+Dashing,Visual Variable
+Greyscale,Visual Variable
+Sketchiness,Visual Variable
+Focus,Visual Variable
+Color Value,Visual Variable
+Whitening,Visual Variable
+Blinking,Visual Variable
+Width,Visual Variable
+Grain,Visual Variable
+Color,Visual Variable
+Texture,Visual Variable
+Error bars,Visual Variable
+Extrinsic,Symbolism Technique
+Intrinsic,Symbolism Technique
+Static,Visualization Technique
+Dynamic,Visualization Technique
+Coincident,View Technique
+Adjacent,View Technique
+Bivariate,Uncertainty Data Dimension
+Univariate,Uncertainty Data Dimension
+Raster,Uncertainty Data Characteristic
+Vector,Uncertainty Data Characteristic
+Raster,Data Characteristic
+Vector,Data Characteristic
+HoR Trustree,Uncertainty Data Characteristic
+"Aerts, et al. (2003)",Author
+Alberti (2013),Author
+"Bisantz, et al. (2009)",Author
+"Boukhelifa, et al. (2012)",Author
+Deitrick (2012),Author
+Edward and Nelson (2001),Author
+Gerharz and Pebesma (2009),Author
+"Kardos, et al. (2007)",Author
+Kinkeldey (2014),Author
+Kubicek and Sasinka (2011),Author
+Leitner and Buttenfield (2000),Author
+"MacEachren, et al. (1998)",Author
+"Nadav-Greenburg, et al. (2008)",Author
+"Sanyal, et al. (2009)",Author
+Viard (2011),Author

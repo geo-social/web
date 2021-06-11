@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="css/graph-creator.css" />
+<link rel="stylesheet" type="text/css" href="css/d3.parcoords.css">
+
+</head>
+
+<body>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script type="text/javascript"
+		src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="js/FileSaver.min.js"></script>
+	<script src="js/graph-creator.js"></script>
+	<script src="js/jenks.js"></script>
+	<script src="js/d3-tip.js"></script>
+	<script src="js/d3.parcoords.js"></script>
+	<script src="js/drawFlow.js"></script>
+
+	<div id="flowmap" style="width: 600px; height: 650px"></div>
+	<div style="float: left">
+		<div id="pcp" class="parcoords" style="width: 600px; height: 200px">
+			<h2>Between Flows</h2>
+		</div>
+		<div id="margindiv" style="width: 600px; height: 50px"></div>
+		<div id="pcpnodes" class="parcoords"
+			style="width: 600px; height: 200px">
+			<h2>Within Flows</h2>
+		</div>
+		<div id="margindiv" style="width: 600px; height: 50px"></div>
+		<div id="toolbox">
+			<input type="file" id="hidden-file-upload"><input
+				id="upload-input" type="image" title="upload graph"
+				src="icons/upload-icon.png" alt="upload graph"> <input
+				type="image" id="download-input" title="download graph"
+				src="icons/download-icon.png" alt="download graph"> <input
+				type="image" id="delete-graph" title="delete graph"
+				src="icons/trash-icon.png" alt="delete graph"> <input
+				type="image" id="previous-graph" title="previous"
+				src="icons/media-previous.png" alt="previous"><select
+				id="ddlViewBy" onchange="redrawflowmap()">
+				<option value="1829_10_kmeans_20.json">1829-1839</option>
+				<option value="1839_10_kmeans_20.json">1839-1849</option>
+				<option value="1849_10_kmeans_20.json">1849-1859</option>
+				<option value="1859_10_kmeans_20.json">1859-1869</option>
+				<option value="1869_10_kmeans_20.json">1869-1879</option>
+				<option value="1879_10_kmeans_20.json">1879-1889</option>
+				<option value="1889_10_kmeans_20.json">1889-1899</option>
+				<option value="1899_10_kmeans_20.json">1899-1909</option>
+				<option value="1909_10_kmeans_20.json">1909-1919</option>
+				<option value="1919_10_kmeans_20.json">1919-1929</option>
+				<option value="1929_10_kmeans_20.json">1929-1939</option>
+				<option value="1939_10_kmeans_20.json">1939-1949</option>
+				<option value="1949_10_kmeans_20.json">1949-1959</option>
+			</select> <input type="image" id="next-graph" title="next"
+				src="icons/media_next.png" alt="next"><select
+				id="ddlflowType" onchange="redrawflowmap()">
+				<option value="straight">Straight Flows</option>
+				<option value="curved">Curved Flows</option>
+			</select>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		//document.onload = (function(d3, saveAs, Blob, undefined) {
+		//	// warn the user when leaving
+		//window.onbeforeunload = function() {
+		//	return "Make sure to save your graph locally before leaving :-)";
+		//	};
+
+		var docEl = document.documentElement, bodyEl = document
+				.getElementsByTagName('#flowmap')[0];
+
+		var width = window.innerWidth || docEl.clientWidth
+				|| bodyEl.clientWidth, height = window.innerHeight
+				|| docEl.clientHeight || bodyEl.clientHeight;
+
+		// var xLoc = width / 2 - 25, yLoc = 100;
+
+		// initial node data
+		var edgesArray = [];
+		var edgeValuesArray = [];
+		var nodeValuesArray = [];
+		var nodesArray = [];
+
+		//because different layers (json files) can be loaded in different order
+		//there is a need to save the order of each layer when they are added
+		var order = [];
+
+		var ddl = document.getElementById('ddlViewBy');
+		for (i = 0; i < ddl.options.length; i++) {
+			var value = ddl.options[i].value;
+			loadData(value);
+		}
+
+		function loadData(value) {
+			$
+					.getJSON(
+							"data/" + value,
+							function(result) {
+
+								$
+										.getJSON(
+												"data/nodes_kmeans_unique_20.json",
+												function(result2) {
+													var nodes = [];
+													$
+															.each(
+																	result2,
+																	function(j,
+																			node) {
+																		node = nodes[parseInt(node.id)]
+																				|| (nodes[parseInt(node.id)] = {
+																					id : parseInt(node.id),
+																					title : parseInt(
+																							node.id)
+																							.toString(),
+																					x : toScreenX(node.x),
+																					y : toScreenY(node.y)
+																				});
+																	});
+
+													var edges = [];
+													var edgeValues = [];
+													var nodeValues = [];
+													$
+															.each(
+																	result,
+																	function(k,
+																			link) {
+																		if (link.source == link.target) {
+																			for ( var col in link) {
+																				if (link
+																						.hasOwnProperty(col)) {
+																					if (col != 'source'
+																							&& col != 'target') {
+																						nodes[parseInt(link.source)][col] = link[col];
+																						if (col == 'Total')
+																							nodeValues
+																									.push(parseInt(link[col]));
+																					}
+																				}
+																			}
+																		}
+																	});
+
+													nodesArray.push(nodes
+															.slice(0));
+													nodeValuesArray
+															.push(nodeValues);
+													var cnt = 0;
+													$
+															.each(
+																	result,
+																	function(l,
+																			link) {
+																		if (link.source != link.target) {
+																			var edge = {
+																				source : nodes[parseInt(link.source)],
+																				target : nodes[parseInt(link.target)],
+																				key : cnt
+																			};
+																			for ( var col in link) {
+																				if (link
+																						.hasOwnProperty(col)) {
+																					if (col != 'source'
+																							&& col != 'target') {
+																						edge[col] = parseInt(link[col]);
+																					}
+																				}
+																			}
+																			edges
+																					.push(edge);
+																			edgeValues
+																					.push(parseInt(link.Total));
+																			cnt++;
+																		}
+																	});
+													edges.sort(compare);
+													edgesArray.push(edges);
+													edgeValuesArray
+															.push(edgeValues);
+
+												});
+								order.push(value);
+							});
+		}
+
+		function drawFlowMap(selectedIndex, flowtype) {
+			var edges = edgesArray[selectedIndex];
+			var edgeValues = edgeValuesArray[selectedIndex];
+			var nodeValues = nodeValuesArray[selectedIndex];
+			var nodes = nodesArray[selectedIndex];
+			// var options = '';
+			// for ( var x in types) {
+			// options += '<option value="' + types[x] + '">' + types[x]
+			// + '</option>';
+			// }
+			// $('#ddlViewBy').html(options);
+
+			/** MAIN SVG * */
+			var svg = d3.select("#flowmap").append("svg").attr("width", width)
+					.attr("height", height);
+			var graph = new GraphCreator(svg, nodes, edges, edgeValues,
+					nodeValues, flowtype);
+			graph.updateGraph();
+		}
+
+		function compare(a, b) {
+			if (a.Total < b.Total)
+				return -1;
+			if (a.Total > b.Total)
+				return 1;
+			return 0;
+		}
+
+		function toScreenX(x) {
+			// return (width / 3.5) + Math.floor((x - 1443) * (520 / 26087));
+			return Math.floor((x - 1443) * (520 / 26087));
+		}
+
+		function toScreenY(y) {
+			return Math.floor((61009 - y) * (720 / 30097));
+		}
+
+		function redrawflowmap() {
+			d3.select("body").selectAll("svg").remove();
+			var e1 = document.getElementById("ddlViewBy");
+			var e2 = document.getElementById("ddlflowType");
+
+			var selectedIndex;
+			for (i = 0; i < order.length; i++) {
+				if (order[i] == e1.options[e1.selectedIndex].value) {
+					selectedIndex = i;
+					console.log(e1.options[e1.selectedIndex].value);
+					break;
+				}
+			}
+			drawFlowMap(selectedIndex, e2.options[e2.selectedIndex].value);
+		}
+
+		//		})(window.d3, window.saveAs, window.Blob);
+	</script>
+
+
+</body>
+
+</html>

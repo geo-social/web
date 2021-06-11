@@ -1,0 +1,57 @@
+[ {
+  "text" : "Emotions",
+  "size" : 0.009000000000000001,
+  "id" : "a"
+}, {
+  "text" : "Opposition",
+  "size" : 0.15000000000000002,
+  "id" : "k"
+}, {
+  "text" : "AprilFools",
+  "size" : 0.003,
+  "id" : "l"
+}, {
+  "text" : "Other",
+  "size" : 0.005,
+  "id" : "f"
+}, {
+  "text" : "Soccer",
+  "size" : 0.002,
+  "id" : "j"
+}, {
+  "text" : "Retweets",
+  "size" : 0.002,
+  "id" : "d"
+}, {
+  "text" : "Greetings",
+  "size" : 0.005,
+  "id" : "n"
+}, {
+  "text" : "ElectionCritiques",
+  "size" : 0.003,
+  "id" : "g"
+}, {
+  "text" : "Status",
+  "size" : 0.673,
+  "id" : "m"
+}, {
+  "text" : "EnglishContent",
+  "size" : 0.001,
+  "id" : "b"
+}, {
+  "text" : "WishesPrayers",
+  "size" : 0.004,
+  "id" : "i"
+}, {
+  "text" : "AnkaraElections",
+  "size" : 0.137,
+  "id" : "h"
+}, {
+  "text" : "CatIncident",
+  "size" : 0.002,
+  "id" : "e"
+}, {
+  "text" : "ElectionResults",
+  "size" : 0.004,
+  "id" : "c"
+} ]

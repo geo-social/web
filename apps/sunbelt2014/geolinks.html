@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<style>
+.link {
+	fill: none;
+	stroke: #666;
+	stroke-width: 1.5px;
+}
+
+#Total {
+	fill: gray;
+}
+
+.link.Total {
+	stroke: gray;
+}
+
+#Bride {
+	fill: red;
+}
+
+.link.Bride {
+	stroke: red;
+}
+
+#Groom {
+	fill: blue;
+}
+
+.link.Groom {
+	stroke: blue;
+}
+
+#VertKin {
+	fill: purple;
+}
+
+.link.VertKin {
+	stroke: purple;
+}
+
+#HorKin {
+	fill: cyan;
+}
+
+.link.HorKin {
+	stroke: cyan;
+}
+
+#Acq {
+	fill: orange;
+}
+
+.link.Acq {
+	stroke: orange;
+}
+
+#NoRel {
+	fill: green;
+}
+
+.link.NoRel {
+	stroke: green;
+}
+
+#UnRel {
+	fill: magenta;
+}
+
+.link.UnRel {
+	stroke: magenta;
+}
+
+circle {
+	fill: #ccc;
+	stroke: #333;
+	stroke-width: 1.5px;
+}
+
+text {
+	font: 10px sans-serif;
+	pointer-events: none;
+	text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+</style>
+<head>
+<title>Marriage Flows</title>
+
+</head>
+<body>
+	<select id="ddlViewBy" onchange="changeflowtype()">
+
+	</select>
+	<script type="text/javascript"
+		src="http://mbostock.github.com/d3/d3.js"></script>
+	<script type="text/javascript"
+		src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<div id="D3line"></div>
+	<script type="text/javascript">
+		function changeflowtype() {
+			d3.select("#D3line").selectAll("svg").remove();
+			var e = document.getElementById("ddlViewBy");
+			var flowtype = e.options[e.selectedIndex].value;
+			drawLinks(flowtype);
+		}
+
+		var links = [];
+		var nodes = [];
+		var types = [];
+		var width = $(window).width();
+		var height = $(window).height();
+		var lineGraph;
+
+		$.getJSON("data/nodes.json", function(result) {
+			$.each(result, function(i, node) {
+				node = nodes[node.id] || nodes.push(node);
+			});
+			console.log(nodes);
+			$.getJSON("data/links.json", function(result) {
+				$.each(result, function(i, link) {
+					if ($.inArray(link.type, types) == -1) {
+						types.push(link.type);
+					}
+					links.push(link);
+				});
+				drawLinks("Bride");
+
+				var options = '';
+				for ( var x in types) {
+					options += '<option value="' + types[x] + '">' + types[x]
+							+ '</option>';
+				}
+				$('#ddlViewBy').html(options);
+			});
+
+		});
+
+		function drawLinks(flowtype) {
+			lineGraph = d3.select("#D3line").append("svg:svg").attr("width",
+					width).attr("height", height);
+			for ( var i in links) {
+				var fromid = links[i].source;
+				var toid = links[i].target;
+				var type = links[i].type;
+
+				if (flowtype == type) {
+					var fromx = toScreenX(nodes[fromid].x);
+					var fromy = toScreenY(nodes[fromid].y);
+					var tox = toScreenX(nodes[toid].x);
+					var toy = toScreenY(nodes[toid].y);
+
+					var myLine = lineGraph.append("svg:line").attr("x1", fromx)
+							.attr("y1", fromy).attr("x2", tox).attr("y2", toy)
+							.style("stroke-opacity", 0.1).attr("class",
+									function(d) {
+										return "link " + type;
+									}).attr("marker-end", function(d) {
+								return "url(#" + type + ")";
+							}).style("stroke-width", function(d) {
+								return 1;
+							});
+				}
+			}
+		}
+
+		function toScreenX(x) {
+			return (width / 3.5) + Math.floor((x - 1443) * (520 / 26087));
+		}
+
+		function toScreenY(y) {
+			return Math.floor((61009 - y) * (720 / 30097));
+		}
+	</script>
+
+</body>
+</html>

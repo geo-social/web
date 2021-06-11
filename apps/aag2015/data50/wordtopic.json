@@ -1,0 +1,5251 @@
+[ {
+  "id" : 0,
+  "cumprob" : 0.44914,
+  "corpusdist" : 2.5645,
+  "words" : [ {
+    "text" : "year",
+    "rank" : 1,
+    "count" : 56461,
+    "prob" : 0.14887
+  }, {
+    "text" : "2015",
+    "rank" : 2,
+    "count" : 28399,
+    "prob" : 0.07488
+  }, {
+    "text" : "years",
+    "rank" : 3,
+    "count" : 25002,
+    "prob" : 0.06592
+  }, {
+    "text" : "2014",
+    "rank" : 4,
+    "count" : 16745,
+    "prob" : 0.04415
+  }, {
+    "text" : "eve",
+    "rank" : 5,
+    "count" : 6775,
+    "prob" : 0.01786
+  }, {
+    "text" : "kiss",
+    "rank" : 6,
+    "count" : 4267,
+    "prob" : 0.01125
+  }, {
+    "text" : "nye",
+    "rank" : 7,
+    "count" : 3572,
+    "prob" : 0.00942
+  }, {
+    "text" : "resolution",
+    "rank" : 8,
+    "count" : 3411,
+    "prob" : 0.00899
+  }, {
+    "text" : "drunk",
+    "rank" : 9,
+    "count" : 3384,
+    "prob" : 0.00892
+  }, {
+    "text" : "party",
+    "rank" : 10,
+    "count" : 3274,
+    "prob" : 0.00863
+  }, {
+    "text" : "hope",
+    "rank" : 11,
+    "count" : 2862,
+    "prob" : 0.00755
+  }, {
+    "text" : "friends",
+    "rank" : 12,
+    "count" : 2430,
+    "prob" : 0.00641
+  }, {
+    "text" : "safe",
+    "rank" : 13,
+    "count" : 2256,
+    "prob" : 0.00595
+  }, {
+    "text" : "family",
+    "rank" : 14,
+    "count" : 1850,
+    "prob" : 0.00488
+  }, {
+    "text" : "ready",
+    "rank" : 15,
+    "count" : 1671,
+    "prob" : 0.00441
+  }, {
+    "text" : "midnight",
+    "rank" : 16,
+    "count" : 1645,
+    "prob" : 0.00434
+  }, {
+    "text" : "plans",
+    "rank" : 17,
+    "count" : 1641,
+    "prob" : 0.00433
+  }, {
+    "text" : "drink",
+    "rank" : 18,
+    "count" : 1628,
+    "prob" : 0.00429
+  }, {
+    "text" : "fun",
+    "rank" : 19,
+    "count" : 1594,
+    "prob" : 0.0042
+  }, {
+    "text" : "tcu",
+    "rank" : 20,
+    "count" : 1477,
+    "prob" : 0.00389
+  } ]
+}, {
+  "id" : 1,
+  "cumprob" : 0.07602,
+  "corpusdist" : 0.7919,
+  "words" : [ {
+    "text" : "work",
+    "rank" : 1,
+    "count" : 17811,
+    "prob" : 0.00645
+  }, {
+    "text" : "bed",
+    "rank" : 2,
+    "count" : 13152,
+    "prob" : 0.00476
+  }, {
+    "text" : "mom",
+    "rank" : 3,
+    "count" : 12391,
+    "prob" : 0.00449
+  }, {
+    "text" : "friends",
+    "rank" : 4,
+    "count" : 12244,
+    "prob" : 0.00443
+  }, {
+    "text" : "eat",
+    "rank" : 5,
+    "count" : 11616,
+    "prob" : 0.00421
+  }, {
+    "text" : "house",
+    "rank" : 6,
+    "count" : 11487,
+    "prob" : 0.00416
+  }, {
+    "text" : "food",
+    "rank" : 7,
+    "count" : 11385,
+    "prob" : 0.00412
+  }, {
+    "text" : "hours",
+    "rank" : 8,
+    "count" : 10137,
+    "prob" : 0.00367
+  }, {
+    "text" : "drink",
+    "rank" : 9,
+    "count" : 9925,
+    "prob" : 0.00359
+  }, {
+    "text" : "drunk",
+    "rank" : 10,
+    "count" : 9843,
+    "prob" : 0.00356
+  }, {
+    "text" : "game",
+    "rank" : 11,
+    "count" : 9777,
+    "prob" : 0.00354
+  }, {
+    "text" : "hot",
+    "rank" : 12,
+    "count" : 9660,
+    "prob" : 0.0035
+  }, {
+    "text" : "pizza",
+    "rank" : 13,
+    "count" : 9394,
+    "prob" : 0.0034
+  }, {
+    "text" : "wait",
+    "rank" : 14,
+    "count" : 9242,
+    "prob" : 0.00335
+  }, {
+    "text" : "party",
+    "rank" : 15,
+    "count" : 9163,
+    "prob" : 0.00332
+  }, {
+    "text" : "dad",
+    "rank" : 16,
+    "count" : 9033,
+    "prob" : 0.00327
+  }, {
+    "text" : "fun",
+    "rank" : 17,
+    "count" : 8891,
+    "prob" : 0.00322
+  }, {
+    "text" : "birthday",
+    "rank" : 18,
+    "count" : 8411,
+    "prob" : 0.00305
+  }, {
+    "text" : "watching",
+    "rank" : 19,
+    "count" : 8210,
+    "prob" : 0.00297
+  }, {
+    "text" : "ice",
+    "rank" : 20,
+    "count" : 8125,
+    "prob" : 0.00294
+  } ]
+}, {
+  "id" : 2,
+  "cumprob" : 0.15199,
+  "corpusdist" : 4.1717,
+  "words" : [ {
+    "text" : "carolina",
+    "rank" : 1,
+    "count" : 2685,
+    "prob" : 0.02054
+  }, {
+    "text" : "nc",
+    "rank" : 2,
+    "count" : 2297,
+    "prob" : 0.01757
+  }, {
+    "text" : "duke",
+    "rank" : 3,
+    "count" : 1210,
+    "prob" : 0.00925
+  }, {
+    "text" : "ready",
+    "rank" : 4,
+    "count" : 1173,
+    "prob" : 0.00897
+  }, {
+    "text" : "north",
+    "rank" : 5,
+    "count" : 1051,
+    "prob" : 0.00804
+  }, {
+    "text" : "virginia",
+    "rank" : 6,
+    "count" : 1033,
+    "prob" : 0.0079
+  }, {
+    "text" : "yall",
+    "rank" : 7,
+    "count" : 1028,
+    "prob" : 0.00786
+  }, {
+    "text" : "charlotte",
+    "rank" : 8,
+    "count" : 971,
+    "prob" : 0.00743
+  }, {
+    "text" : "south",
+    "rank" : 9,
+    "count" : 913,
+    "prob" : 0.00698
+  }, {
+    "text" : "unc",
+    "rank" : 10,
+    "count" : 896,
+    "prob" : 0.00685
+  }, {
+    "text" : "beach",
+    "rank" : 11,
+    "count" : 853,
+    "prob" : 0.00652
+  }, {
+    "text" : "charleston",
+    "rank" : 12,
+    "count" : 777,
+    "prob" : 0.00594
+  }, {
+    "text" : "sc",
+    "rank" : 13,
+    "count" : 743,
+    "prob" : 0.00568
+  }, {
+    "text" : "bruh",
+    "rank" : 14,
+    "count" : 716,
+    "prob" : 0.00548
+  }, {
+    "text" : "cookout",
+    "rank" : 15,
+    "count" : 690,
+    "prob" : 0.00528
+  }, {
+    "text" : "stg",
+    "rank" : 16,
+    "count" : 676,
+    "prob" : 0.00517
+  }, {
+    "text" : "exam",
+    "rank" : 17,
+    "count" : 559,
+    "prob" : 0.00428
+  }, {
+    "text" : "uva",
+    "rank" : 18,
+    "count" : 550,
+    "prob" : 0.00421
+  }, {
+    "text" : "smh",
+    "rank" : 19,
+    "count" : 531,
+    "prob" : 0.00406
+  }, {
+    "text" : "raleigh",
+    "rank" : 20,
+    "count" : 520,
+    "prob" : 0.00398
+  } ]
+}, {
+  "id" : 3,
+  "cumprob" : 0.08895,
+  "corpusdist" : 4.1236,
+  "words" : [ {
+    "text" : "gracias",
+    "rank" : 1,
+    "count" : 3640,
+    "prob" : 0.01148
+  }, {
+    "text" : "saludos",
+    "rank" : 2,
+    "count" : 2942,
+    "prob" : 0.00928
+  }, {
+    "text" : "hola",
+    "rank" : 3,
+    "count" : 2222,
+    "prob" : 0.00701
+  }, {
+    "text" : "justin",
+    "rank" : 4,
+    "count" : 1768,
+    "prob" : 0.00557
+  }, {
+    "text" : "excelente",
+    "rank" : 5,
+    "count" : 1604,
+    "prob" : 0.00506
+  }, {
+    "text" : "dios",
+    "rank" : 6,
+    "count" : 1580,
+    "prob" : 0.00498
+  }, {
+    "text" : "méxico",
+    "rank" : 7,
+    "count" : 1569,
+    "prob" : 0.00495
+  }, {
+    "text" : "bieber",
+    "rank" : 8,
+    "count" : 1308,
+    "prob" : 0.00412
+  }, {
+    "text" : "bendiciones",
+    "rank" : 9,
+    "count" : 1187,
+    "prob" : 0.00374
+  }, {
+    "text" : "día",
+    "rank" : 10,
+    "count" : 1175,
+    "prob" : 0.00371
+  }, {
+    "text" : "semana",
+    "rank" : 11,
+    "count" : 1040,
+    "prob" : 0.00328
+  }, {
+    "text" : "feliz",
+    "rank" : 12,
+    "count" : 1039,
+    "prob" : 0.00328
+  }, {
+    "text" : "amiga",
+    "rank" : 13,
+    "count" : 1036,
+    "prob" : 0.00327
+  }, {
+    "text" : "noches",
+    "rank" : 14,
+    "count" : 980,
+    "prob" : 0.00309
+  }, {
+    "text" : "familia",
+    "rank" : 15,
+    "count" : 928,
+    "prob" : 0.00293
+  }, {
+    "text" : "2015",
+    "rank" : 16,
+    "count" : 896,
+    "prob" : 0.00283
+  }, {
+    "text" : "hermosa",
+    "rank" : 17,
+    "count" : 878,
+    "prob" : 0.00277
+  }, {
+    "text" : "amigo",
+    "rank" : 18,
+    "count" : 832,
+    "prob" : 0.00262
+  }, {
+    "text" : "abrazos",
+    "rank" : 19,
+    "count" : 797,
+    "prob" : 0.00251
+  }, {
+    "text" : "besos",
+    "rank" : 20,
+    "count" : 789,
+    "prob" : 0.00249
+  } ]
+}, {
+  "id" : 4,
+  "cumprob" : 0.10441,
+  "corpusdist" : 0.7056,
+  "words" : [ {
+    "text" : "class",
+    "rank" : 1,
+    "count" : 55875,
+    "prob" : 0.01762
+  }, {
+    "text" : "school",
+    "rank" : 2,
+    "count" : 52137,
+    "prob" : 0.01644
+  }, {
+    "text" : "birthday",
+    "rank" : 3,
+    "count" : 20005,
+    "prob" : 0.00631
+  }, {
+    "text" : "week",
+    "rank" : 4,
+    "count" : 18435,
+    "prob" : 0.00581
+  }, {
+    "text" : "work",
+    "rank" : 5,
+    "count" : 14772,
+    "prob" : 0.00466
+  }, {
+    "text" : "wait",
+    "rank" : 6,
+    "count" : 14686,
+    "prob" : 0.00463
+  }, {
+    "text" : "college",
+    "rank" : 7,
+    "count" : 13230,
+    "prob" : 0.00417
+  }, {
+    "text" : "semester",
+    "rank" : 8,
+    "count" : 12957,
+    "prob" : 0.00409
+  }, {
+    "text" : "weekend",
+    "rank" : 9,
+    "count" : 12711,
+    "prob" : 0.00401
+  }, {
+    "text" : "friday",
+    "rank" : 10,
+    "count" : 12607,
+    "prob" : 0.00398
+  }, {
+    "text" : "classes",
+    "rank" : 11,
+    "count" : 12519,
+    "prob" : 0.00395
+  }, {
+    "text" : "homework",
+    "rank" : 12,
+    "count" : 12473,
+    "prob" : 0.00393
+  }, {
+    "text" : "friends",
+    "rank" : 13,
+    "count" : 12022,
+    "prob" : 0.00379
+  }, {
+    "text" : "sleep",
+    "rank" : 14,
+    "count" : 10591,
+    "prob" : 0.00334
+  }, {
+    "text" : "year",
+    "rank" : 15,
+    "count" : 10494,
+    "prob" : 0.00331
+  }, {
+    "text" : "valentine",
+    "rank" : 16,
+    "count" : 9882,
+    "prob" : 0.00312
+  }, {
+    "text" : "high",
+    "rank" : 17,
+    "count" : 9416,
+    "prob" : 0.00297
+  }, {
+    "text" : "gym",
+    "rank" : 18,
+    "count" : 8788,
+    "prob" : 0.00277
+  }, {
+    "text" : "teacher",
+    "rank" : 19,
+    "count" : 8754,
+    "prob" : 0.00276
+  }, {
+    "text" : "bed",
+    "rank" : 20,
+    "count" : 8730,
+    "prob" : 0.00275
+  } ]
+}, {
+  "id" : 5,
+  "cumprob" : 0.15628,
+  "corpusdist" : 1.8487,
+  "words" : [ {
+    "text" : "game",
+    "rank" : 1,
+    "count" : 18490,
+    "prob" : 0.0264
+  }, {
+    "text" : "win",
+    "rank" : 2,
+    "count" : 8535,
+    "prob" : 0.01219
+  }, {
+    "text" : "team",
+    "rank" : 3,
+    "count" : 7793,
+    "prob" : 0.01113
+  }, {
+    "text" : "play",
+    "rank" : 4,
+    "count" : 7415,
+    "prob" : 0.01059
+  }, {
+    "text" : "football",
+    "rank" : 5,
+    "count" : 6194,
+    "prob" : 0.00884
+  }, {
+    "text" : "year",
+    "rank" : 6,
+    "count" : 5844,
+    "prob" : 0.00834
+  }, {
+    "text" : "season",
+    "rank" : 7,
+    "count" : 5471,
+    "prob" : 0.00781
+  }, {
+    "text" : "nfl",
+    "rank" : 8,
+    "count" : 4608,
+    "prob" : 0.00658
+  }, {
+    "text" : "week",
+    "rank" : 9,
+    "count" : 4537,
+    "prob" : 0.00648
+  }, {
+    "text" : "sunday",
+    "rank" : 10,
+    "count" : 4379,
+    "prob" : 0.00625
+  }, {
+    "text" : "defense",
+    "rank" : 11,
+    "count" : 4226,
+    "prob" : 0.00603
+  }, {
+    "text" : "qb",
+    "rank" : 12,
+    "count" : 4163,
+    "prob" : 0.00594
+  }, {
+    "text" : "playoffs",
+    "rank" : 13,
+    "count" : 4064,
+    "prob" : 0.0058
+  }, {
+    "text" : "cowboys",
+    "rank" : 14,
+    "count" : 3621,
+    "prob" : 0.00517
+  }, {
+    "text" : "steelers",
+    "rank" : 15,
+    "count" : 3543,
+    "prob" : 0.00506
+  }, {
+    "text" : "ravens",
+    "rank" : 16,
+    "count" : 3532,
+    "prob" : 0.00504
+  }, {
+    "text" : "fans",
+    "rank" : 17,
+    "count" : 3492,
+    "prob" : 0.00499
+  }, {
+    "text" : "ball",
+    "rank" : 18,
+    "count" : 3360,
+    "prob" : 0.0048
+  }, {
+    "text" : "td",
+    "rank" : 19,
+    "count" : 3259,
+    "prob" : 0.00465
+  }, {
+    "text" : "eagles",
+    "rank" : 20,
+    "count" : 2916,
+    "prob" : 0.00416
+  } ]
+}, {
+  "id" : 6,
+  "cumprob" : 0.26627,
+  "corpusdist" : 2.3995,
+  "words" : [ {
+    "text" : "game",
+    "rank" : 1,
+    "count" : 17380,
+    "prob" : 0.03577
+  }, {
+    "text" : "oregon",
+    "rank" : 2,
+    "count" : 16024,
+    "prob" : 0.03298
+  }, {
+    "text" : "ohio",
+    "rank" : 3,
+    "count" : 13549,
+    "prob" : 0.02789
+  }, {
+    "text" : "football",
+    "rank" : 4,
+    "count" : 7005,
+    "prob" : 0.01442
+  }, {
+    "text" : "year",
+    "rank" : 5,
+    "count" : 6363,
+    "prob" : 0.0131
+  }, {
+    "text" : "bama",
+    "rank" : 6,
+    "count" : 6142,
+    "prob" : 0.01264
+  }, {
+    "text" : "fsu",
+    "rank" : 7,
+    "count" : 6131,
+    "prob" : 0.01262
+  }, {
+    "text" : "team",
+    "rank" : 8,
+    "count" : 6107,
+    "prob" : 0.01257
+  }, {
+    "text" : "win",
+    "rank" : 9,
+    "count" : 5726,
+    "prob" : 0.01179
+  }, {
+    "text" : "osu",
+    "rank" : 10,
+    "count" : 5666,
+    "prob" : 0.01166
+  }, {
+    "text" : "ducks",
+    "rank" : 11,
+    "count" : 5009,
+    "prob" : 0.01031
+  }, {
+    "text" : "alabama",
+    "rank" : 12,
+    "count" : 4660,
+    "prob" : 0.00959
+  }, {
+    "text" : "play",
+    "rank" : 13,
+    "count" : 4468,
+    "prob" : 0.0092
+  }, {
+    "text" : "championship",
+    "rank" : 14,
+    "count" : 4217,
+    "prob" : 0.00868
+  }, {
+    "text" : "big",
+    "rank" : 15,
+    "count" : 3928,
+    "prob" : 0.00809
+  }, {
+    "text" : "ball",
+    "rank" : 16,
+    "count" : 3524,
+    "prob" : 0.00725
+  }, {
+    "text" : "tcu",
+    "rank" : 17,
+    "count" : 3508,
+    "prob" : 0.00722
+  }, {
+    "text" : "baylor",
+    "rank" : 18,
+    "count" : 3396,
+    "prob" : 0.00699
+  }, {
+    "text" : "fans",
+    "rank" : 19,
+    "count" : 3305,
+    "prob" : 0.0068
+  }, {
+    "text" : "bowl",
+    "rank" : 20,
+    "count" : 3254,
+    "prob" : 0.0067
+  } ]
+}, {
+  "id" : 7,
+  "cumprob" : 0.06454,
+  "corpusdist" : 4.5411,
+  "words" : [ {
+    "text" : "bonne",
+    "rank" : 1,
+    "count" : 1491,
+    "prob" : 0.00666
+  }, {
+    "text" : "faire",
+    "rank" : 2,
+    "count" : 1295,
+    "prob" : 0.00578
+  }, {
+    "text" : "oui",
+    "rank" : 3,
+    "count" : 1089,
+    "prob" : 0.00486
+  }, {
+    "text" : "soir",
+    "rank" : 4,
+    "count" : 754,
+    "prob" : 0.00337
+  }, {
+    "text" : "denis",
+    "rank" : 5,
+    "count" : 721,
+    "prob" : 0.00322
+  }, {
+    "text" : "voir",
+    "rank" : 6,
+    "count" : 702,
+    "prob" : 0.00313
+  }, {
+    "text" : "temps",
+    "rank" : 7,
+    "count" : 694,
+    "prob" : 0.0031
+  }, {
+    "text" : "aime",
+    "rank" : 8,
+    "count" : 686,
+    "prob" : 0.00306
+  }, {
+    "text" : "monde",
+    "rank" : 9,
+    "count" : 679,
+    "prob" : 0.00303
+  }, {
+    "text" : "année",
+    "rank" : 10,
+    "count" : 649,
+    "prob" : 0.0029
+  }, {
+    "text" : "belle",
+    "rank" : 11,
+    "count" : 635,
+    "prob" : 0.00284
+  }, {
+    "text" : "québec",
+    "rank" : 12,
+    "count" : 610,
+    "prob" : 0.00272
+  }, {
+    "text" : "faut",
+    "rank" : 13,
+    "count" : 609,
+    "prob" : 0.00272
+  }, {
+    "text" : "noël",
+    "rank" : 14,
+    "count" : 575,
+    "prob" : 0.00257
+  }, {
+    "text" : "vie",
+    "rank" : 15,
+    "count" : 575,
+    "prob" : 0.00257
+  }, {
+    "text" : "vraiment",
+    "rank" : 16,
+    "count" : 560,
+    "prob" : 0.0025
+  }, {
+    "text" : "demain",
+    "rank" : 17,
+    "count" : 547,
+    "prob" : 0.00244
+  }, {
+    "text" : "canada",
+    "rank" : 18,
+    "count" : 537,
+    "prob" : 0.0024
+  }, {
+    "text" : "montreal",
+    "rank" : 19,
+    "count" : 532,
+    "prob" : 0.00238
+  }, {
+    "text" : "match",
+    "rank" : 20,
+    "count" : 514,
+    "prob" : 0.0023
+  } ]
+}, {
+  "id" : 8,
+  "cumprob" : 0.17863,
+  "corpusdist" : 5.3949,
+  "words" : [ {
+    "text" : "save",
+    "rank" : 1,
+    "count" : 1336,
+    "prob" : 0.02355
+  }, {
+    "text" : "sign",
+    "rank" : 2,
+    "count" : 1246,
+    "prob" : 0.02196
+  }, {
+    "text" : "east",
+    "rank" : 3,
+    "count" : 841,
+    "prob" : 0.01482
+  }, {
+    "text" : "pittsburgh",
+    "rank" : 4,
+    "count" : 797,
+    "prob" : 0.01405
+  }, {
+    "text" : "pitt",
+    "rank" : 5,
+    "count" : 736,
+    "prob" : 0.01297
+  }, {
+    "text" : "witches",
+    "rank" : 6,
+    "count" : 697,
+    "prob" : 0.01229
+  }, {
+    "text" : "pens",
+    "rank" : 7,
+    "count" : 454,
+    "prob" : 0.008
+  }, {
+    "text" : "000",
+    "rank" : 8,
+    "count" : 440,
+    "prob" : 0.00776
+  }, {
+    "text" : "penn",
+    "rank" : 9,
+    "count" : 426,
+    "prob" : 0.00751
+  }, {
+    "text" : "fans",
+    "rank" : 10,
+    "count" : 398,
+    "prob" : 0.00702
+  }, {
+    "text" : "signatures",
+    "rank" : 11,
+    "count" : 363,
+    "prob" : 0.0064
+  }, {
+    "text" : "season",
+    "rank" : 12,
+    "count" : 322,
+    "prob" : 0.00568
+  }, {
+    "text" : "cruz",
+    "rank" : 13,
+    "count" : 287,
+    "prob" : 0.00506
+  }, {
+    "text" : "petition",
+    "rank" : 14,
+    "count" : 284,
+    "prob" : 0.00501
+  }, {
+    "text" : "sheetz",
+    "rank" : 15,
+    "count" : 271,
+    "prob" : 0.00478
+  }, {
+    "text" : "support",
+    "rank" : 16,
+    "count" : 268,
+    "prob" : 0.00472
+  }, {
+    "text" : "psu",
+    "rank" : 17,
+    "count" : 248,
+    "prob" : 0.00437
+  }, {
+    "text" : "banger",
+    "rank" : 18,
+    "count" : 246,
+    "prob" : 0.00434
+  }, {
+    "text" : "santa",
+    "rank" : 19,
+    "count" : 242,
+    "prob" : 0.00427
+  }, {
+    "text" : "erie",
+    "rank" : 20,
+    "count" : 232,
+    "prob" : 0.00409
+  } ]
+}, {
+  "id" : 9,
+  "cumprob" : 0.13021,
+  "corpusdist" : 3.3174,
+  "words" : [ {
+    "text" : "game",
+    "rank" : 1,
+    "count" : 2805,
+    "prob" : 0.01454
+  }, {
+    "text" : "michigan",
+    "rank" : 2,
+    "count" : 2761,
+    "prob" : 0.01431
+  }, {
+    "text" : "wisconsin",
+    "rank" : 3,
+    "count" : 2351,
+    "prob" : 0.01219
+  }, {
+    "text" : "hockey",
+    "rank" : 4,
+    "count" : 2253,
+    "prob" : 0.01168
+  }, {
+    "text" : "team",
+    "rank" : 5,
+    "count" : 1581,
+    "prob" : 0.0082
+  }, {
+    "text" : "minnesota",
+    "rank" : 6,
+    "count" : 1527,
+    "prob" : 0.00792
+  }, {
+    "text" : "win",
+    "rank" : 7,
+    "count" : 1257,
+    "prob" : 0.00652
+  }, {
+    "text" : "play",
+    "rank" : 8,
+    "count" : 1098,
+    "prob" : 0.00569
+  }, {
+    "text" : "goal",
+    "rank" : 9,
+    "count" : 986,
+    "prob" : 0.00511
+  }, {
+    "text" : "mn",
+    "rank" : 10,
+    "count" : 959,
+    "prob" : 0.00497
+  }, {
+    "text" : "detroit",
+    "rank" : 11,
+    "count" : 910,
+    "prob" : 0.00472
+  }, {
+    "text" : "wild",
+    "rank" : 12,
+    "count" : 869,
+    "prob" : 0.0045
+  }, {
+    "text" : "boys",
+    "rank" : 13,
+    "count" : 834,
+    "prob" : 0.00432
+  }, {
+    "text" : "milwaukee",
+    "rank" : 14,
+    "count" : 814,
+    "prob" : 0.00422
+  }, {
+    "text" : "north",
+    "rank" : 15,
+    "count" : 711,
+    "prob" : 0.00369
+  }, {
+    "text" : "snow",
+    "rank" : 16,
+    "count" : 704,
+    "prob" : 0.00365
+  }, {
+    "text" : "msu",
+    "rank" : 17,
+    "count" : 691,
+    "prob" : 0.00358
+  }, {
+    "text" : "basketball",
+    "rank" : 18,
+    "count" : 681,
+    "prob" : 0.00353
+  }, {
+    "text" : "left",
+    "rank" : 19,
+    "count" : 681,
+    "prob" : 0.00353
+  }, {
+    "text" : "st",
+    "rank" : 20,
+    "count" : 646,
+    "prob" : 0.00335
+  } ]
+}, {
+  "id" : 10,
+  "cumprob" : 0.09462,
+  "corpusdist" : 0.7126,
+  "words" : [ {
+    "text" : "yall",
+    "rank" : 1,
+    "count" : 32648,
+    "prob" : 0.0064
+  }, {
+    "text" : "real",
+    "rank" : 2,
+    "count" : 31834,
+    "prob" : 0.00624
+  }, {
+    "text" : "tho",
+    "rank" : 3,
+    "count" : 29388,
+    "prob" : 0.00576
+  }, {
+    "text" : "bout",
+    "rank" : 4,
+    "count" : 29107,
+    "prob" : 0.00571
+  }, {
+    "text" : "baby",
+    "rank" : 5,
+    "count" : 26903,
+    "prob" : 0.00528
+  }, {
+    "text" : "bro",
+    "rank" : 6,
+    "count" : 26215,
+    "prob" : 0.00514
+  }, {
+    "text" : "sleep",
+    "rank" : 7,
+    "count" : 26122,
+    "prob" : 0.00512
+  }, {
+    "text" : "smh",
+    "rank" : 8,
+    "count" : 23451,
+    "prob" : 0.0046
+  }, {
+    "text" : "money",
+    "rank" : 9,
+    "count" : 22973,
+    "prob" : 0.00451
+  }, {
+    "text" : "bruh",
+    "rank" : 10,
+    "count" : 22943,
+    "prob" : 0.0045
+  }, {
+    "text" : "bitches",
+    "rank" : 11,
+    "count" : 22907,
+    "prob" : 0.00449
+  }, {
+    "text" : "lil",
+    "rank" : 12,
+    "count" : 22654,
+    "prob" : 0.00444
+  }, {
+    "text" : "work",
+    "rank" : 13,
+    "count" : 22161,
+    "prob" : 0.00435
+  }, {
+    "text" : "talk",
+    "rank" : 14,
+    "count" : 21943,
+    "prob" : 0.0043
+  }, {
+    "text" : "mad",
+    "rank" : 15,
+    "count" : 21454,
+    "prob" : 0.00421
+  }, {
+    "text" : "text",
+    "rank" : 16,
+    "count" : 20975,
+    "prob" : 0.00411
+  }, {
+    "text" : "phone",
+    "rank" : 17,
+    "count" : 20504,
+    "prob" : 0.00402
+  }, {
+    "text" : "ima",
+    "rank" : 18,
+    "count" : 20018,
+    "prob" : 0.00393
+  }, {
+    "text" : "boy",
+    "rank" : 19,
+    "count" : 19957,
+    "prob" : 0.00391
+  }, {
+    "text" : "talking",
+    "rank" : 20,
+    "count" : 18239,
+    "prob" : 0.00358
+  } ]
+}, {
+  "id" : 11,
+  "cumprob" : 0.10772,
+  "corpusdist" : 1.8816,
+  "words" : [ {
+    "text" : "rn",
+    "rank" : 1,
+    "count" : 5473,
+    "prob" : 0.01015
+  }, {
+    "text" : "hella",
+    "rank" : 2,
+    "count" : 5246,
+    "prob" : 0.00973
+  }, {
+    "text" : "mom",
+    "rank" : 3,
+    "count" : 4969,
+    "prob" : 0.00921
+  }, {
+    "text" : "wtf",
+    "rank" : 4,
+    "count" : 4457,
+    "prob" : 0.00826
+  }, {
+    "text" : "san",
+    "rank" : 5,
+    "count" : 3320,
+    "prob" : 0.00616
+  }, {
+    "text" : "cute",
+    "rank" : 6,
+    "count" : 3047,
+    "prob" : 0.00565
+  }, {
+    "text" : "smh",
+    "rank" : 7,
+    "count" : 3025,
+    "prob" : 0.00561
+  }, {
+    "text" : "guys",
+    "rank" : 8,
+    "count" : 2824,
+    "prob" : 0.00524
+  }, {
+    "text" : "dude",
+    "rank" : 9,
+    "count" : 2757,
+    "prob" : 0.00511
+  }, {
+    "text" : "work",
+    "rank" : 10,
+    "count" : 2613,
+    "prob" : 0.00484
+  }, {
+    "text" : "rain",
+    "rank" : 11,
+    "count" : 2597,
+    "prob" : 0.00482
+  }, {
+    "text" : "california",
+    "rank" : 12,
+    "count" : 2371,
+    "prob" : 0.0044
+  }, {
+    "text" : "vegas",
+    "rank" : 13,
+    "count" : 2134,
+    "prob" : 0.00396
+  }, {
+    "text" : "finally",
+    "rank" : 14,
+    "count" : 2001,
+    "prob" : 0.00371
+  }, {
+    "text" : "tbh",
+    "rank" : 15,
+    "count" : 1957,
+    "prob" : 0.00363
+  }, {
+    "text" : "dad",
+    "rank" : 16,
+    "count" : 1953,
+    "prob" : 0.00362
+  }, {
+    "text" : "lmfao",
+    "rank" : 17,
+    "count" : 1921,
+    "prob" : 0.00356
+  }, {
+    "text" : "idk",
+    "rank" : 18,
+    "count" : 1822,
+    "prob" : 0.00338
+  }, {
+    "text" : "sister",
+    "rank" : 19,
+    "count" : 1815,
+    "prob" : 0.00337
+  }, {
+    "text" : "early",
+    "rank" : 20,
+    "count" : 1795,
+    "prob" : 0.00333
+  } ]
+}, {
+  "id" : 12,
+  "cumprob" : 0.07847,
+  "corpusdist" : 5.3264,
+  "words" : [ {
+    "text" : "الله",
+    "rank" : 1,
+    "count" : 2845,
+    "prob" : 0.01464
+  }, {
+    "text" : "ي",
+    "rank" : 2,
+    "count" : 1114,
+    "prob" : 0.00573
+  }, {
+    "text" : "بس",
+    "rank" : 3,
+    "count" : 911,
+    "prob" : 0.00469
+  }, {
+    "text" : "انا",
+    "rank" : 4,
+    "count" : 892,
+    "prob" : 0.00459
+  }, {
+    "text" : "م",
+    "rank" : 5,
+    "count" : 878,
+    "prob" : 0.00452
+  }, {
+    "text" : "اللي",
+    "rank" : 6,
+    "count" : 836,
+    "prob" : 0.0043
+  }, {
+    "text" : "أن",
+    "rank" : 7,
+    "count" : 725,
+    "prob" : 0.00373
+  }, {
+    "text" : "ل",
+    "rank" : 8,
+    "count" : 695,
+    "prob" : 0.00358
+  }, {
+    "text" : "والله",
+    "rank" : 9,
+    "count" : 649,
+    "prob" : 0.00334
+  }, {
+    "text" : "ع",
+    "rank" : 10,
+    "count" : 646,
+    "prob" : 0.00332
+  }, {
+    "text" : "اللهم",
+    "rank" : 11,
+    "count" : 639,
+    "prob" : 0.00329
+  }, {
+    "text" : "لو",
+    "rank" : 12,
+    "count" : 578,
+    "prob" : 0.00297
+  }, {
+    "text" : "لك",
+    "rank" : 13,
+    "count" : 560,
+    "prob" : 0.00288
+  }, {
+    "text" : "ن",
+    "rank" : 14,
+    "count" : 551,
+    "prob" : 0.00284
+  }, {
+    "text" : "ه",
+    "rank" : 15,
+    "count" : 481,
+    "prob" : 0.00248
+  }, {
+    "text" : "شي",
+    "rank" : 16,
+    "count" : 475,
+    "prob" : 0.00244
+  }, {
+    "text" : "لي",
+    "rank" : 17,
+    "count" : 464,
+    "prob" : 0.00239
+  }, {
+    "text" : "ت",
+    "rank" : 18,
+    "count" : 450,
+    "prob" : 0.00232
+  }, {
+    "text" : "ر",
+    "rank" : 19,
+    "count" : 430,
+    "prob" : 0.00221
+  }, {
+    "text" : "انت",
+    "rank" : 20,
+    "count" : 428,
+    "prob" : 0.0022
+  } ]
+}, {
+  "id" : 13,
+  "cumprob" : 0.0494,
+  "corpusdist" : 6.0422,
+  "words" : [ {
+    "text" : "control",
+    "rank" : 1,
+    "count" : 235,
+    "prob" : 0.00375
+  }, {
+    "text" : "health",
+    "rank" : 2,
+    "count" : 230,
+    "prob" : 0.00367
+  }, {
+    "text" : "disease",
+    "rank" : 3,
+    "count" : 217,
+    "prob" : 0.00346
+  }, {
+    "text" : "medical",
+    "rank" : 4,
+    "count" : 210,
+    "prob" : 0.00335
+  }, {
+    "text" : "alert",
+    "rank" : 5,
+    "count" : 207,
+    "prob" : 0.0033
+  }, {
+    "text" : "allah",
+    "rank" : 6,
+    "count" : 192,
+    "prob" : 0.00306
+  }, {
+    "text" : "tucson",
+    "rank" : 7,
+    "count" : 184,
+    "prob" : 0.00293
+  }, {
+    "text" : "urgency",
+    "rank" : 8,
+    "count" : 177,
+    "prob" : 0.00282
+  }, {
+    "text" : "camd",
+    "rank" : 9,
+    "count" : 165,
+    "prob" : 0.00263
+  }, {
+    "text" : "ab2camouflage",
+    "rank" : 10,
+    "count" : 163,
+    "prob" : 0.0026
+  }, {
+    "text" : "iyi",
+    "rank" : 11,
+    "count" : 143,
+    "prob" : 0.00228
+  }, {
+    "text" : "akp",
+    "rank" : 12,
+    "count" : 138,
+    "prob" : 0.0022
+  }, {
+    "text" : "bi",
+    "rank" : 13,
+    "count" : 123,
+    "prob" : 0.00196
+  }, {
+    "text" : "zaman",
+    "rank" : 14,
+    "count" : 118,
+    "prob" : 0.00188
+  }, {
+    "text" : "reno",
+    "rank" : 15,
+    "count" : 118,
+    "prob" : 0.00188
+  }, {
+    "text" : "güzel",
+    "rank" : 16,
+    "count" : 105,
+    "prob" : 0.00167
+  }, {
+    "text" : "islam",
+    "rank" : 17,
+    "count" : 103,
+    "prob" : 0.00164
+  }, {
+    "text" : "yeni",
+    "rank" : 18,
+    "count" : 93,
+    "prob" : 0.00148
+  }, {
+    "text" : "tek",
+    "rank" : 19,
+    "count" : 92,
+    "prob" : 0.00147
+  }, {
+    "text" : "tmzlive",
+    "rank" : 20,
+    "count" : 85,
+    "prob" : 0.00136
+  } ]
+}, {
+  "id" : 14,
+  "cumprob" : 0.14846,
+  "corpusdist" : 3.6963,
+  "words" : [ {
+    "text" : "yall",
+    "rank" : 1,
+    "count" : 2423,
+    "prob" : 0.01977
+  }, {
+    "text" : "ion",
+    "rank" : 2,
+    "count" : 1526,
+    "prob" : 0.01245
+  }, {
+    "text" : "bruh",
+    "rank" : 3,
+    "count" : 1342,
+    "prob" : 0.01095
+  }, {
+    "text" : "ima",
+    "rank" : 4,
+    "count" : 1339,
+    "prob" : 0.01093
+  }, {
+    "text" : "bout",
+    "rank" : 5,
+    "count" : 1113,
+    "prob" : 0.00908
+  }, {
+    "text" : "louisiana",
+    "rank" : 6,
+    "count" : 1078,
+    "prob" : 0.0088
+  }, {
+    "text" : "dude",
+    "rank" : 7,
+    "count" : 1000,
+    "prob" : 0.00816
+  }, {
+    "text" : "gras",
+    "rank" : 8,
+    "count" : 814,
+    "prob" : 0.00664
+  }, {
+    "text" : "fw",
+    "rank" : 9,
+    "count" : 760,
+    "prob" : 0.0062
+  }, {
+    "text" : "mardi",
+    "rank" : 10,
+    "count" : 745,
+    "prob" : 0.00608
+  }, {
+    "text" : "orleans",
+    "rank" : 11,
+    "count" : 737,
+    "prob" : 0.00601
+  }, {
+    "text" : "hoes",
+    "rank" : 12,
+    "count" : 679,
+    "prob" : 0.00554
+  }, {
+    "text" : "lsu",
+    "rank" : 13,
+    "count" : 665,
+    "prob" : 0.00543
+  }, {
+    "text" : "huh",
+    "rank" : 14,
+    "count" : 662,
+    "prob" : 0.0054
+  }, {
+    "text" : "ppl",
+    "rank" : 15,
+    "count" : 599,
+    "prob" : 0.00489
+  }, {
+    "text" : "boy",
+    "rank" : 16,
+    "count" : 595,
+    "prob" : 0.00486
+  }, {
+    "text" : "yu",
+    "rank" : 17,
+    "count" : 541,
+    "prob" : 0.00441
+  }, {
+    "text" : "bouta",
+    "rank" : 18,
+    "count" : 537,
+    "prob" : 0.00438
+  }, {
+    "text" : "momma",
+    "rank" : 19,
+    "count" : 535,
+    "prob" : 0.00437
+  }, {
+    "text" : "lil",
+    "rank" : 20,
+    "count" : 502,
+    "prob" : 0.0041
+  } ]
+}, {
+  "id" : 15,
+  "cumprob" : 0.16011,
+  "corpusdist" : 4.1845,
+  "words" : [ {
+    "text" : "colorado",
+    "rank" : 1,
+    "count" : 2384,
+    "prob" : 0.02017
+  }, {
+    "text" : "snow",
+    "rank" : 2,
+    "count" : 1832,
+    "prob" : 0.0155
+  }, {
+    "text" : "utah",
+    "rank" : 3,
+    "count" : 1549,
+    "prob" : 0.0131
+  }, {
+    "text" : "ski",
+    "rank" : 4,
+    "count" : 1458,
+    "prob" : 0.01233
+  }, {
+    "text" : "mountain",
+    "rank" : 5,
+    "count" : 1374,
+    "prob" : 0.01162
+  }, {
+    "text" : "skiing",
+    "rank" : 6,
+    "count" : 1201,
+    "prob" : 0.01016
+  }, {
+    "text" : "denver",
+    "rank" : 7,
+    "count" : 1142,
+    "prob" : 0.00966
+  }, {
+    "text" : "montana",
+    "rank" : 8,
+    "count" : 842,
+    "prob" : 0.00712
+  }, {
+    "text" : "idaho",
+    "rank" : 9,
+    "count" : 840,
+    "prob" : 0.00711
+  }, {
+    "text" : "snowboarding",
+    "rank" : 10,
+    "count" : 783,
+    "prob" : 0.00662
+  }, {
+    "text" : "tahoe",
+    "rank" : 11,
+    "count" : 671,
+    "prob" : 0.00568
+  }, {
+    "text" : "lake",
+    "rank" : 12,
+    "count" : 666,
+    "prob" : 0.00563
+  }, {
+    "text" : "mountains",
+    "rank" : 13,
+    "count" : 659,
+    "prob" : 0.00557
+  }, {
+    "text" : "byu",
+    "rank" : 14,
+    "count" : 544,
+    "prob" : 0.0046
+  }, {
+    "text" : "beautiful",
+    "rank" : 15,
+    "count" : 536,
+    "prob" : 0.00453
+  }, {
+    "text" : "boise",
+    "rank" : 16,
+    "count" : 505,
+    "prob" : 0.00427
+  }, {
+    "text" : "fun",
+    "rank" : 17,
+    "count" : 495,
+    "prob" : 0.00419
+  }, {
+    "text" : "view",
+    "rank" : 18,
+    "count" : 491,
+    "prob" : 0.00415
+  }, {
+    "text" : "aspen",
+    "rank" : 19,
+    "count" : 479,
+    "prob" : 0.00405
+  }, {
+    "text" : "slopes",
+    "rank" : 20,
+    "count" : 476,
+    "prob" : 0.00403
+  } ]
+}, {
+  "id" : 16,
+  "cumprob" : 0.20342,
+  "corpusdist" : 1.4534,
+  "words" : [ {
+    "text" : "christmas",
+    "rank" : 1,
+    "count" : 71119,
+    "prob" : 0.07906
+  }, {
+    "text" : "year",
+    "rank" : 2,
+    "count" : 9297,
+    "prob" : 0.01034
+  }, {
+    "text" : "shopping",
+    "rank" : 3,
+    "count" : 7943,
+    "prob" : 0.00883
+  }, {
+    "text" : "work",
+    "rank" : 4,
+    "count" : 7877,
+    "prob" : 0.00876
+  }, {
+    "text" : "break",
+    "rank" : 5,
+    "count" : 7603,
+    "prob" : 0.00845
+  }, {
+    "text" : "family",
+    "rank" : 6,
+    "count" : 7365,
+    "prob" : 0.00819
+  }, {
+    "text" : "santa",
+    "rank" : 7,
+    "count" : 7092,
+    "prob" : 0.00788
+  }, {
+    "text" : "crack",
+    "rank" : 8,
+    "count" : 6459,
+    "prob" : 0.00718
+  }, {
+    "text" : "trivia",
+    "rank" : 9,
+    "count" : 6096,
+    "prob" : 0.00678
+  }, {
+    "text" : "holidays",
+    "rank" : 10,
+    "count" : 5939,
+    "prob" : 0.0066
+  }, {
+    "text" : "gift",
+    "rank" : 11,
+    "count" : 5814,
+    "prob" : 0.00646
+  }, {
+    "text" : "holiday",
+    "rank" : 12,
+    "count" : 5714,
+    "prob" : 0.00635
+  }, {
+    "text" : "mom",
+    "rank" : 13,
+    "count" : 5154,
+    "prob" : 0.00573
+  }, {
+    "text" : "party",
+    "rank" : 14,
+    "count" : 4653,
+    "prob" : 0.00517
+  }, {
+    "text" : "2014",
+    "rank" : 15,
+    "count" : 4488,
+    "prob" : 0.00499
+  }, {
+    "text" : "tree",
+    "rank" : 16,
+    "count" : 4474,
+    "prob" : 0.00497
+  }, {
+    "text" : "presents",
+    "rank" : 17,
+    "count" : 4278,
+    "prob" : 0.00476
+  }, {
+    "text" : "merry",
+    "rank" : 18,
+    "count" : 4028,
+    "prob" : 0.00448
+  }, {
+    "text" : "xmas",
+    "rank" : 19,
+    "count" : 3856,
+    "prob" : 0.00429
+  }, {
+    "text" : "years",
+    "rank" : 20,
+    "count" : 3736,
+    "prob" : 0.00415
+  } ]
+}, {
+  "id" : 17,
+  "cumprob" : 0.1317,
+  "corpusdist" : 6.5096,
+  "words" : [ {
+    "text" : "笑",
+    "rank" : 1,
+    "count" : 869,
+    "prob" : 0.02041
+  }, {
+    "text" : "ப",
+    "rank" : 2,
+    "count" : 429,
+    "prob" : 0.01007
+  }, {
+    "text" : "ம",
+    "rank" : 3,
+    "count" : 366,
+    "prob" : 0.0086
+  }, {
+    "text" : "ன",
+    "rank" : 4,
+    "count" : 355,
+    "prob" : 0.00834
+  }, {
+    "text" : "views",
+    "rank" : 5,
+    "count" : 345,
+    "prob" : 0.0081
+  }, {
+    "text" : "ல",
+    "rank" : 6,
+    "count" : 297,
+    "prob" : 0.00697
+  }, {
+    "text" : "ர",
+    "rank" : 7,
+    "count" : 290,
+    "prob" : 0.00681
+  }, {
+    "text" : "ச",
+    "rank" : 8,
+    "count" : 288,
+    "prob" : 0.00676
+  }, {
+    "text" : "ய",
+    "rank" : 9,
+    "count" : 255,
+    "prob" : 0.00599
+  }, {
+    "text" : "வ",
+    "rank" : 10,
+    "count" : 232,
+    "prob" : 0.00545
+  }, {
+    "text" : "likes",
+    "rank" : 11,
+    "count" : 217,
+    "prob" : 0.0051
+  }, {
+    "text" : "म",
+    "rank" : 12,
+    "count" : 210,
+    "prob" : 0.00493
+  }, {
+    "text" : "subscribe",
+    "rank" : 13,
+    "count" : 206,
+    "prob" : 0.00484
+  }, {
+    "text" : "victoria",
+    "rank" : 14,
+    "count" : 195,
+    "prob" : 0.00458
+  }, {
+    "text" : "000",
+    "rank" : 15,
+    "count" : 188,
+    "prob" : 0.00442
+  }, {
+    "text" : "freestyle",
+    "rank" : 16,
+    "count" : 182,
+    "prob" : 0.00427
+  }, {
+    "text" : "comments",
+    "rank" : 17,
+    "count" : 174,
+    "prob" : 0.00409
+  }, {
+    "text" : "breonah",
+    "rank" : 18,
+    "count" : 172,
+    "prob" : 0.00404
+  }, {
+    "text" : "स",
+    "rank" : 19,
+    "count" : 169,
+    "prob" : 0.00397
+  }, {
+    "text" : "playlist",
+    "rank" : 20,
+    "count" : 169,
+    "prob" : 0.00397
+  } ]
+}, {
+  "id" : 18,
+  "cumprob" : 0.12768,
+  "corpusdist" : 3.6405,
+  "words" : [ {
+    "text" : "canada",
+    "rank" : 1,
+    "count" : 4016,
+    "prob" : 0.02308
+  }, {
+    "text" : "game",
+    "rank" : 2,
+    "count" : 1995,
+    "prob" : 0.01147
+  }, {
+    "text" : "hockey",
+    "rank" : 3,
+    "count" : 1593,
+    "prob" : 0.00916
+  }, {
+    "text" : "toronto",
+    "rank" : 4,
+    "count" : 1562,
+    "prob" : 0.00898
+  }, {
+    "text" : "favourite",
+    "rank" : 5,
+    "count" : 1272,
+    "prob" : 0.00731
+  }, {
+    "text" : "team",
+    "rank" : 6,
+    "count" : 1215,
+    "prob" : 0.00698
+  }, {
+    "text" : "canadian",
+    "rank" : 7,
+    "count" : 1191,
+    "prob" : 0.00684
+  }, {
+    "text" : "leafs",
+    "rank" : 8,
+    "count" : 1165,
+    "prob" : 0.0067
+  }, {
+    "text" : "goal",
+    "rank" : 9,
+    "count" : 1087,
+    "prob" : 0.00625
+  }, {
+    "text" : "ontario",
+    "rank" : 10,
+    "count" : 942,
+    "prob" : 0.00541
+  }, {
+    "text" : "exam",
+    "rank" : 11,
+    "count" : 793,
+    "prob" : 0.00456
+  }, {
+    "text" : "win",
+    "rank" : 12,
+    "count" : 709,
+    "prob" : 0.00407
+  }, {
+    "text" : "ottawa",
+    "rank" : 13,
+    "count" : 663,
+    "prob" : 0.00381
+  }, {
+    "text" : "exams",
+    "rank" : 14,
+    "count" : 640,
+    "prob" : 0.00368
+  }, {
+    "text" : "harper",
+    "rank" : 15,
+    "count" : 624,
+    "prob" : 0.00359
+  }, {
+    "text" : "mental",
+    "rank" : 16,
+    "count" : 621,
+    "prob" : 0.00357
+  }, {
+    "text" : "boys",
+    "rank" : 17,
+    "count" : 579,
+    "prob" : 0.00333
+  }, {
+    "text" : "period",
+    "rank" : 18,
+    "count" : 548,
+    "prob" : 0.00315
+  }, {
+    "text" : "puck",
+    "rank" : 19,
+    "count" : 510,
+    "prob" : 0.00293
+  }, {
+    "text" : "play",
+    "rank" : 20,
+    "count" : 492,
+    "prob" : 0.00283
+  } ]
+}, {
+  "id" : 19,
+  "cumprob" : 0.09947,
+  "corpusdist" : 2.1271,
+  "words" : [ {
+    "text" : "check",
+    "rank" : 1,
+    "count" : 6343,
+    "prob" : 0.01397
+  }, {
+    "text" : "free",
+    "rank" : 2,
+    "count" : 3329,
+    "prob" : 0.00733
+  }, {
+    "text" : "join",
+    "rank" : 3,
+    "count" : 2669,
+    "prob" : 0.00588
+  }, {
+    "text" : "link",
+    "rank" : 4,
+    "count" : 2568,
+    "prob" : 0.00566
+  }, {
+    "text" : "hope",
+    "rank" : 5,
+    "count" : 2509,
+    "prob" : 0.00553
+  }, {
+    "text" : "win",
+    "rank" : 6,
+    "count" : 2431,
+    "prob" : 0.00535
+  }, {
+    "text" : "awesome",
+    "rank" : 7,
+    "count" : 2347,
+    "prob" : 0.00517
+  }, {
+    "text" : "support",
+    "rank" : 8,
+    "count" : 2217,
+    "prob" : 0.00488
+  }, {
+    "text" : "music",
+    "rank" : 9,
+    "count" : 2038,
+    "prob" : 0.00449
+  }, {
+    "text" : "share",
+    "rank" : 10,
+    "count" : 2015,
+    "prob" : 0.00444
+  }, {
+    "text" : "2015",
+    "rank" : 11,
+    "count" : 1920,
+    "prob" : 0.00423
+  }, {
+    "text" : "read",
+    "rank" : 12,
+    "count" : 1859,
+    "prob" : 0.00409
+  }, {
+    "text" : "thx",
+    "rank" : 13,
+    "count" : 1805,
+    "prob" : 0.00398
+  }, {
+    "text" : "video",
+    "rank" : 14,
+    "count" : 1739,
+    "prob" : 0.00383
+  }, {
+    "text" : "book",
+    "rank" : 15,
+    "count" : 1732,
+    "prob" : 0.00381
+  }, {
+    "text" : "tweet",
+    "rank" : 16,
+    "count" : 1680,
+    "prob" : 0.0037
+  }, {
+    "text" : "blog",
+    "rank" : 17,
+    "count" : 1575,
+    "prob" : 0.00347
+  }, {
+    "text" : "evening",
+    "rank" : 18,
+    "count" : 1516,
+    "prob" : 0.00334
+  }, {
+    "text" : "live",
+    "rank" : 19,
+    "count" : 1444,
+    "prob" : 0.00318
+  }, {
+    "text" : "enter",
+    "rank" : 20,
+    "count" : 1426,
+    "prob" : 0.00314
+  } ]
+}, {
+  "id" : 20,
+  "cumprob" : 0.20252,
+  "corpusdist" : 5.9827,
+  "words" : [ {
+    "text" : "น",
+    "rank" : 1,
+    "count" : 2279,
+    "prob" : 0.02176
+  }, {
+    "text" : "ก",
+    "rank" : 2,
+    "count" : 2109,
+    "prob" : 0.02014
+  }, {
+    "text" : "ม",
+    "rank" : 3,
+    "count" : 1629,
+    "prob" : 0.01556
+  }, {
+    "text" : "อ",
+    "rank" : 4,
+    "count" : 1413,
+    "prob" : 0.01349
+  }, {
+    "text" : "ไม",
+    "rank" : 5,
+    "count" : 1218,
+    "prob" : 0.01163
+  }, {
+    "text" : "ค",
+    "rank" : 6,
+    "count" : 1156,
+    "prob" : 0.01104
+  }, {
+    "text" : "ว",
+    "rank" : 7,
+    "count" : 1155,
+    "prob" : 0.01103
+  }, {
+    "text" : "ะ",
+    "rank" : 8,
+    "count" : 968,
+    "prob" : 0.00924
+  }, {
+    "text" : "ย",
+    "rank" : 9,
+    "count" : 956,
+    "prob" : 0.00913
+  }, {
+    "text" : "ด",
+    "rank" : 10,
+    "count" : 931,
+    "prob" : 0.00889
+  }, {
+    "text" : "ร",
+    "rank" : 11,
+    "count" : 928,
+    "prob" : 0.00886
+  }, {
+    "text" : "ง",
+    "rank" : 12,
+    "count" : 896,
+    "prob" : 0.00856
+  }, {
+    "text" : "ส",
+    "rank" : 13,
+    "count" : 885,
+    "prob" : 0.00845
+  }, {
+    "text" : "ต",
+    "rank" : 14,
+    "count" : 833,
+    "prob" : 0.00795
+  }, {
+    "text" : "ท",
+    "rank" : 15,
+    "count" : 707,
+    "prob" : 0.00675
+  }, {
+    "text" : "า",
+    "rank" : 16,
+    "count" : 705,
+    "prob" : 0.00673
+  }, {
+    "text" : "ได",
+    "rank" : 17,
+    "count" : 678,
+    "prob" : 0.00647
+  }, {
+    "text" : "แต",
+    "rank" : 18,
+    "count" : 634,
+    "prob" : 0.00605
+  }, {
+    "text" : "อย",
+    "rank" : 19,
+    "count" : 571,
+    "prob" : 0.00545
+  }, {
+    "text" : "บ",
+    "rank" : 20,
+    "count" : 557,
+    "prob" : 0.00532
+  } ]
+}, {
+  "id" : 21,
+  "cumprob" : 0.46889,
+  "corpusdist" : 2.4061,
+  "words" : [ {
+    "text" : "christmas",
+    "rank" : 1,
+    "count" : 118272,
+    "prob" : 0.20981
+  }, {
+    "text" : "merry",
+    "rank" : 2,
+    "count" : 45920,
+    "prob" : 0.08146
+  }, {
+    "text" : "family",
+    "rank" : 3,
+    "count" : 15468,
+    "prob" : 0.02744
+  }, {
+    "text" : "eve",
+    "rank" : 4,
+    "count" : 14572,
+    "prob" : 0.02585
+  }, {
+    "text" : "santa",
+    "rank" : 5,
+    "count" : 9254,
+    "prob" : 0.01642
+  }, {
+    "text" : "year",
+    "rank" : 6,
+    "count" : 8009,
+    "prob" : 0.01421
+  }, {
+    "text" : "presents",
+    "rank" : 7,
+    "count" : 5766,
+    "prob" : 0.01023
+  }, {
+    "text" : "mom",
+    "rank" : 8,
+    "count" : 5264,
+    "prob" : 0.00934
+  }, {
+    "text" : "gift",
+    "rank" : 9,
+    "count" : 4841,
+    "prob" : 0.00859
+  }, {
+    "text" : "holidays",
+    "rank" : 10,
+    "count" : 4365,
+    "prob" : 0.00774
+  }, {
+    "text" : "hope",
+    "rank" : 11,
+    "count" : 4310,
+    "prob" : 0.00765
+  }, {
+    "text" : "xmas",
+    "rank" : 12,
+    "count" : 4278,
+    "prob" : 0.00759
+  }, {
+    "text" : "gifts",
+    "rank" : 13,
+    "count" : 3872,
+    "prob" : 0.00687
+  }, {
+    "text" : "dad",
+    "rank" : 14,
+    "count" : 3699,
+    "prob" : 0.00656
+  }, {
+    "text" : "jesus",
+    "rank" : 15,
+    "count" : 3283,
+    "prob" : 0.00582
+  }, {
+    "text" : "open",
+    "rank" : 16,
+    "count" : 3268,
+    "prob" : 0.0058
+  }, {
+    "text" : "holiday",
+    "rank" : 17,
+    "count" : 2929,
+    "prob" : 0.0052
+  }, {
+    "text" : "blessed",
+    "rank" : 18,
+    "count" : 2656,
+    "prob" : 0.00471
+  }, {
+    "text" : "parents",
+    "rank" : 19,
+    "count" : 2153,
+    "prob" : 0.00382
+  }, {
+    "text" : "tree",
+    "rank" : 20,
+    "count" : 2139,
+    "prob" : 0.00379
+  } ]
+}, {
+  "id" : 22,
+  "cumprob" : 0.09206,
+  "corpusdist" : 1.0303,
+  "words" : [ {
+    "text" : "game",
+    "rank" : 1,
+    "count" : 15892,
+    "prob" : 0.01359
+  }, {
+    "text" : "birthday",
+    "rank" : 2,
+    "count" : 7492,
+    "prob" : 0.0064
+  }, {
+    "text" : "ready",
+    "rank" : 3,
+    "count" : 7341,
+    "prob" : 0.00628
+  }, {
+    "text" : "play",
+    "rank" : 4,
+    "count" : 6686,
+    "prob" : 0.00572
+  }, {
+    "text" : "hope",
+    "rank" : 5,
+    "count" : 6616,
+    "prob" : 0.00566
+  }, {
+    "text" : "team",
+    "rank" : 6,
+    "count" : 6196,
+    "prob" : 0.0053
+  }, {
+    "text" : "win",
+    "rank" : 7,
+    "count" : 5992,
+    "prob" : 0.00512
+  }, {
+    "text" : "basketball",
+    "rank" : 8,
+    "count" : 5306,
+    "prob" : 0.00454
+  }, {
+    "text" : "big",
+    "rank" : 9,
+    "count" : 4202,
+    "prob" : 0.00359
+  }, {
+    "text" : "heart",
+    "rank" : 10,
+    "count" : 4148,
+    "prob" : 0.00355
+  }, {
+    "text" : "baby",
+    "rank" : 11,
+    "count" : 4123,
+    "prob" : 0.00352
+  }, {
+    "text" : "kentucky",
+    "rank" : 12,
+    "count" : 4017,
+    "prob" : 0.00343
+  }, {
+    "text" : "coach",
+    "rank" : 13,
+    "count" : 3947,
+    "prob" : 0.00337
+  }, {
+    "text" : "friends",
+    "rank" : 14,
+    "count" : 3946,
+    "prob" : 0.00337
+  }, {
+    "text" : "yall",
+    "rank" : 15,
+    "count" : 3845,
+    "prob" : 0.00329
+  }, {
+    "text" : "glad",
+    "rank" : 16,
+    "count" : 3792,
+    "prob" : 0.00324
+  }, {
+    "text" : "year",
+    "rank" : 17,
+    "count" : 3659,
+    "prob" : 0.00313
+  }, {
+    "text" : "watch",
+    "rank" : 18,
+    "count" : 3560,
+    "prob" : 0.00304
+  }, {
+    "text" : "boys",
+    "rank" : 19,
+    "count" : 3498,
+    "prob" : 0.00299
+  }, {
+    "text" : "won",
+    "rank" : 20,
+    "count" : 3423,
+    "prob" : 0.00293
+  } ]
+}, {
+  "id" : 23,
+  "cumprob" : 0.13653,
+  "corpusdist" : 2.1386,
+  "words" : [ {
+    "text" : "texas",
+    "rank" : 1,
+    "count" : 7705,
+    "prob" : 0.01966
+  }, {
+    "text" : "yall",
+    "rank" : 2,
+    "count" : 5268,
+    "prob" : 0.01344
+  }, {
+    "text" : "rn",
+    "rank" : 3,
+    "count" : 3959,
+    "prob" : 0.0101
+  }, {
+    "text" : "bro",
+    "rank" : 4,
+    "count" : 3414,
+    "prob" : 0.00871
+  }, {
+    "text" : "oomf",
+    "rank" : 5,
+    "count" : 3167,
+    "prob" : 0.00808
+  }, {
+    "text" : "ready",
+    "rank" : 6,
+    "count" : 3002,
+    "prob" : 0.00766
+  }, {
+    "text" : "bc",
+    "rank" : 7,
+    "count" : 2524,
+    "prob" : 0.00644
+  }, {
+    "text" : "dallas",
+    "rank" : 8,
+    "count" : 2503,
+    "prob" : 0.00639
+  }, {
+    "text" : "baby",
+    "rank" : 9,
+    "count" : 2412,
+    "prob" : 0.00615
+  }, {
+    "text" : "tx",
+    "rank" : 10,
+    "count" : 2298,
+    "prob" : 0.00586
+  }, {
+    "text" : "houston",
+    "rank" : 11,
+    "count" : 2227,
+    "prob" : 0.00568
+  }, {
+    "text" : "oklahoma",
+    "rank" : 12,
+    "count" : 1956,
+    "prob" : 0.00499
+  }, {
+    "text" : "text",
+    "rank" : 13,
+    "count" : 1876,
+    "prob" : 0.00479
+  }, {
+    "text" : "san",
+    "rank" : 14,
+    "count" : 1715,
+    "prob" : 0.00438
+  }, {
+    "text" : "game",
+    "rank" : 15,
+    "count" : 1695,
+    "prob" : 0.00432
+  }, {
+    "text" : "fam",
+    "rank" : 16,
+    "count" : 1679,
+    "prob" : 0.00428
+  }, {
+    "text" : "whataburger",
+    "rank" : 17,
+    "count" : 1631,
+    "prob" : 0.00416
+  }, {
+    "text" : "cowboys",
+    "rank" : 18,
+    "count" : 1570,
+    "prob" : 0.00401
+  }, {
+    "text" : "boy",
+    "rank" : 19,
+    "count" : 1502,
+    "prob" : 0.00383
+  }, {
+    "text" : "weather",
+    "rank" : 20,
+    "count" : 1409,
+    "prob" : 0.0036
+  } ]
+}, {
+  "id" : 24,
+  "cumprob" : 0.09016,
+  "corpusdist" : 0.4704,
+  "words" : [ {
+    "text" : "birthday",
+    "rank" : 1,
+    "count" : 54293,
+    "prob" : 0.00811
+  }, {
+    "text" : "mom",
+    "rank" : 2,
+    "count" : 44373,
+    "prob" : 0.00663
+  }, {
+    "text" : "friends",
+    "rank" : 3,
+    "count" : 39926,
+    "prob" : 0.00596
+  }, {
+    "text" : "bc",
+    "rank" : 4,
+    "count" : 35810,
+    "prob" : 0.00535
+  }, {
+    "text" : "guys",
+    "rank" : 5,
+    "count" : 32558,
+    "prob" : 0.00486
+  }, {
+    "text" : "sleep",
+    "rank" : 6,
+    "count" : 31861,
+    "prob" : 0.00476
+  }, {
+    "text" : "pretty",
+    "rank" : 7,
+    "count" : 29411,
+    "prob" : 0.00439
+  }, {
+    "text" : "cute",
+    "rank" : 8,
+    "count" : 29004,
+    "prob" : 0.00433
+  }, {
+    "text" : "literally",
+    "rank" : 9,
+    "count" : 28669,
+    "prob" : 0.00428
+  }, {
+    "text" : "wait",
+    "rank" : 10,
+    "count" : 27634,
+    "prob" : 0.00413
+  }, {
+    "text" : "rn",
+    "rank" : 11,
+    "count" : 26999,
+    "prob" : 0.00403
+  }, {
+    "text" : "watch",
+    "rank" : 12,
+    "count" : 25848,
+    "prob" : 0.00386
+  }, {
+    "text" : "girls",
+    "rank" : 13,
+    "count" : 25245,
+    "prob" : 0.00377
+  }, {
+    "text" : "work",
+    "rank" : 14,
+    "count" : 25219,
+    "prob" : 0.00377
+  }, {
+    "text" : "bed",
+    "rank" : 15,
+    "count" : 25103,
+    "prob" : 0.00375
+  }, {
+    "text" : "text",
+    "rank" : 16,
+    "count" : 24912,
+    "prob" : 0.00372
+  }, {
+    "text" : "friend",
+    "rank" : 17,
+    "count" : 24633,
+    "prob" : 0.00368
+  }, {
+    "text" : "talk",
+    "rank" : 18,
+    "count" : 24515,
+    "prob" : 0.00366
+  }, {
+    "text" : "year",
+    "rank" : 19,
+    "count" : 23956,
+    "prob" : 0.00358
+  }, {
+    "text" : "dad",
+    "rank" : 20,
+    "count" : 23802,
+    "prob" : 0.00355
+  } ]
+}, {
+  "id" : 25,
+  "cumprob" : 0.29919,
+  "corpusdist" : 2.8525,
+  "words" : [ {
+    "text" : "snow",
+    "rank" : 1,
+    "count" : 27013,
+    "prob" : 0.08213
+  }, {
+    "text" : "school",
+    "rank" : 2,
+    "count" : 16250,
+    "prob" : 0.04941
+  }, {
+    "text" : "cold",
+    "rank" : 3,
+    "count" : 8122,
+    "prob" : 0.02469
+  }, {
+    "text" : "weather",
+    "rank" : 4,
+    "count" : 5949,
+    "prob" : 0.01809
+  }, {
+    "text" : "delay",
+    "rank" : 5,
+    "count" : 4768,
+    "prob" : 0.0145
+  }, {
+    "text" : "snowing",
+    "rank" : 6,
+    "count" : 3682,
+    "prob" : 0.01119
+  }, {
+    "text" : "winter",
+    "rank" : 7,
+    "count" : 3249,
+    "prob" : 0.00988
+  }, {
+    "text" : "roads",
+    "rank" : 8,
+    "count" : 3150,
+    "prob" : 0.00958
+  }, {
+    "text" : "hour",
+    "rank" : 9,
+    "count" : 3145,
+    "prob" : 0.00956
+  }, {
+    "text" : "storm",
+    "rank" : 10,
+    "count" : 3059,
+    "prob" : 0.0093
+  }, {
+    "text" : "cancelled",
+    "rank" : 11,
+    "count" : 2373,
+    "prob" : 0.00721
+  }, {
+    "text" : "closed",
+    "rank" : 12,
+    "count" : 2229,
+    "prob" : 0.00678
+  }, {
+    "text" : "warm",
+    "rank" : 13,
+    "count" : 2187,
+    "prob" : 0.00665
+  }, {
+    "text" : "wind",
+    "rank" : 14,
+    "count" : 2150,
+    "prob" : 0.00654
+  }, {
+    "text" : "degrees",
+    "rank" : 15,
+    "count" : 2059,
+    "prob" : 0.00626
+  }, {
+    "text" : "drive",
+    "rank" : 16,
+    "count" : 1970,
+    "prob" : 0.00599
+  }, {
+    "text" : "ice",
+    "rank" : 17,
+    "count" : 1829,
+    "prob" : 0.00556
+  }, {
+    "text" : "blizzard",
+    "rank" : 18,
+    "count" : 1787,
+    "prob" : 0.00543
+  }, {
+    "text" : "cancel",
+    "rank" : 19,
+    "count" : 1734,
+    "prob" : 0.00527
+  }, {
+    "text" : "schools",
+    "rank" : 20,
+    "count" : 1703,
+    "prob" : 0.00518
+  } ]
+}, {
+  "id" : 26,
+  "cumprob" : 0.04187,
+  "corpusdist" : 0.9951,
+  "words" : [ {
+    "text" : "year",
+    "rank" : 1,
+    "count" : 9029,
+    "prob" : 0.0026
+  }, {
+    "text" : "read",
+    "rank" : 2,
+    "count" : 8936,
+    "prob" : 0.00257
+  }, {
+    "text" : "work",
+    "rank" : 3,
+    "count" : 8670,
+    "prob" : 0.00249
+  }, {
+    "text" : "years",
+    "rank" : 4,
+    "count" : 8373,
+    "prob" : 0.00241
+  }, {
+    "text" : "black",
+    "rank" : 5,
+    "count" : 8254,
+    "prob" : 0.00237
+  }, {
+    "text" : "white",
+    "rank" : 6,
+    "count" : 7912,
+    "prob" : 0.00227
+  }, {
+    "text" : "live",
+    "rank" : 7,
+    "count" : 7486,
+    "prob" : 0.00215
+  }, {
+    "text" : "police",
+    "rank" : 8,
+    "count" : 7427,
+    "prob" : 0.00213
+  }, {
+    "text" : "twitter",
+    "rank" : 9,
+    "count" : 7409,
+    "prob" : 0.00213
+  }, {
+    "text" : "free",
+    "rank" : 10,
+    "count" : 7148,
+    "prob" : 0.00205
+  }, {
+    "text" : "women",
+    "rank" : 11,
+    "count" : 7109,
+    "prob" : 0.00204
+  }, {
+    "text" : "money",
+    "rank" : 12,
+    "count" : 6786,
+    "prob" : 0.00195
+  }, {
+    "text" : "real",
+    "rank" : 13,
+    "count" : 6768,
+    "prob" : 0.00195
+  }, {
+    "text" : "job",
+    "rank" : 14,
+    "count" : 6737,
+    "prob" : 0.00194
+  }, {
+    "text" : "news",
+    "rank" : 15,
+    "count" : 6616,
+    "prob" : 0.0019
+  }, {
+    "text" : "big",
+    "rank" : 16,
+    "count" : 6434,
+    "prob" : 0.00185
+  }, {
+    "text" : "kids",
+    "rank" : 17,
+    "count" : 6346,
+    "prob" : 0.00182
+  }, {
+    "text" : "media",
+    "rank" : 18,
+    "count" : 6117,
+    "prob" : 0.00176
+  }, {
+    "text" : "nice",
+    "rank" : 19,
+    "count" : 6086,
+    "prob" : 0.00175
+  }, {
+    "text" : "true",
+    "rank" : 20,
+    "count" : 6007,
+    "prob" : 0.00173
+  } ]
+}, {
+  "id" : 27,
+  "cumprob" : 0.13469,
+  "corpusdist" : 5.953,
+  "words" : [ {
+    "text" : "michael",
+    "rank" : 1,
+    "count" : 1051,
+    "prob" : 0.02176
+  }, {
+    "text" : "nuts",
+    "rank" : 2,
+    "count" : 605,
+    "prob" : 0.01253
+  }, {
+    "text" : "naked",
+    "rank" : 3,
+    "count" : 603,
+    "prob" : 0.01249
+  }, {
+    "text" : "psychiatrist",
+    "rank" : 4,
+    "count" : 467,
+    "prob" : 0.00967
+  }, {
+    "text" : "fellow",
+    "rank" : 5,
+    "count" : 344,
+    "prob" : 0.00712
+  }, {
+    "text" : "cute",
+    "rank" : 6,
+    "count" : 311,
+    "prob" : 0.00644
+  }, {
+    "text" : "jackson",
+    "rank" : 7,
+    "count" : 310,
+    "prob" : 0.00642
+  }, {
+    "text" : "ps",
+    "rank" : 8,
+    "count" : 286,
+    "prob" : 0.00592
+  }, {
+    "text" : "yg",
+    "rank" : 9,
+    "count" : 285,
+    "prob" : 0.0059
+  }, {
+    "text" : "alan",
+    "rank" : 10,
+    "count" : 280,
+    "prob" : 0.0058
+  }, {
+    "text" : "pipe",
+    "rank" : 11,
+    "count" : 246,
+    "prob" : 0.00509
+  }, {
+    "text" : "clifford",
+    "rank" : 12,
+    "count" : 245,
+    "prob" : 0.00507
+  }, {
+    "text" : "water",
+    "rank" : 13,
+    "count" : 234,
+    "prob" : 0.00485
+  }, {
+    "text" : "official",
+    "rank" : 14,
+    "count" : 220,
+    "prob" : 0.00456
+  }, {
+    "text" : "nak",
+    "rank" : 15,
+    "count" : 216,
+    "prob" : 0.00447
+  }, {
+    "text" : "dah",
+    "rank" : 16,
+    "count" : 211,
+    "prob" : 0.00437
+  }, {
+    "text" : "kau",
+    "rank" : 17,
+    "count" : 186,
+    "prob" : 0.00385
+  }, {
+    "text" : "site",
+    "rank" : 18,
+    "count" : 151,
+    "prob" : 0.00313
+  }, {
+    "text" : "cimfam",
+    "rank" : 19,
+    "count" : 140,
+    "prob" : 0.0029
+  }, {
+    "text" : "orang",
+    "rank" : 20,
+    "count" : 114,
+    "prob" : 0.00236
+  } ]
+}, {
+  "id" : 28,
+  "cumprob" : 0.21193,
+  "corpusdist" : 4.2375,
+  "words" : [ {
+    "text" : "video",
+    "rank" : 1,
+    "count" : 3020,
+    "prob" : 0.02215
+  }, {
+    "text" : "luke",
+    "rank" : 2,
+    "count" : 2547,
+    "prob" : 0.01868
+  }, {
+    "text" : "nash",
+    "rank" : 3,
+    "count" : 2322,
+    "prob" : 0.01703
+  }, {
+    "text" : "5sos",
+    "rank" : 4,
+    "count" : 2300,
+    "prob" : 0.01687
+  }, {
+    "text" : "watch",
+    "rank" : 5,
+    "count" : 2181,
+    "prob" : 0.016
+  }, {
+    "text" : "ilysm",
+    "rank" : 6,
+    "count" : 1707,
+    "prob" : 0.01252
+  }, {
+    "text" : "michael",
+    "rank" : 7,
+    "count" : 1473,
+    "prob" : 0.01081
+  }, {
+    "text" : "hemmings",
+    "rank" : 8,
+    "count" : 1443,
+    "prob" : 0.01059
+  }, {
+    "text" : "cam",
+    "rank" : 9,
+    "count" : 1372,
+    "prob" : 0.01006
+  }, {
+    "text" : "calum",
+    "rank" : 10,
+    "count" : 1267,
+    "prob" : 0.00929
+  }, {
+    "text" : "subscribe",
+    "rank" : 11,
+    "count" : 1142,
+    "prob" : 0.00838
+  }, {
+    "text" : "dm",
+    "rank" : 12,
+    "count" : 1027,
+    "prob" : 0.00753
+  }, {
+    "text" : "birthday",
+    "rank" : 13,
+    "count" : 1005,
+    "prob" : 0.00737
+  }, {
+    "text" : "beautiful",
+    "rank" : 14,
+    "count" : 928,
+    "prob" : 0.00681
+  }, {
+    "text" : "direction",
+    "rank" : 15,
+    "count" : 879,
+    "prob" : 0.00645
+  }, {
+    "text" : "babe",
+    "rank" : 16,
+    "count" : 878,
+    "prob" : 0.00644
+  }, {
+    "text" : "bae",
+    "rank" : 17,
+    "count" : 874,
+    "prob" : 0.00641
+  }, {
+    "text" : "link",
+    "rank" : 18,
+    "count" : 866,
+    "prob" : 0.00635
+  }, {
+    "text" : "cameron",
+    "rank" : 19,
+    "count" : 840,
+    "prob" : 0.00616
+  }, {
+    "text" : "sunshine",
+    "rank" : 20,
+    "count" : 818,
+    "prob" : 0.006
+  } ]
+}, {
+  "id" : 29,
+  "cumprob" : 0.07926,
+  "corpusdist" : 0.401,
+  "words" : [ {
+    "text" : "sleep",
+    "rank" : 1,
+    "count" : 58905,
+    "prob" : 0.00658
+  }, {
+    "text" : "work",
+    "rank" : 2,
+    "count" : 49724,
+    "prob" : 0.00555
+  }, {
+    "text" : "school",
+    "rank" : 3,
+    "count" : 49063,
+    "prob" : 0.00548
+  }, {
+    "text" : "bed",
+    "rank" : 4,
+    "count" : 38485,
+    "prob" : 0.0043
+  }, {
+    "text" : "baby",
+    "rank" : 5,
+    "count" : 38307,
+    "prob" : 0.00428
+  }, {
+    "text" : "mom",
+    "rank" : 6,
+    "count" : 37399,
+    "prob" : 0.00418
+  }, {
+    "text" : "friends",
+    "rank" : 7,
+    "count" : 35974,
+    "prob" : 0.00402
+  }, {
+    "text" : "talk",
+    "rank" : 8,
+    "count" : 35880,
+    "prob" : 0.00401
+  }, {
+    "text" : "real",
+    "rank" : 9,
+    "count" : 32711,
+    "prob" : 0.00365
+  }, {
+    "text" : "person",
+    "rank" : 10,
+    "count" : 32211,
+    "prob" : 0.0036
+  }, {
+    "text" : "pretty",
+    "rank" : 11,
+    "count" : 31919,
+    "prob" : 0.00356
+  }, {
+    "text" : "wait",
+    "rank" : 12,
+    "count" : 31242,
+    "prob" : 0.00349
+  }, {
+    "text" : "hard",
+    "rank" : 13,
+    "count" : 31233,
+    "prob" : 0.00349
+  }, {
+    "text" : "girls",
+    "rank" : 14,
+    "count" : 31055,
+    "prob" : 0.00347
+  }, {
+    "text" : "phone",
+    "rank" : 15,
+    "count" : 30456,
+    "prob" : 0.0034
+  }, {
+    "text" : "heart",
+    "rank" : 16,
+    "count" : 30297,
+    "prob" : 0.00338
+  }, {
+    "text" : "long",
+    "rank" : 17,
+    "count" : 29322,
+    "prob" : 0.00327
+  }, {
+    "text" : "ready",
+    "rank" : 18,
+    "count" : 29025,
+    "prob" : 0.00324
+  }, {
+    "text" : "tired",
+    "rank" : 19,
+    "count" : 28812,
+    "prob" : 0.00322
+  }, {
+    "text" : "hair",
+    "rank" : 20,
+    "count" : 27918,
+    "prob" : 0.00312
+  } ]
+}, {
+  "id" : 30,
+  "cumprob" : 0.15843,
+  "corpusdist" : 4.2392,
+  "words" : [ {
+    "text" : "amen",
+    "rank" : 1,
+    "count" : 1521,
+    "prob" : 0.01908
+  }, {
+    "text" : "luv",
+    "rank" : 2,
+    "count" : 1039,
+    "prob" : 0.01304
+  }, {
+    "text" : "jesus",
+    "rank" : 3,
+    "count" : 986,
+    "prob" : 0.01237
+  }, {
+    "text" : "xxx",
+    "rank" : 4,
+    "count" : 697,
+    "prob" : 0.00874
+  }, {
+    "text" : "bless",
+    "rank" : 5,
+    "count" : 678,
+    "prob" : 0.00851
+  }, {
+    "text" : "savior",
+    "rank" : 6,
+    "count" : 657,
+    "prob" : 0.00824
+  }, {
+    "text" : "christ",
+    "rank" : 7,
+    "count" : 598,
+    "prob" : 0.0075
+  }, {
+    "text" : "hope",
+    "rank" : 8,
+    "count" : 596,
+    "prob" : 0.00748
+  }, {
+    "text" : "xo",
+    "rank" : 9,
+    "count" : 577,
+    "prob" : 0.00724
+  }, {
+    "text" : "hugs",
+    "rank" : 10,
+    "count" : 550,
+    "prob" : 0.0069
+  }, {
+    "text" : "grace",
+    "rank" : 11,
+    "count" : 542,
+    "prob" : 0.0068
+  }, {
+    "text" : "sweet",
+    "rank" : 12,
+    "count" : 499,
+    "prob" : 0.00626
+  }, {
+    "text" : "beautiful",
+    "rank" : 13,
+    "count" : 491,
+    "prob" : 0.00616
+  }, {
+    "text" : "lord",
+    "rank" : 14,
+    "count" : 481,
+    "prob" : 0.00603
+  }, {
+    "text" : "wow",
+    "rank" : 15,
+    "count" : 468,
+    "prob" : 0.00587
+  }, {
+    "text" : "spirit",
+    "rank" : 16,
+    "count" : 465,
+    "prob" : 0.00583
+  }, {
+    "text" : "thoughts",
+    "rank" : 17,
+    "count" : 460,
+    "prob" : 0.00577
+  }, {
+    "text" : "blessings",
+    "rank" : 18,
+    "count" : 449,
+    "prob" : 0.00563
+  }, {
+    "text" : "friend",
+    "rank" : 19,
+    "count" : 448,
+    "prob" : 0.00562
+  }, {
+    "text" : "umc",
+    "rank" : 20,
+    "count" : 425,
+    "prob" : 0.00533
+  } ]
+}, {
+  "id" : 31,
+  "cumprob" : 0.15501,
+  "corpusdist" : 3.6121,
+  "words" : [ {
+    "text" : "game",
+    "rank" : 1,
+    "count" : 3844,
+    "prob" : 0.02399
+  }, {
+    "text" : "kobe",
+    "rank" : 2,
+    "count" : 1773,
+    "prob" : 0.01107
+  }, {
+    "text" : "team",
+    "rank" : 3,
+    "count" : 1668,
+    "prob" : 0.01041
+  }, {
+    "text" : "nba",
+    "rank" : 4,
+    "count" : 1613,
+    "prob" : 0.01007
+  }, {
+    "text" : "lebron",
+    "rank" : 5,
+    "count" : 1572,
+    "prob" : 0.00981
+  }, {
+    "text" : "points",
+    "rank" : 6,
+    "count" : 1299,
+    "prob" : 0.00811
+  }, {
+    "text" : "cavs",
+    "rank" : 7,
+    "count" : 1222,
+    "prob" : 0.00763
+  }, {
+    "text" : "bulls",
+    "rank" : 8,
+    "count" : 1120,
+    "prob" : 0.00699
+  }, {
+    "text" : "curry",
+    "rank" : 9,
+    "count" : 1030,
+    "prob" : 0.00643
+  }, {
+    "text" : "lakers",
+    "rank" : 10,
+    "count" : 1018,
+    "prob" : 0.00635
+  }, {
+    "text" : "rondo",
+    "rank" : 11,
+    "count" : 983,
+    "prob" : 0.00614
+  }, {
+    "text" : "klay",
+    "rank" : 12,
+    "count" : 944,
+    "prob" : 0.00589
+  }, {
+    "text" : "play",
+    "rank" : 13,
+    "count" : 898,
+    "prob" : 0.00561
+  }, {
+    "text" : "james",
+    "rank" : 14,
+    "count" : 897,
+    "prob" : 0.0056
+  }, {
+    "text" : "win",
+    "rank" : 15,
+    "count" : 884,
+    "prob" : 0.00552
+  }, {
+    "text" : "kyrie",
+    "rank" : 16,
+    "count" : 874,
+    "prob" : 0.00546
+  }, {
+    "text" : "player",
+    "rank" : 17,
+    "count" : 857,
+    "prob" : 0.00535
+  }, {
+    "text" : "knicks",
+    "rank" : 18,
+    "count" : 799,
+    "prob" : 0.00499
+  }, {
+    "text" : "thompson",
+    "rank" : 19,
+    "count" : 791,
+    "prob" : 0.00494
+  }, {
+    "text" : "games",
+    "rank" : 20,
+    "count" : 749,
+    "prob" : 0.00468
+  } ]
+}, {
+  "id" : 32,
+  "cumprob" : 0.0932,
+  "corpusdist" : 3.1515,
+  "words" : [ {
+    "text" : "quiero",
+    "rank" : 1,
+    "count" : 19486,
+    "prob" : 0.01343
+  }, {
+    "text" : "vida",
+    "rank" : 2,
+    "count" : 9555,
+    "prob" : 0.00658
+  }, {
+    "text" : "mis",
+    "rank" : 3,
+    "count" : 9065,
+    "prob" : 0.00625
+  }, {
+    "text" : "amo",
+    "rank" : 4,
+    "count" : 8692,
+    "prob" : 0.00599
+  }, {
+    "text" : "amor",
+    "rank" : 5,
+    "count" : 7945,
+    "prob" : 0.00547
+  }, {
+    "text" : "día",
+    "rank" : 6,
+    "count" : 7858,
+    "prob" : 0.00541
+  }, {
+    "text" : "feliz",
+    "rank" : 7,
+    "count" : 7639,
+    "prob" : 0.00526
+  }, {
+    "text" : "jajaja",
+    "rank" : 8,
+    "count" : 7353,
+    "prob" : 0.00507
+  }, {
+    "text" : "gracias",
+    "rank" : 9,
+    "count" : 6594,
+    "prob" : 0.00454
+  }, {
+    "text" : "año",
+    "rank" : 10,
+    "count" : 5971,
+    "prob" : 0.00411
+  }, {
+    "text" : "mañana",
+    "rank" : 11,
+    "count" : 5381,
+    "prob" : 0.00371
+  }, {
+    "text" : "jaja",
+    "rank" : 12,
+    "count" : 5098,
+    "prob" : 0.00351
+  }, {
+    "text" : "tus",
+    "rank" : 13,
+    "count" : 4921,
+    "prob" : 0.00339
+  }, {
+    "text" : "dios",
+    "rank" : 14,
+    "count" : 4848,
+    "prob" : 0.00334
+  }, {
+    "text" : "jajajaja",
+    "rank" : 15,
+    "count" : 4703,
+    "prob" : 0.00324
+  }, {
+    "text" : "alguien",
+    "rank" : 16,
+    "count" : 4555,
+    "prob" : 0.00314
+  }, {
+    "text" : "días",
+    "rank" : 17,
+    "count" : 4157,
+    "prob" : 0.00286
+  }, {
+    "text" : "gusta",
+    "rank" : 18,
+    "count" : 4089,
+    "prob" : 0.00282
+  }, {
+    "text" : "navidad",
+    "rank" : 19,
+    "count" : 3791,
+    "prob" : 0.00261
+  }, {
+    "text" : "noche",
+    "rank" : 20,
+    "count" : 3556,
+    "prob" : 0.00245
+  } ]
+}, {
+  "id" : 33,
+  "cumprob" : 0.18301,
+  "corpusdist" : 1.5052,
+  "words" : [ {
+    "text" : "christmas",
+    "rank" : 1,
+    "count" : 34046,
+    "prob" : 0.03554
+  }, {
+    "text" : "finals",
+    "rank" : 2,
+    "count" : 22572,
+    "prob" : 0.02356
+  }, {
+    "text" : "week",
+    "rank" : 3,
+    "count" : 17236,
+    "prob" : 0.01799
+  }, {
+    "text" : "school",
+    "rank" : 4,
+    "count" : 9998,
+    "prob" : 0.01044
+  }, {
+    "text" : "class",
+    "rank" : 5,
+    "count" : 8999,
+    "prob" : 0.00939
+  }, {
+    "text" : "semester",
+    "rank" : 6,
+    "count" : 8472,
+    "prob" : 0.00884
+  }, {
+    "text" : "study",
+    "rank" : 7,
+    "count" : 8468,
+    "prob" : 0.00884
+  }, {
+    "text" : "studying",
+    "rank" : 8,
+    "count" : 7919,
+    "prob" : 0.00827
+  }, {
+    "text" : "break",
+    "rank" : 9,
+    "count" : 7506,
+    "prob" : 0.00784
+  }, {
+    "text" : "december",
+    "rank" : 10,
+    "count" : 6811,
+    "prob" : 0.00711
+  }, {
+    "text" : "college",
+    "rank" : 11,
+    "count" : 5139,
+    "prob" : 0.00536
+  }, {
+    "text" : "paper",
+    "rank" : 12,
+    "count" : 5018,
+    "prob" : 0.00524
+  }, {
+    "text" : "exam",
+    "rank" : 13,
+    "count" : 4941,
+    "prob" : 0.00516
+  }, {
+    "text" : "test",
+    "rank" : 14,
+    "count" : 4473,
+    "prob" : 0.00467
+  }, {
+    "text" : "wait",
+    "rank" : 15,
+    "count" : 4393,
+    "prob" : 0.00459
+  }, {
+    "text" : "year",
+    "rank" : 16,
+    "count" : 4314,
+    "prob" : 0.0045
+  }, {
+    "text" : "hours",
+    "rank" : 17,
+    "count" : 3950,
+    "prob" : 0.00412
+  }, {
+    "text" : "santa",
+    "rank" : 18,
+    "count" : 3723,
+    "prob" : 0.00389
+  }, {
+    "text" : "homework",
+    "rank" : 19,
+    "count" : 3704,
+    "prob" : 0.00387
+  }, {
+    "text" : "fashion",
+    "rank" : 20,
+    "count" : 3625,
+    "prob" : 0.00378
+  } ]
+}, {
+  "id" : 34,
+  "cumprob" : 0.06322,
+  "corpusdist" : 0.4753,
+  "words" : [ {
+    "text" : "watch",
+    "rank" : 1,
+    "count" : 29432,
+    "prob" : 0.0041
+  }, {
+    "text" : "hope",
+    "rank" : 2,
+    "count" : 28806,
+    "prob" : 0.00401
+  }, {
+    "text" : "birthday",
+    "rank" : 3,
+    "count" : 26036,
+    "prob" : 0.00363
+  }, {
+    "text" : "watching",
+    "rank" : 4,
+    "count" : 26022,
+    "prob" : 0.00362
+  }, {
+    "text" : "game",
+    "rank" : 5,
+    "count" : 25069,
+    "prob" : 0.00349
+  }, {
+    "text" : "wait",
+    "rank" : 6,
+    "count" : 24208,
+    "prob" : 0.00337
+  }, {
+    "text" : "work",
+    "rank" : 7,
+    "count" : 23958,
+    "prob" : 0.00334
+  }, {
+    "text" : "year",
+    "rank" : 8,
+    "count" : 23381,
+    "prob" : 0.00326
+  }, {
+    "text" : "beautiful",
+    "rank" : 9,
+    "count" : 23216,
+    "prob" : 0.00323
+  }, {
+    "text" : "guys",
+    "rank" : 10,
+    "count" : 22287,
+    "prob" : 0.0031
+  }, {
+    "text" : "awesome",
+    "rank" : 11,
+    "count" : 21994,
+    "prob" : 0.00306
+  }, {
+    "text" : "music",
+    "rank" : 12,
+    "count" : 21129,
+    "prob" : 0.00294
+  }, {
+    "text" : "nice",
+    "rank" : 13,
+    "count" : 21127,
+    "prob" : 0.00294
+  }, {
+    "text" : "live",
+    "rank" : 14,
+    "count" : 20619,
+    "prob" : 0.00287
+  }, {
+    "text" : "big",
+    "rank" : 15,
+    "count" : 20565,
+    "prob" : 0.00286
+  }, {
+    "text" : "amazing",
+    "rank" : 16,
+    "count" : 20442,
+    "prob" : 0.00285
+  }, {
+    "text" : "song",
+    "rank" : 17,
+    "count" : 20204,
+    "prob" : 0.00281
+  }, {
+    "text" : "movie",
+    "rank" : 18,
+    "count" : 19941,
+    "prob" : 0.00278
+  }, {
+    "text" : "play",
+    "rank" : 19,
+    "count" : 18374,
+    "prob" : 0.00256
+  }, {
+    "text" : "favorite",
+    "rank" : 20,
+    "count" : 17104,
+    "prob" : 0.00238
+  } ]
+}, {
+  "id" : 35,
+  "cumprob" : 0.3157,
+  "corpusdist" : 2.2367,
+  "words" : [ {
+    "text" : "bowl",
+    "rank" : 1,
+    "count" : 22188,
+    "prob" : 0.03846
+  }, {
+    "text" : "super",
+    "rank" : 2,
+    "count" : 21672,
+    "prob" : 0.03757
+  }, {
+    "text" : "game",
+    "rank" : 3,
+    "count" : 12730,
+    "prob" : 0.02207
+  }, {
+    "text" : "katy",
+    "rank" : 4,
+    "count" : 12490,
+    "prob" : 0.02165
+  }, {
+    "text" : "seahawks",
+    "rank" : 5,
+    "count" : 12243,
+    "prob" : 0.02122
+  }, {
+    "text" : "patriots",
+    "rank" : 6,
+    "count" : 11513,
+    "prob" : 0.01996
+  }, {
+    "text" : "brady",
+    "rank" : 7,
+    "count" : 10281,
+    "prob" : 0.01782
+  }, {
+    "text" : "perry",
+    "rank" : 8,
+    "count" : 10234,
+    "prob" : 0.01774
+  }, {
+    "text" : "commercial",
+    "rank" : 9,
+    "count" : 8212,
+    "prob" : 0.01424
+  }, {
+    "text" : "nfl",
+    "rank" : 10,
+    "count" : 7758,
+    "prob" : 0.01345
+  }, {
+    "text" : "pats",
+    "rank" : 11,
+    "count" : 6625,
+    "prob" : 0.01148
+  }, {
+    "text" : "winning",
+    "rank" : 12,
+    "count" : 6493,
+    "prob" : 0.01126
+  }, {
+    "text" : "seattle",
+    "rank" : 13,
+    "count" : 6091,
+    "prob" : 0.01056
+  }, {
+    "text" : "win",
+    "rank" : 14,
+    "count" : 6039,
+    "prob" : 0.01047
+  }, {
+    "text" : "football",
+    "rank" : 15,
+    "count" : 5462,
+    "prob" : 0.00947
+  }, {
+    "text" : "halftime",
+    "rank" : 16,
+    "count" : 5405,
+    "prob" : 0.00937
+  }, {
+    "text" : "commercials",
+    "rank" : 17,
+    "count" : 4495,
+    "prob" : 0.00779
+  }, {
+    "text" : "lynch",
+    "rank" : 18,
+    "count" : 4092,
+    "prob" : 0.00709
+  }, {
+    "text" : "play",
+    "rank" : 19,
+    "count" : 4064,
+    "prob" : 0.00705
+  }, {
+    "text" : "superbowl",
+    "rank" : 20,
+    "count" : 4025,
+    "prob" : 0.00698
+  } ]
+}, {
+  "id" : 36,
+  "cumprob" : 0.12432,
+  "corpusdist" : 1.2444,
+  "words" : [ {
+    "text" : "ready",
+    "rank" : 1,
+    "count" : 11805,
+    "prob" : 0.00892
+  }, {
+    "text" : "bout",
+    "rank" : 2,
+    "count" : 11544,
+    "prob" : 0.00872
+  }, {
+    "text" : "finna",
+    "rank" : 3,
+    "count" : 10987,
+    "prob" : 0.0083
+  }, {
+    "text" : "sleep",
+    "rank" : 4,
+    "count" : 10938,
+    "prob" : 0.00827
+  }, {
+    "text" : "ion",
+    "rank" : 5,
+    "count" : 10796,
+    "prob" : 0.00816
+  }, {
+    "text" : "yall",
+    "rank" : 6,
+    "count" : 9651,
+    "prob" : 0.00729
+  }, {
+    "text" : "lil",
+    "rank" : 7,
+    "count" : 9646,
+    "prob" : 0.00729
+  }, {
+    "text" : "baby",
+    "rank" : 8,
+    "count" : 9427,
+    "prob" : 0.00712
+  }, {
+    "text" : "tho",
+    "rank" : 9,
+    "count" : 8474,
+    "prob" : 0.0064
+  }, {
+    "text" : "bruh",
+    "rank" : 10,
+    "count" : 7976,
+    "prob" : 0.00603
+  }, {
+    "text" : "ima",
+    "rank" : 11,
+    "count" : 7215,
+    "prob" : 0.00545
+  }, {
+    "text" : "phone",
+    "rank" : 12,
+    "count" : 7210,
+    "prob" : 0.00545
+  }, {
+    "text" : "bae",
+    "rank" : 13,
+    "count" : 7169,
+    "prob" : 0.00542
+  }, {
+    "text" : "real",
+    "rank" : 14,
+    "count" : 7007,
+    "prob" : 0.0053
+  }, {
+    "text" : "wit",
+    "rank" : 15,
+    "count" : 6588,
+    "prob" : 0.00498
+  }, {
+    "text" : "mad",
+    "rank" : 16,
+    "count" : 5890,
+    "prob" : 0.00445
+  }, {
+    "text" : "hell",
+    "rank" : 17,
+    "count" : 5765,
+    "prob" : 0.00436
+  }, {
+    "text" : "hoes",
+    "rank" : 18,
+    "count" : 5562,
+    "prob" : 0.0042
+  }, {
+    "text" : "mama",
+    "rank" : 19,
+    "count" : 5489,
+    "prob" : 0.00415
+  }, {
+    "text" : "swear",
+    "rank" : 20,
+    "count" : 5353,
+    "prob" : 0.00405
+  } ]
+}, {
+  "id" : 37,
+  "cumprob" : 0.17891,
+  "corpusdist" : 5.373,
+  "words" : [ {
+    "text" : "smiles",
+    "rank" : 1,
+    "count" : 1857,
+    "prob" : 0.02765
+  }, {
+    "text" : "nevada",
+    "rank" : 2,
+    "count" : 1383,
+    "prob" : 0.0206
+  }, {
+    "text" : "match",
+    "rank" : 3,
+    "count" : 906,
+    "prob" : 0.01349
+  }, {
+    "text" : "wwe",
+    "rank" : 4,
+    "count" : 886,
+    "prob" : 0.01319
+  }, {
+    "text" : "cena",
+    "rank" : 5,
+    "count" : 800,
+    "prob" : 0.01191
+  }, {
+    "text" : "reigns",
+    "rank" : 6,
+    "count" : 739,
+    "prob" : 0.011
+  }, {
+    "text" : "rumble",
+    "rank" : 7,
+    "count" : 672,
+    "prob" : 0.01001
+  }, {
+    "text" : "rollins",
+    "rank" : 8,
+    "count" : 652,
+    "prob" : 0.00971
+  }, {
+    "text" : "roman",
+    "rank" : 9,
+    "count" : 643,
+    "prob" : 0.00958
+  }, {
+    "text" : "seth",
+    "rank" : 10,
+    "count" : 412,
+    "prob" : 0.00614
+  }, {
+    "text" : "ambrose",
+    "rank" : 11,
+    "count" : 388,
+    "prob" : 0.00578
+  }, {
+    "text" : "lesnar",
+    "rank" : 12,
+    "count" : 385,
+    "prob" : 0.00573
+  }, {
+    "text" : "bryan",
+    "rank" : 13,
+    "count" : 350,
+    "prob" : 0.00521
+  }, {
+    "text" : "raw",
+    "rank" : 14,
+    "count" : 349,
+    "prob" : 0.0052
+  }, {
+    "text" : "brock",
+    "rank" : 15,
+    "count" : 335,
+    "prob" : 0.00499
+  }, {
+    "text" : "ziggler",
+    "rank" : 16,
+    "count" : 288,
+    "prob" : 0.00429
+  }, {
+    "text" : "dean",
+    "rank" : 17,
+    "count" : 272,
+    "prob" : 0.00405
+  }, {
+    "text" : "royal",
+    "rank" : 18,
+    "count" : 256,
+    "prob" : 0.00381
+  }, {
+    "text" : "vineyard",
+    "rank" : 19,
+    "count" : 223,
+    "prob" : 0.00332
+  }, {
+    "text" : "compassion",
+    "rank" : 20,
+    "count" : 218,
+    "prob" : 0.00325
+  } ]
+}, {
+  "id" : 38,
+  "cumprob" : 0.0694,
+  "corpusdist" : 6.0402,
+  "words" : [ {
+    "text" : "sales",
+    "rank" : 1,
+    "count" : 559,
+    "prob" : 0.00846
+  }, {
+    "text" : "twitter",
+    "rank" : 2,
+    "count" : 360,
+    "prob" : 0.00545
+  }, {
+    "text" : "analysis",
+    "rank" : 3,
+    "count" : 334,
+    "prob" : 0.00506
+  }, {
+    "text" : "click",
+    "rank" : 4,
+    "count" : 327,
+    "prob" : 0.00495
+  }, {
+    "text" : "sundoghigh",
+    "rank" : 5,
+    "count" : 314,
+    "prob" : 0.00475
+  }, {
+    "text" : "kittyssaloon",
+    "rank" : 6,
+    "count" : 255,
+    "prob" : 0.00386
+  }, {
+    "text" : "handle",
+    "rank" : 7,
+    "count" : 225,
+    "prob" : 0.00341
+  }, {
+    "text" : "salud",
+    "rank" : 8,
+    "count" : 220,
+    "prob" : 0.00333
+  }, {
+    "text" : "llmajer",
+    "rank" : 9,
+    "count" : 201,
+    "prob" : 0.00304
+  }, {
+    "text" : "mrsp11307",
+    "rank" : 10,
+    "count" : 198,
+    "prob" : 0.003
+  }, {
+    "text" : "intelligently",
+    "rank" : 11,
+    "count" : 190,
+    "prob" : 0.00288
+  }, {
+    "text" : "mad_rebel",
+    "rank" : 12,
+    "count" : 169,
+    "prob" : 0.00256
+  }, {
+    "text" : "dinero",
+    "rank" : 13,
+    "count" : 168,
+    "prob" : 0.00254
+  }, {
+    "text" : "freelion7",
+    "rank" : 14,
+    "count" : 164,
+    "prob" : 0.00248
+  }, {
+    "text" : "qnoftherealm",
+    "rank" : 15,
+    "count" : 161,
+    "prob" : 0.00244
+  }, {
+    "text" : "amor",
+    "rank" : 16,
+    "count" : 152,
+    "prob" : 0.0023
+  }, {
+    "text" : "woodenthreat",
+    "rank" : 17,
+    "count" : 150,
+    "prob" : 0.00227
+  }, {
+    "text" : "kwickcarley",
+    "rank" : 18,
+    "count" : 148,
+    "prob" : 0.00224
+  }, {
+    "text" : "homequant",
+    "rank" : 19,
+    "count" : 147,
+    "prob" : 0.00223
+  }, {
+    "text" : "febrero",
+    "rank" : 20,
+    "count" : 142,
+    "prob" : 0.00215
+  } ]
+}, {
+  "id" : 39,
+  "cumprob" : 0.13537,
+  "corpusdist" : 2.8132,
+  "words" : [ {
+    "text" : "game",
+    "rank" : 1,
+    "count" : 5527,
+    "prob" : 0.01813
+  }, {
+    "text" : "iowa",
+    "rank" : 2,
+    "count" : 4589,
+    "prob" : 0.01505
+  }, {
+    "text" : "basketball",
+    "rank" : 3,
+    "count" : 3065,
+    "prob" : 0.01006
+  }, {
+    "text" : "win",
+    "rank" : 4,
+    "count" : 2837,
+    "prob" : 0.00931
+  }, {
+    "text" : "team",
+    "rank" : 5,
+    "count" : 2672,
+    "prob" : 0.00877
+  }, {
+    "text" : "boys",
+    "rank" : 6,
+    "count" : 2136,
+    "prob" : 0.00701
+  }, {
+    "text" : "chicago",
+    "rank" : 7,
+    "count" : 1923,
+    "prob" : 0.00631
+  }, {
+    "text" : "girls",
+    "rank" : 8,
+    "count" : 1923,
+    "prob" : 0.00631
+  }, {
+    "text" : "city",
+    "rank" : 9,
+    "count" : 1640,
+    "prob" : 0.00538
+  }, {
+    "text" : "kansas",
+    "rank" : 10,
+    "count" : 1564,
+    "prob" : 0.00513
+  }, {
+    "text" : "play",
+    "rank" : 11,
+    "count" : 1540,
+    "prob" : 0.00505
+  }, {
+    "text" : "illinois",
+    "rank" : 12,
+    "count" : 1523,
+    "prob" : 0.005
+  }, {
+    "text" : "indiana",
+    "rank" : 13,
+    "count" : 1464,
+    "prob" : 0.0048
+  }, {
+    "text" : "left",
+    "rank" : 14,
+    "count" : 1463,
+    "prob" : 0.0048
+  }, {
+    "text" : "lead",
+    "rank" : 15,
+    "count" : 1381,
+    "prob" : 0.00453
+  }, {
+    "text" : "big",
+    "rank" : 16,
+    "count" : 1368,
+    "prob" : 0.00449
+  }, {
+    "text" : "wrestling",
+    "rank" : 17,
+    "count" : 1240,
+    "prob" : 0.00407
+  }, {
+    "text" : "nebraska",
+    "rank" : 18,
+    "count" : 1193,
+    "prob" : 0.00391
+  }, {
+    "text" : "jv",
+    "rank" : 19,
+    "count" : 1122,
+    "prob" : 0.00368
+  }, {
+    "text" : "wins",
+    "rank" : 20,
+    "count" : 1093,
+    "prob" : 0.00359
+  } ]
+}, {
+  "id" : 40,
+  "cumprob" : 0.14907,
+  "corpusdist" : 4.328,
+  "words" : [ {
+    "text" : "florida",
+    "rank" : 1,
+    "count" : 4334,
+    "prob" : 0.03734
+  }, {
+    "text" : "beach",
+    "rank" : 2,
+    "count" : 2329,
+    "prob" : 0.02007
+  }, {
+    "text" : "fl",
+    "rank" : 3,
+    "count" : 1491,
+    "prob" : 0.01285
+  }, {
+    "text" : "miami",
+    "rank" : 4,
+    "count" : 1330,
+    "prob" : 0.01146
+  }, {
+    "text" : "orlando",
+    "rank" : 5,
+    "count" : 1177,
+    "prob" : 0.01014
+  }, {
+    "text" : "tampa",
+    "rank" : 6,
+    "count" : 999,
+    "prob" : 0.00861
+  }, {
+    "text" : "key",
+    "rank" : 7,
+    "count" : 617,
+    "prob" : 0.00532
+  }, {
+    "text" : "disney",
+    "rank" : 8,
+    "count" : 566,
+    "prob" : 0.00488
+  }, {
+    "text" : "west",
+    "rank" : 9,
+    "count" : 428,
+    "prob" : 0.00369
+  }, {
+    "text" : "island",
+    "rank" : 10,
+    "count" : 427,
+    "prob" : 0.00368
+  }, {
+    "text" : "fsu",
+    "rank" : 11,
+    "count" : 407,
+    "prob" : 0.00351
+  }, {
+    "text" : "lmfao",
+    "rank" : 12,
+    "count" : 393,
+    "prob" : 0.00339
+  }, {
+    "text" : "item",
+    "rank" : 13,
+    "count" : 372,
+    "prob" : 0.00321
+  }, {
+    "text" : "boat",
+    "rank" : 14,
+    "count" : 368,
+    "prob" : 0.00317
+  }, {
+    "text" : "palm",
+    "rank" : 15,
+    "count" : 363,
+    "prob" : 0.00313
+  }, {
+    "text" : "ebay",
+    "rank" : 16,
+    "count" : 359,
+    "prob" : 0.00309
+  }, {
+    "text" : "gators",
+    "rank" : 17,
+    "count" : 357,
+    "prob" : 0.00308
+  }, {
+    "text" : "bless",
+    "rank" : 18,
+    "count" : 334,
+    "prob" : 0.00288
+  }, {
+    "text" : "tally",
+    "rank" : 19,
+    "count" : 326,
+    "prob" : 0.00281
+  }, {
+    "text" : "mommy",
+    "rank" : 20,
+    "count" : 324,
+    "prob" : 0.00279
+  } ]
+}, {
+  "id" : 41,
+  "cumprob" : 0.22947,
+  "corpusdist" : 2.2555,
+  "words" : [ {
+    "text" : "game",
+    "rank" : 1,
+    "count" : 15299,
+    "prob" : 0.03413
+  }, {
+    "text" : "cowboys",
+    "rank" : 2,
+    "count" : 12267,
+    "prob" : 0.02736
+  }, {
+    "text" : "packers",
+    "rank" : 3,
+    "count" : 7561,
+    "prob" : 0.01687
+  }, {
+    "text" : "win",
+    "rank" : 4,
+    "count" : 6057,
+    "prob" : 0.01351
+  }, {
+    "text" : "dallas",
+    "rank" : 5,
+    "count" : 4915,
+    "prob" : 0.01096
+  }, {
+    "text" : "colts",
+    "rank" : 6,
+    "count" : 4757,
+    "prob" : 0.01061
+  }, {
+    "text" : "fans",
+    "rank" : 7,
+    "count" : 4193,
+    "prob" : 0.00935
+  }, {
+    "text" : "green",
+    "rank" : 8,
+    "count" : 4156,
+    "prob" : 0.00927
+  }, {
+    "text" : "bay",
+    "rank" : 9,
+    "count" : 4019,
+    "prob" : 0.00897
+  }, {
+    "text" : "football",
+    "rank" : 10,
+    "count" : 3991,
+    "prob" : 0.0089
+  }, {
+    "text" : "scott",
+    "rank" : 11,
+    "count" : 3951,
+    "prob" : 0.00881
+  }, {
+    "text" : "seattle",
+    "rank" : 12,
+    "count" : 3817,
+    "prob" : 0.00851
+  }, {
+    "text" : "stuart",
+    "rank" : 13,
+    "count" : 3602,
+    "prob" : 0.00804
+  }, {
+    "text" : "sunday",
+    "rank" : 14,
+    "count" : 3596,
+    "prob" : 0.00802
+  }, {
+    "text" : "catch",
+    "rank" : 15,
+    "count" : 3574,
+    "prob" : 0.00797
+  }, {
+    "text" : "team",
+    "rank" : 16,
+    "count" : 3561,
+    "prob" : 0.00794
+  }, {
+    "text" : "school",
+    "rank" : 17,
+    "count" : 3530,
+    "prob" : 0.00787
+  }, {
+    "text" : "rodgers",
+    "rank" : 18,
+    "count" : 3479,
+    "prob" : 0.00776
+  }, {
+    "text" : "week",
+    "rank" : 19,
+    "count" : 3290,
+    "prob" : 0.00734
+  }, {
+    "text" : "lions",
+    "rank" : 20,
+    "count" : 3252,
+    "prob" : 0.00725
+  } ]
+}, {
+  "id" : 42,
+  "cumprob" : 0.23834,
+  "corpusdist" : 3.6344,
+  "words" : [ {
+    "text" : "lead",
+    "rank" : 1,
+    "count" : 3416,
+    "prob" : 0.02307
+  }, {
+    "text" : "girls",
+    "rank" : 2,
+    "count" : 3230,
+    "prob" : 0.02182
+  }, {
+    "text" : "leads",
+    "rank" : 3,
+    "count" : 3034,
+    "prob" : 0.02049
+  }, {
+    "text" : "boys",
+    "rank" : 4,
+    "count" : 2966,
+    "prob" : 0.02003
+  }, {
+    "text" : "left",
+    "rank" : 5,
+    "count" : 2877,
+    "prob" : 0.01943
+  }, {
+    "text" : "game",
+    "rank" : 6,
+    "count" : 2800,
+    "prob" : 0.01891
+  }, {
+    "text" : "points",
+    "rank" : 7,
+    "count" : 1949,
+    "prob" : 0.01316
+  }, {
+    "text" : "basketball",
+    "rank" : 8,
+    "count" : 1739,
+    "prob" : 0.01175
+  }, {
+    "text" : "quarter",
+    "rank" : 9,
+    "count" : 1708,
+    "prob" : 0.01154
+  }, {
+    "text" : "win",
+    "rank" : 10,
+    "count" : 1678,
+    "prob" : 0.01133
+  }, {
+    "text" : "halftime",
+    "rank" : 11,
+    "count" : 1332,
+    "prob" : 0.009
+  }, {
+    "text" : "lady",
+    "rank" : 12,
+    "count" : 1164,
+    "prob" : 0.00786
+  }, {
+    "text" : "pts",
+    "rank" : 13,
+    "count" : 1156,
+    "prob" : 0.00781
+  }, {
+    "text" : "play",
+    "rank" : 14,
+    "count" : 1043,
+    "prob" : 0.00704
+  }, {
+    "text" : "hoops",
+    "rank" : 15,
+    "count" : 962,
+    "prob" : 0.0065
+  }, {
+    "text" : "entering",
+    "rank" : 16,
+    "count" : 896,
+    "prob" : 0.00605
+  }, {
+    "text" : "timeout",
+    "rank" : 17,
+    "count" : 861,
+    "prob" : 0.00582
+  }, {
+    "text" : "prize",
+    "rank" : 18,
+    "count" : 845,
+    "prob" : 0.00571
+  }, {
+    "text" : "harmony",
+    "rank" : 19,
+    "count" : 844,
+    "prob" : 0.0057
+  }, {
+    "text" : "minutes",
+    "rank" : 20,
+    "count" : 789,
+    "prob" : 0.00533
+  } ]
+}, {
+  "id" : 43,
+  "cumprob" : 0.16251,
+  "corpusdist" : 4.9479,
+  "words" : [ {
+    "text" : "ohio",
+    "rank" : 1,
+    "count" : 1914,
+    "prob" : 0.02676
+  }, {
+    "text" : "cavs",
+    "rank" : 2,
+    "count" : 920,
+    "prob" : 0.01286
+  }, {
+    "text" : "check",
+    "rank" : 3,
+    "count" : 898,
+    "prob" : 0.01255
+  }, {
+    "text" : "columbus",
+    "rank" : 4,
+    "count" : 773,
+    "prob" : 0.01081
+  }, {
+    "text" : "cleveland",
+    "rank" : 5,
+    "count" : 644,
+    "prob" : 0.009
+  }, {
+    "text" : "win",
+    "rank" : 6,
+    "count" : 644,
+    "prob" : 0.009
+  }, {
+    "text" : "chipotle",
+    "rank" : 7,
+    "count" : 617,
+    "prob" : 0.00863
+  }, {
+    "text" : "browns",
+    "rank" : 8,
+    "count" : 617,
+    "prob" : 0.00863
+  }, {
+    "text" : "tv",
+    "rank" : 9,
+    "count" : 573,
+    "prob" : 0.00801
+  }, {
+    "text" : "plz",
+    "rank" : 10,
+    "count" : 493,
+    "prob" : 0.00689
+  }, {
+    "text" : "facebook",
+    "rank" : 11,
+    "count" : 436,
+    "prob" : 0.0061
+  }, {
+    "text" : "athens",
+    "rank" : 12,
+    "count" : 416,
+    "prob" : 0.00582
+  }, {
+    "text" : "loss",
+    "rank" : 13,
+    "count" : 372,
+    "prob" : 0.0052
+  }, {
+    "text" : "osu",
+    "rank" : 14,
+    "count" : 365,
+    "prob" : 0.0051
+  }, {
+    "text" : "youtube",
+    "rank" : 15,
+    "count" : 351,
+    "prob" : 0.00491
+  }, {
+    "text" : "bg",
+    "rank" : 16,
+    "count" : 348,
+    "prob" : 0.00487
+  }, {
+    "text" : "toledo",
+    "rank" : 17,
+    "count" : 342,
+    "prob" : 0.00478
+  }, {
+    "text" : "reverbnation",
+    "rank" : 18,
+    "count" : 327,
+    "prob" : 0.00457
+  }, {
+    "text" : "kyrie",
+    "rank" : 19,
+    "count" : 291,
+    "prob" : 0.00407
+  }, {
+    "text" : "1on1",
+    "rank" : 20,
+    "count" : 283,
+    "prob" : 0.00396
+  } ]
+}, {
+  "id" : 44,
+  "cumprob" : 0.10627,
+  "corpusdist" : 5.1919,
+  "words" : [ {
+    "text" : "mother",
+    "rank" : 1,
+    "count" : 455,
+    "prob" : 0.00865
+  }, {
+    "text" : "revolution",
+    "rank" : 2,
+    "count" : 426,
+    "prob" : 0.0081
+  }, {
+    "text" : "genesis",
+    "rank" : 3,
+    "count" : 396,
+    "prob" : 0.00753
+  }, {
+    "text" : "free",
+    "rank" : 4,
+    "count" : 374,
+    "prob" : 0.00711
+  }, {
+    "text" : "808",
+    "rank" : 5,
+    "count" : 315,
+    "prob" : 0.00599
+  }, {
+    "text" : "pdf",
+    "rank" : 6,
+    "count" : 289,
+    "prob" : 0.00549
+  }, {
+    "text" : "earth",
+    "rank" : 7,
+    "count" : 275,
+    "prob" : 0.00523
+  }, {
+    "text" : "monica",
+    "rank" : 8,
+    "count" : 274,
+    "prob" : 0.00521
+  }, {
+    "text" : "10k",
+    "rank" : 9,
+    "count" : 255,
+    "prob" : 0.00485
+  }, {
+    "text" : "crowley",
+    "rank" : 10,
+    "count" : 253,
+    "prob" : 0.00481
+  }, {
+    "text" : "asheville",
+    "rank" : 11,
+    "count" : 246,
+    "prob" : 0.00468
+  }, {
+    "text" : "pays",
+    "rank" : 12,
+    "count" : 243,
+    "prob" : 0.00462
+  }, {
+    "text" : "quotes",
+    "rank" : 13,
+    "count" : 234,
+    "prob" : 0.00445
+  }, {
+    "text" : "heavy",
+    "rank" : 14,
+    "count" : 232,
+    "prob" : 0.00441
+  }, {
+    "text" : "aims",
+    "rank" : 15,
+    "count" : 228,
+    "prob" : 0.00433
+  }, {
+    "text" : "ra",
+    "rank" : 16,
+    "count" : 226,
+    "prob" : 0.0043
+  }, {
+    "text" : "reality",
+    "rank" : 17,
+    "count" : 223,
+    "prob" : 0.00424
+  }, {
+    "text" : "spokane",
+    "rank" : 18,
+    "count" : 220,
+    "prob" : 0.00418
+  }, {
+    "text" : "book",
+    "rank" : 19,
+    "count" : 217,
+    "prob" : 0.00413
+  }, {
+    "text" : "angel",
+    "rank" : 20,
+    "count" : 209,
+    "prob" : 0.00397
+  } ]
+}, {
+  "id" : 45,
+  "cumprob" : 0.0994,
+  "corpusdist" : 4.7186,
+  "words" : [ {
+    "text" : "pra",
+    "rank" : 1,
+    "count" : 3188,
+    "prob" : 0.01585
+  }, {
+    "text" : "vou",
+    "rank" : 2,
+    "count" : 2016,
+    "prob" : 0.01002
+  }, {
+    "text" : "vc",
+    "rank" : 3,
+    "count" : 1741,
+    "prob" : 0.00866
+  }, {
+    "text" : "nao",
+    "rank" : 4,
+    "count" : 1627,
+    "prob" : 0.00809
+  }, {
+    "text" : "só",
+    "rank" : 5,
+    "count" : 1552,
+    "prob" : 0.00772
+  }, {
+    "text" : "pq",
+    "rank" : 6,
+    "count" : 1052,
+    "prob" : 0.00523
+  }, {
+    "text" : "amo",
+    "rank" : 7,
+    "count" : 762,
+    "prob" : 0.00379
+  }, {
+    "text" : "تو",
+    "rank" : 8,
+    "count" : 721,
+    "prob" : 0.00358
+  }, {
+    "text" : "cara",
+    "rank" : 9,
+    "count" : 712,
+    "prob" : 0.00354
+  }, {
+    "text" : "vida",
+    "rank" : 10,
+    "count" : 693,
+    "prob" : 0.00345
+  }, {
+    "text" : "justin",
+    "rank" : 11,
+    "count" : 684,
+    "prob" : 0.0034
+  }, {
+    "text" : "melhor",
+    "rank" : 12,
+    "count" : 675,
+    "prob" : 0.00336
+  }, {
+    "text" : "amor",
+    "rank" : 13,
+    "count" : 673,
+    "prob" : 0.00335
+  }, {
+    "text" : "mim",
+    "rank" : 14,
+    "count" : 626,
+    "prob" : 0.00311
+  }, {
+    "text" : "رو",
+    "rank" : 15,
+    "count" : 601,
+    "prob" : 0.00299
+  }, {
+    "text" : "acho",
+    "rank" : 16,
+    "count" : 572,
+    "prob" : 0.00284
+  }, {
+    "text" : "vcs",
+    "rank" : 17,
+    "count" : 562,
+    "prob" : 0.00279
+  }, {
+    "text" : "deus",
+    "rank" : 18,
+    "count" : 558,
+    "prob" : 0.00277
+  }, {
+    "text" : "sdv",
+    "rank" : 19,
+    "count" : 494,
+    "prob" : 0.00246
+  }, {
+    "text" : "tava",
+    "rank" : 20,
+    "count" : 486,
+    "prob" : 0.00242
+  } ]
+}, {
+  "id" : 46,
+  "cumprob" : 0.2092,
+  "corpusdist" : 6.0206,
+  "words" : [ {
+    "text" : "jesus",
+    "rank" : 1,
+    "count" : 2035,
+    "prob" : 0.04892
+  }, {
+    "text" : "poor",
+    "rank" : 2,
+    "count" : 1756,
+    "prob" : 0.04221
+  }, {
+    "text" : "bring",
+    "rank" : 3,
+    "count" : 1250,
+    "prob" : 0.03005
+  }, {
+    "text" : "properties",
+    "rank" : 4,
+    "count" : 956,
+    "prob" : 0.02298
+  }, {
+    "text" : "ι",
+    "rank" : 5,
+    "count" : 424,
+    "prob" : 0.01019
+  }, {
+    "text" : "countries",
+    "rank" : 6,
+    "count" : 301,
+    "prob" : 0.00724
+  }, {
+    "text" : "share",
+    "rank" : 7,
+    "count" : 290,
+    "prob" : 0.00697
+  }, {
+    "text" : "market",
+    "rank" : 8,
+    "count" : 287,
+    "prob" : 0.0069
+  }, {
+    "text" : "fisher",
+    "rank" : 9,
+    "count" : 153,
+    "prob" : 0.00368
+  }, {
+    "text" : "bash",
+    "rank" : 10,
+    "count" : 134,
+    "prob" : 0.00322
+  }, {
+    "text" : "land",
+    "rank" : 11,
+    "count" : 131,
+    "prob" : 0.00315
+  }, {
+    "text" : "https",
+    "rank" : 12,
+    "count" : 120,
+    "prob" : 0.00288
+  }, {
+    "text" : "jesús",
+    "rank" : 13,
+    "count" : 115,
+    "prob" : 0.00276
+  }, {
+    "text" : "mundo",
+    "rank" : 14,
+    "count" : 114,
+    "prob" : 0.00274
+  }, {
+    "text" : "тσ",
+    "rank" : 15,
+    "count" : 110,
+    "prob" : 0.00264
+  }, {
+    "text" : "boat",
+    "rank" : 16,
+    "count" : 110,
+    "prob" : 0.00264
+  }, {
+    "text" : "dry",
+    "rank" : 17,
+    "count" : 107,
+    "prob" : 0.00257
+  }, {
+    "text" : "knowledge",
+    "rank" : 18,
+    "count" : 105,
+    "prob" : 0.00252
+  }, {
+    "text" : "reign",
+    "rank" : 19,
+    "count" : 104,
+    "prob" : 0.0025
+  }, {
+    "text" : "propiedades",
+    "rank" : 20,
+    "count" : 100,
+    "prob" : 0.0024
+  } ]
+}, {
+  "id" : 47,
+  "cumprob" : 0.13347,
+  "corpusdist" : 3.3032,
+  "words" : [ {
+    "text" : "obama",
+    "rank" : 1,
+    "count" : 7607,
+    "prob" : 0.0298
+  }, {
+    "text" : "america",
+    "rank" : 2,
+    "count" : 2872,
+    "prob" : 0.01125
+  }, {
+    "text" : "truth",
+    "rank" : 3,
+    "count" : 2552,
+    "prob" : 0.01
+  }, {
+    "text" : "president",
+    "rank" : 4,
+    "count" : 2113,
+    "prob" : 0.00828
+  }, {
+    "text" : "american",
+    "rank" : 5,
+    "count" : 1838,
+    "prob" : 0.0072
+  }, {
+    "text" : "lie",
+    "rank" : 6,
+    "count" : 1828,
+    "prob" : 0.00716
+  }, {
+    "text" : "judge",
+    "rank" : 7,
+    "count" : 1534,
+    "prob" : 0.00601
+  }, {
+    "text" : "gop",
+    "rank" : 8,
+    "count" : 1490,
+    "prob" : 0.00584
+  }, {
+    "text" : "isis",
+    "rank" : 9,
+    "count" : 1222,
+    "prob" : 0.00479
+  }, {
+    "text" : "muslim",
+    "rank" : 10,
+    "count" : 1185,
+    "prob" : 0.00464
+  }, {
+    "text" : "congress",
+    "rank" : 11,
+    "count" : 1156,
+    "prob" : 0.00453
+  }, {
+    "text" : "law",
+    "rank" : 12,
+    "count" : 1136,
+    "prob" : 0.00445
+  }, {
+    "text" : "islam",
+    "rank" : 13,
+    "count" : 1117,
+    "prob" : 0.00438
+  }, {
+    "text" : "vote",
+    "rank" : 14,
+    "count" : 1059,
+    "prob" : 0.00415
+  }, {
+    "text" : "country",
+    "rank" : 15,
+    "count" : 950,
+    "prob" : 0.00372
+  }, {
+    "text" : "military",
+    "rank" : 16,
+    "count" : 912,
+    "prob" : 0.00357
+  }, {
+    "text" : "boehner",
+    "rank" : 17,
+    "count" : 901,
+    "prob" : 0.00353
+  }, {
+    "text" : "americans",
+    "rank" : 18,
+    "count" : 893,
+    "prob" : 0.0035
+  }, {
+    "text" : "israel",
+    "rank" : 19,
+    "count" : 854,
+    "prob" : 0.00335
+  }, {
+    "text" : "muslims",
+    "rank" : 20,
+    "count" : 852,
+    "prob" : 0.00334
+  } ]
+}, {
+  "id" : 48,
+  "cumprob" : 0.12941,
+  "corpusdist" : 5.5037,
+  "words" : [ {
+    "text" : "ko",
+    "rank" : 1,
+    "count" : 1521,
+    "prob" : 0.02042
+  }, {
+    "text" : "mo",
+    "rank" : 2,
+    "count" : 1336,
+    "prob" : 0.01794
+  }, {
+    "text" : "ng",
+    "rank" : 3,
+    "count" : 863,
+    "prob" : 0.01159
+  }, {
+    "text" : "ang",
+    "rank" : 4,
+    "count" : 734,
+    "prob" : 0.00986
+  }, {
+    "text" : "branson",
+    "rank" : 5,
+    "count" : 727,
+    "prob" : 0.00976
+  }, {
+    "text" : "tickets",
+    "rank" : 6,
+    "count" : 592,
+    "prob" : 0.00795
+  }, {
+    "text" : "yung",
+    "rank" : 7,
+    "count" : 433,
+    "prob" : 0.00581
+  }, {
+    "text" : "naman",
+    "rank" : 8,
+    "count" : 414,
+    "prob" : 0.00556
+  }, {
+    "text" : "ba",
+    "rank" : 9,
+    "count" : 330,
+    "prob" : 0.00443
+  }, {
+    "text" : "mga",
+    "rank" : 10,
+    "count" : 298,
+    "prob" : 0.004
+  }, {
+    "text" : "hindi",
+    "rank" : 11,
+    "count" : 290,
+    "prob" : 0.00389
+  }, {
+    "text" : "xd",
+    "rank" : 12,
+    "count" : 289,
+    "prob" : 0.00388
+  }, {
+    "text" : "nga",
+    "rank" : 13,
+    "count" : 273,
+    "prob" : 0.00367
+  }, {
+    "text" : "lin",
+    "rank" : 14,
+    "count" : 266,
+    "prob" : 0.00357
+  }, {
+    "text" : "wala",
+    "rank" : 15,
+    "count" : 234,
+    "prob" : 0.00314
+  }, {
+    "text" : "yan",
+    "rank" : 16,
+    "count" : 215,
+    "prob" : 0.00289
+  }, {
+    "text" : "talaga",
+    "rank" : 17,
+    "count" : 213,
+    "prob" : 0.00286
+  }, {
+    "text" : "kung",
+    "rank" : 18,
+    "count" : 210,
+    "prob" : 0.00282
+  }, {
+    "text" : "pag",
+    "rank" : 19,
+    "count" : 210,
+    "prob" : 0.00282
+  }, {
+    "text" : "kasi",
+    "rank" : 20,
+    "count" : 190,
+    "prob" : 0.00255
+  } ]
+}, {
+  "id" : 49,
+  "cumprob" : 0.09788,
+  "corpusdist" : 3.179,
+  "words" : [ {
+    "text" : "lmfao",
+    "rank" : 1,
+    "count" : 1819,
+    "prob" : 0.00806
+  }, {
+    "text" : "mad",
+    "rank" : 2,
+    "count" : 1518,
+    "prob" : 0.00672
+  }, {
+    "text" : "boston",
+    "rank" : 3,
+    "count" : 1494,
+    "prob" : 0.00662
+  }, {
+    "text" : "birthday",
+    "rank" : 4,
+    "count" : 1486,
+    "prob" : 0.00658
+  }, {
+    "text" : "wait",
+    "rank" : 5,
+    "count" : 1376,
+    "prob" : 0.0061
+  }, {
+    "text" : "bed",
+    "rank" : 6,
+    "count" : 1217,
+    "prob" : 0.00539
+  }, {
+    "text" : "literally",
+    "rank" : 7,
+    "count" : 1154,
+    "prob" : 0.00511
+  }, {
+    "text" : "bitches",
+    "rank" : 8,
+    "count" : 1115,
+    "prob" : 0.00494
+  }, {
+    "text" : "rn",
+    "rank" : 9,
+    "count" : 1028,
+    "prob" : 0.00455
+  }, {
+    "text" : "deadass",
+    "rank" : 10,
+    "count" : 1027,
+    "prob" : 0.00455
+  }, {
+    "text" : "artist",
+    "rank" : 11,
+    "count" : 1018,
+    "prob" : 0.00451
+  }, {
+    "text" : "york",
+    "rank" : 12,
+    "count" : 1010,
+    "prob" : 0.00447
+  }, {
+    "text" : "nyc",
+    "rank" : 13,
+    "count" : 936,
+    "prob" : 0.00415
+  }, {
+    "text" : "philly",
+    "rank" : 14,
+    "count" : 917,
+    "prob" : 0.00406
+  }, {
+    "text" : "facts",
+    "rank" : 15,
+    "count" : 903,
+    "prob" : 0.004
+  }, {
+    "text" : "hockey",
+    "rank" : 16,
+    "count" : 896,
+    "prob" : 0.00397
+  }, {
+    "text" : "tn",
+    "rank" : 17,
+    "count" : 801,
+    "prob" : 0.00355
+  }, {
+    "text" : "snow",
+    "rank" : 18,
+    "count" : 800,
+    "prob" : 0.00354
+  }, {
+    "text" : "gym",
+    "rank" : 19,
+    "count" : 792,
+    "prob" : 0.00351
+  }, {
+    "text" : "kid",
+    "rank" : 20,
+    "count" : 789,
+    "prob" : 0.0035
+  } ]
+} ]

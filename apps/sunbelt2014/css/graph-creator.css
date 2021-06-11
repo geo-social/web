@@ -1,0 +1,145 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+h2 {
+	font: 14px sans-serif;
+}
+
+p {
+	text-align: center;
+	overflow: overlay;
+	position: relative;
+}
+
+body {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: rgb(248, 248, 248);
+}
+
+#flowmap {
+	float: left;
+	font: 8px sans-serif;
+}
+
+#toolbox {
+
+	bottom: 0;
+	left: 0;
+	margin-bottom: 0.5em;
+	margin-right: 1em;
+	border: 2px solid #EEEEEE;
+	border-radius: 5px;
+	padding: 1em;
+	z-index: 5;
+}
+
+#toolbox input {
+	width: 30px;
+	opacity: 0.4;
+}
+
+#toolbox input:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+#hidden-file-upload {
+	display: none;
+}
+
+#download-input {
+	margin: 0 0.5em;
+}
+
+.conceptG text {
+	pointer-events: none;
+}
+
+marker {
+	fill: rgb(165, 15, 21);
+}
+
+g.conceptG circle {
+	fill: #F6FBFF;
+	stroke: #333;
+	stroke-width: 0.5px;
+}
+
+g.conceptG:hover circle {
+	fill: rgb(200, 238, 241);
+}
+
+g.selected circle {
+	fill: rgb(250, 232, 255);
+}
+
+g.selected:hover circle {
+	fill: rgb(250, 232, 255);
+}
+
+path.link {
+	fill: none;
+	stroke: #666;
+	stroke-width: 1.5px;
+	cursor: default;
+}
+
+path.link:hover {
+	stroke: rgb(94, 196, 204);
+}
+
+g.connect-node circle {
+	fill: #BEFFFF;
+}
+
+path.link.hidden {
+	stroke-width: 0;
+}
+
+path.link.selected {
+	stroke: rgb(229, 172, 247);
+}
+
+.d3-tip {
+	line-height: 1;
+	font-weight: bold;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	border-radius: 1px;
+}
+
+.d3-tip text {
+	fill: #fff;
+	font-size: 10px;
+	stroke: none;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#controls {
+	position: absolute;
+	width: 240px;
+	font: 10px sans-serif;
+}
+
+#controls span,#controls label {
+	position: relative;
+	top: -5px;
+	padding: 5px;
+	display: inline-block;
+	width: 20px;
+}
+
+#controls button {
+	font: 10px sans-serif;
+	padding: 5px;
+	width: 70px;
+}

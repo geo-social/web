@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Parallel Coordinate Plot</title>
+<style>
+path {
+	stroke-width: 1.5px;
+	stroke: #666;
+	fill: #ddd;
+}
+
+#controls {
+	position: absolute;
+	width: 240px;
+	font: 10px sans-serif;
+}
+
+#controls span,#controls label {
+	position: relative;
+	top: -5px;
+	padding: 5px;
+	display: inline-block;
+	width: 20px;
+}
+
+#controls button {
+	font: 10px sans-serif;
+	padding: 5px;
+	width: 70px;
+}
+</style>
+<div id="superformula"></div>
+<div id="example" class="parcoords" style="width: 960px; height: 320px"></div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="d3.parcoords.js"></script>
+<link rel="stylesheet" type="text/css" href="d3.parcoords.css">
+<script src="superformula.js"></script>
+<script>
+	var width = $(window).width();
+	var height = $(window).height();
+	var mvdata = {};
+
+	$.getJSON("linkswithin_kmeans_20.json", function(result) {
+		//link file must contain (1) source, (2) target, and (3) volume
+		//if there are more than 3 fields the rest will be treated as 
+		//multivariate volume fields
+		var options = '';
+		var flowVolType = [];
+		for ( var col in result[0]) {
+			if (result[0].hasOwnProperty(col)) {
+				if (col != 'source' && col != 'target') {
+					options += '<option value="' + col + '">' + col
+							+ '</option>';
+					flowVolType.push(col);
+				}
+			}
+		}
+		$('#ddlViewBy').html(options);
+
+		$.each(result, function(i, link) {
+			if (link.source == link.target) {
+				var node = {
+					name : link.source
+				}
+				for ( var c = 0; c < flowVolType.length; c++) {
+					node[flowVolType[c]] = link[flowVolType[c]];
+				}
+				mvdata[link.source] = node;
+			}
+		});
+		//console.log(mvdata);
+		drawPCP(mvdata);
+	});
+
+	function drawPCP(mvdata) {
+
+		var data = d3.entries(mvdata).map(function(d) {
+			var val = d.value;
+			val.key = d.key;
+			return val;
+		});
+
+		var format = d3.format(".4n"), scale = d3.scale.linear().domain(
+				[ -10, 20, 1000 ]).range([ 0, 800, 1000 ]);
+
+		var svg = d3.select("#superformula").append("svg").attr("width", 960)
+				.attr("height", 500).append("g").attr("transform",
+						"translate(70,70)");
+
+		var parcoords = d3.parcoords()("#example").data(data).render()
+				.brushable().on(
+						"brush",
+						function(items) {
+							var selected = items.map(function(d) {
+								return d.key;
+							});
+							svg.selectAll("path").style("opacity", 0.2).filter(
+									function(d) {
+										return selected.indexOf(d.key) > -1;
+									}).style("opacity", 1);
+						});
+
+		// 		var shape = d3.superformula().size(5000).segments(3600);
+
+		// 		var path = svg.selectAll("path").data(d3.entries(mvdata)).enter()
+		// 				.append("path").attr(
+		// 						"transform",
+		// 						function(d, i) {
+		// 							return "translate(" + (140 * (i % 7)) + ","
+		// 									+ (140 * Math.floor(i / 7)) + ")"
+		// 						}).attr("d", function(d) {
+		// 					return shape.type(d.key)();
+		// 				}).on("mouseover", function(d, i) {
+		// 					parcoords.highlight([ data[i] ]);
+		// 				}).on("mouseout", parcoords.unhighlight);
+
+	}
+</script>

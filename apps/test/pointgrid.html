@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body {
+	font-family: Helvetica;
+	font-size: 18px;
+}
+
+.point {
+	
+}
+</style>
+<body>
+	<div id="gridstats"></div>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="d3-grid.js"></script>
+	<script>
+		var points = [];
+
+		//TODO: # distinct values: CHANGE THIS IF YOU INPUT A GRID WITH MORE OR LESS THAN 3 DISTINCT VALUES
+		var category = [ 0, 1, 2 ];
+		var categorycount = [ 0, 0, 0 ];
+		var categorycounttotal = 0;
+
+		var extent = 360;
+		var numOfPnts;
+
+		var width = 960, height = 500;
+
+		var pointGrid = d3.layout.grid().points().size([ extent, extent ]);
+
+		var values = [];
+		d3
+				.csv(
+						"data/clstrd987.csv",
+						function(pnts) {
+							numOfPnts = pnts.length;
+
+							//create the points
+							for ( var i = 0; i < numOfPnts; i++) {
+								points.push({});
+							}
+							var k = 0;
+							points.forEach(function(d) {
+								d.value = pnts[k].value;
+								categorycount[d.value]++;
+								categorycounttotal++;
+								k++;
+							});
+
+							var svg = d3.select("body").append("svg").attr({
+								width : width,
+								height : height
+							}).append("g")
+									.attr("transform", "translate(70,70)");
+
+							var catprob = "";
+							var offset = 100;
+
+							for ( var i = 0; i < category.length; i++) {
+								var gradient = svg.append("svg:defs").append(
+										"svg:radialGradient").attr("id",
+										"gradient" + i).attr("cx", "50%").attr(
+										"cy", "50%").attr("cx", "50%").attr(
+										"cy", "50%");
+								// Define the gradient colors
+								gradient.append("svg:stop").attr("offset",
+										function() {
+											return offset + "%";
+										}).attr("stop-color", "black").attr(
+										"stop-opacity", 1);
+								gradient.append("svg:stop").attr("offset",
+										"100%").attr("stop-color", "white")
+										.attr("stop-opacity", 1);
+
+								var pattern = svg
+								  .append('defs')
+								  .append('pattern')
+								    .attr('id', 'pattern' + i)
+								    .attr('patternUnits', 'userSpaceOnUse')
+								    .attr('width', 12)
+								    .attr('height', 12)
+								  .append('rect')
+								    .attr('fill', 'black').attr('width', 5)
+								    .attr('height', 5);
+
+								offset = offset - 30;
+
+								catprob += i
+										+ 1
+										+ ": %"
+										+ d3
+												.round(100 * ((1.0 * categorycount[i]) / (1.0 * categorycounttotal)))
+										+ "\t\t";
+							}
+							d3.select("#gridstats").text(catprob);
+
+							var gradientfill = d3.scale.linear().domain(
+									[ 0, 1, 2 ]).range(
+									[ 'url(#gradient0)', 'url(#gradient1)',
+											'url(#gradient2)' ]);
+							var patternfill = d3.scale.linear().domain(
+									[ 0, 1, 2 ]).range(
+									[ 'url(#pattern0)', 'url(#pattern1)',
+											'url(#pattern2)' ]);
+							var opacity = d3.scale.linear().domain([ 0, 1, 2 ])
+									.range([ 1, 0.6, 0.3 ]);
+							var size = d3.scale.linear().domain([ 0, 1, 2 ])
+									.range([ 6, 4, 2 ]);
+
+							var point = svg.selectAll(".point").data(
+									pointGrid(points));
+							point.enter().append("circle").attr("r", 14).attr(
+									'fill', function(d) {
+										//return gradientfill(d.value);
+										return patternfill(d.value);
+									}).attr("transform", function(d) {
+								return "translate(" + d.x + "," + d.y + ")";
+							});
+
+						});
+	</script>

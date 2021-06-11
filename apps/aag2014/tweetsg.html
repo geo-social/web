@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script type="text/javascript" language="javascript" src="js/jenks.js"></script>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<style type="text/css">
+html,body,#map {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+
+#time {
+	font-family: "Times New Roman";
+	font-size: 30px;
+}
+</style>
+</head>
+<body>
+	<div id="map"></div>
+	<div id="time">
+		<span id="slidertext">0</span>
+	</div>
+	<div id="timeslider" class="wrapper"></div>
+	<script type="text/javascript">
+		// Create the Google Map…
+		var myStyle = [ {
+			featureType : "administrative",
+			elementType : "labels",
+			stylers : [ {
+				visibility : "off"
+			} ]
+		}, {
+			"featureType" : "administrative",
+			"elementType" : "geometry.stroke",
+			"stylers" : [ {
+				"visibility" : "on"
+			}, {
+				"lightness" : 50
+			} ]
+		}, {
+			featureType : "poi",
+			elementType : "labels",
+			stylers : [ {
+				visibility : "off"
+			} ]
+		}, {
+			featureType : "water",
+			elementType : "labels",
+			stylers : [ {
+				visibility : "off"
+			} ]
+		}, {
+			featureType : "road",
+			elementType : "labels",
+			stylers : [ {
+				visibility : "off"
+			} ]
+		}, {
+			"featureType" : "road",
+			"elementType" : "geometry.fill",
+			"stylers" : [ {
+				"visibility" : "off"
+			} ]
+		} ];
+		var map = new google.maps.Map(d3.select("#map").node(), {
+			mapTypeControlOptions : {
+				mapTypeIds : [ 'mystyle', google.maps.MapTypeId.TERRAIN ]
+			},
+			center : new google.maps.LatLng(40, 35),
+			zoom : 6,
+			mapTypeId : 'mystyle'
+		});
+
+		map.mapTypes.set('mystyle', new google.maps.StyledMapType(myStyle, {
+			name : 'My Style'
+		}));
+
+		$("#timeslider").slider({
+			min : 0, // there are 71 months between 1/1/04 and 12/31/09, 0 is all events
+			max : 30,
+			value : 0, //default slider value
+			step : 1, // step is the allow increments the slider can move. 1 = one month
+			slide : function(event, ui) {
+				d3.select("#slidertext").text(ui.value);
+				switchColor(ui.value);
+			}
+		});
+		map.controls[google.maps.ControlPosition.TOP_CENTER].push(time);
+		map.controls[google.maps.ControlPosition.TOP_CENTER].push(timeslider);
+
+		var rectangles = [];
+		var cells = [];
+		var values = [];
+		var breaks = [];
+		$.getJSON("data/tweets.json", function(result) {
+			$.each(result, function(i, cell) {
+				cells.push(cell);
+				//jenks crashes when the data is too large
+				//for(var t = 0; t < cell[2].length; t++){
+				values.push(cell[2][0]);
+				//}
+			});
+			breaks = jenks(values, 10);
+			console.log(breaks);
+			drawDensityMap();
+		});
+
+		function drawDensityMap() {
+			//remove();
+			for ( var i = 0; i < cells.length; i++) {
+				var c = cells[i];
+				var opacity = getOpacity(c[2][0]);
+				var rectangle = new google.maps.Rectangle({
+					strokeColor : '#FF0000',
+					strokeOpacity : 0,
+					strokeWeight : 1,
+					fillColor : '#FF0000',
+					fillOpacity : opacity,
+					map : map,
+					bounds : new google.maps.LatLngBounds(
+							new google.maps.LatLng(c[1], c[0]),
+							new google.maps.LatLng(c[1] + 0.2, c[0] + 0.2))
+				});
+				rectangles.push(rectangle);
+			}
+		}
+
+		function getOpacity(value) {
+			var opacity = 0;
+			for ( var b = 1; b < breaks.length; b++) {
+				if (value <= breaks[b] || b == breaks.length - 1) {
+					opacity = b / 15;
+					break;
+				}
+			}
+			return opacity;
+		}
+
+		function switchColor(time) {
+			for ( var i = 0; i < rectangles.length; i++) {
+				var c = cells[i];
+				var opacity = getOpacity(c[2][time]);
+				var rectangle = rectangles[i];
+				rectangle.fillOpacity = opacity;
+				rectangle.setMap(map);
+			}
+			google.maps.event.trigger(map,'resize');
+		}
+
+		// 		function remove(){
+		// 			for ( var i = 0; i < rectangles.length; i++) {
+		// 				var rectangle = rectangles[i];
+		// 				rectangle.setMap(null);
+		// 			}
+		// 		}
+	</script>
+</body>
+</html>

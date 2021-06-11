@@ -1,0 +1,416 @@
+[ {
+  "CatIncident" : [ {
+    "text" : "kedi",
+    "size" : 2998.0,
+    "id" : "e"
+  }, {
+    "text" : "elektrik",
+    "size" : 1907.0,
+    "id" : "e"
+  }, {
+    "text" : "trafoya",
+    "size" : 1169.0,
+    "id" : "e"
+  }, {
+    "text" : "kediler",
+    "size" : 561.0,
+    "id" : "e"
+  }, {
+    "text" : "elektrikler",
+    "size" : 536.0,
+    "id" : "e"
+  } ],
+  "Emotions" : [ {
+    "text" : "ister",
+    "size" : 938.0,
+    "id" : "a"
+  }, {
+    "text" : "iyi",
+    "size" : 842.0,
+    "id" : "a"
+  }, {
+    "text" : "türlü",
+    "size" : 753.0,
+    "id" : "a"
+  }, {
+    "text" : "a??k",
+    "size" : 727.0,
+    "id" : "a"
+  }, {
+    "text" : "mutlu",
+    "size" : 716.0,
+    "id" : "a"
+  }, {
+    "text" : "bende",
+    "size" : 1603.0,
+    "id" : "a"
+  }, {
+    "text" : "art?k",
+    "size" : 1525.0,
+    "id" : "a"
+  }, {
+    "text" : "?imdi",
+    "size" : 1516.0,
+    "id" : "a"
+  }, {
+    "text" : "sabah",
+    "size" : 1374.0,
+    "id" : "a"
+  }, {
+    "text" : "gece",
+    "size" : 1168.0,
+    "id" : "a"
+  } ],
+  "AnkaraElections" : [ {
+    "text" : "mansur",
+    "size" : 6203.0,
+    "id" : "h"
+  }, {
+    "text" : "ankara",
+    "size" : 5696.0,
+    "id" : "h"
+  }, {
+    "text" : "yava?",
+    "size" : 4901.0,
+    "id" : "h"
+  }, {
+    "text" : "hadi",
+    "size" : 4439.0,
+    "id" : "h"
+  }, {
+    "text" : "melih",
+    "size" : 2900.0,
+    "id" : "h"
+  } ],
+  "Greetings" : [ {
+    "text" : "güzel",
+    "size" : 3460.0,
+    "id" : "n"
+  }, {
+    "text" : "iyi",
+    "size" : 3312.0,
+    "id" : "n"
+  }, {
+    "text" : "gün",
+    "size" : 3017.0,
+    "id" : "n"
+  }, {
+    "text" : "bugün",
+    "size" : 2262.0,
+    "id" : "n"
+  }, {
+    "text" : "günayd?n",
+    "size" : 2252.0,
+    "id" : "n"
+  } ],
+  "Retweets" : [ {
+    "text" : "takip",
+    "size" : 3285.0,
+    "id" : "d"
+  }, {
+    "text" : "diyenler",
+    "size" : 2056.0,
+    "id" : "d"
+  }, {
+    "text" : "geri",
+    "size" : 1737.0,
+    "id" : "d"
+  }, {
+    "text" : "arkada?lar",
+    "size" : 1448.0,
+    "id" : "d"
+  }, {
+    "text" : "taga",
+    "size" : 1315.0,
+    "id" : "d"
+  } ],
+  "Opposition" : [ {
+    "text" : "seçim",
+    "size" : 3528.0,
+    "id" : "k"
+  }, {
+    "text" : "akp",
+    "size" : 2499.0,
+    "id" : "k"
+  }, {
+    "text" : "art?k",
+    "size" : 2482.0,
+    "id" : "k"
+  }, {
+    "text" : "hala",
+    "size" : 2041.0,
+    "id" : "k"
+  }, {
+    "text" : "ülke",
+    "size" : 1906.0,
+    "id" : "k"
+  }, {
+    "text" : "allah",
+    "size" : 2505.0,
+    "id" : "k"
+  }, {
+    "text" : "versin",
+    "size" : 1149.0,
+    "id" : "k"
+  }, {
+    "text" : "balkon",
+    "size" : 1100.0,
+    "id" : "k"
+  }, {
+    "text" : "tayyip",
+    "size" : 1050.0,
+    "id" : "k"
+  }, {
+    "text" : "adam",
+    "size" : 1013.0,
+    "id" : "k"
+  }, {
+    "text" : "degil",
+    "size" : 2353.0,
+    "id" : "k"
+  }, {
+    "text" : "secim",
+    "size" : 1934.0,
+    "id" : "k"
+  }, {
+    "text" : "artik",
+    "size" : 1927.0,
+    "id" : "k"
+  }, {
+    "text" : "akp",
+    "size" : 1704.0,
+    "id" : "k"
+  }, {
+    "text" : "hala",
+    "size" : 1407.0,
+    "id" : "k"
+  } ],
+  "Other" : [ {
+    "text" : "bak",
+    "size" : 1341.0,
+    "id" : "f"
+  }, {
+    "text" : "git",
+    "size" : 1339.0,
+    "id" : "f"
+  }, {
+    "text" : "gel",
+    "size" : 1159.0,
+    "id" : "f"
+  }, {
+    "text" : "sende",
+    "size" : 841.0,
+    "id" : "f"
+  }, {
+    "text" : "yapma",
+    "size" : 794.0,
+    "id" : "f"
+  }, {
+    "text" : "twitter",
+    "size" : 453.0,
+    "id" : "f"
+  }, {
+    "text" : "günler",
+    "size" : 359.0,
+    "id" : "f"
+  }, {
+    "text" : "kad?n",
+    "size" : 294.0,
+    "id" : "f"
+  }, {
+    "text" : "çocuk",
+    "size" : 272.0,
+    "id" : "f"
+  }, {
+    "text" : "diyen",
+    "size" : 231.0,
+    "id" : "f"
+  } ],
+  "ElectionResults" : [ {
+    "text" : "chp",
+    "size" : 6860.0,
+    "id" : "c"
+  }, {
+    "text" : "akp",
+    "size" : 5589.0,
+    "id" : "c"
+  }, {
+    "text" : "sand?k",
+    "size" : 4264.0,
+    "id" : "c"
+  }, {
+    "text" : "seçim",
+    "size" : 2494.0,
+    "id" : "c"
+  }, {
+    "text" : "ankara",
+    "size" : 2415.0,
+    "id" : "c"
+  } ],
+  "Soccer" : [ {
+    "text" : "fenerbahçe",
+    "size" : 2088.0,
+    "id" : "j"
+  }, {
+    "text" : "gol",
+    "size" : 1254.0,
+    "id" : "j"
+  }, {
+    "text" : "akaydin",
+    "size" : 927.0,
+    "id" : "j"
+  }, {
+    "text" : "dolapdere",
+    "size" : 917.0,
+    "id" : "j"
+  }, {
+    "text" : "avrupa",
+    "size" : 878.0,
+    "id" : "j"
+  } ],
+  "ElectionCritiques" : [ {
+    "text" : "chp",
+    "size" : 3675.0,
+    "id" : "g"
+  }, {
+    "text" : "akp",
+    "size" : 2761.0,
+    "id" : "g"
+  }, {
+    "text" : "mhp",
+    "size" : 2350.0,
+    "id" : "g"
+  }, {
+    "text" : "parti",
+    "size" : 1338.0,
+    "id" : "g"
+  }, {
+    "text" : "aziz",
+    "size" : 915.0,
+    "id" : "g"
+  } ],
+  "EnglishContent" : [ {
+    "text" : "follow",
+    "size" : 930.0,
+    "id" : "b"
+  }, {
+    "text" : "love",
+    "size" : 833.0,
+    "id" : "b"
+  }, {
+    "text" : "turkey",
+    "size" : 776.0,
+    "id" : "b"
+  }, {
+    "text" : "topic",
+    "size" : 743.0,
+    "id" : "b"
+  }, {
+    "text" : "trending",
+    "size" : 736.0,
+    "id" : "b"
+  } ],
+  "WishesPrayers" : [ {
+    "text" : "hay?rl?",
+    "size" : 1772.0,
+    "id" : "i"
+  }, {
+    "text" : "ederim",
+    "size" : 963.0,
+    "id" : "i"
+  }, {
+    "text" : "gurur",
+    "size" : 894.0,
+    "id" : "i"
+  }, {
+    "text" : "oyumu",
+    "size" : 882.0,
+    "id" : "i"
+  }, {
+    "text" : "günayd?n",
+    "size" : 785.0,
+    "id" : "i"
+  }, {
+    "text" : "allah",
+    "size" : 3017.0,
+    "id" : "i"
+  }, {
+    "text" : "güzel",
+    "size" : 761.0,
+    "id" : "i"
+  }, {
+    "text" : "dua",
+    "size" : 584.0,
+    "id" : "i"
+  }, {
+    "text" : "rabbim",
+    "size" : 550.0,
+    "id" : "i"
+  }, {
+    "text" : "vard?r",
+    "size" : 503.0,
+    "id" : "i"
+  } ],
+  "AprilFools" : [ {
+    "text" : "nisan",
+    "size" : 2814.0,
+    "id" : "l"
+  }, {
+    "text" : "?aka",
+    "size" : 1502.0,
+    "id" : "l"
+  }, {
+    "text" : "mesaj",
+    "size" : 1137.0,
+    "id" : "l"
+  }, {
+    "text" : "?akas?",
+    "size" : 1063.0,
+    "id" : "l"
+  }, {
+    "text" : "twitter",
+    "size" : 998.0,
+    "id" : "l"
+  } ],
+  "Status" : [ {
+    "text" : "palace",
+    "size" : 5242.0,
+    "id" : "m"
+  }, {
+    "text" : "pgs",
+    "size" : 5232.0,
+    "id" : "m"
+  }, {
+    "text" : "ö?rendim",
+    "size" : 922.0,
+    "id" : "m"
+  }, {
+    "text" : "sevmem",
+    "size" : 324.0,
+    "id" : "m"
+  }, {
+    "text" : "dost",
+    "size" : 279.0,
+    "id" : "m"
+  }, {
+    "text" : "zaman",
+    "size" : 2466.0,
+    "id" : "m"
+  }, {
+    "text" : "bazen",
+    "size" : 2107.0,
+    "id" : "m"
+  }, {
+    "text" : "güzel",
+    "size" : 2080.0,
+    "id" : "m"
+  }, {
+    "text" : "insan",
+    "size" : 2067.0,
+    "id" : "m"
+  }, {
+    "text" : "tek",
+    "size" : 1762.0,
+    "id" : "m"
+  } ]
+} ]

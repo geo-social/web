@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style type="text/css">
+table {
+	border-collapse: collapse;
+	font: 10px sans-serif;
+	width: 400px;
+}
+
+th {
+	font-weight: normal;
+	text-align: right;
+	padding-right: 6px;
+	min-width: 43px;
+}
+
+thead td {
+	cursor: s-resize;
+}
+
+tbody tr:first-child td {
+	padding-top: 2px;
+}
+
+tbody td {
+	padding: 0;
+	border-left: solid 1px #000;
+}
+
+tbody rect {
+	fill: steelblue;
+}
+
+tbody tr:hover rect {
+	fill: brown;
+}
+</style>
+
+<table>
+	<thead>
+		<tr>
+			<th>topic</th>
+			<td>prob</td>
+			<td>corpusdist</td>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+
+<script src="http://d3js.org/d3.v2.min.js"></script>
+<script>
+	d3.json("data50/wordtopic.json", function(data) {
+
+		var scale_corspusdist = d3.scale.linear().domain([ 0, 6.6 ]).range(
+				[ 0, 1 ]);
+
+		var atts = d3.keys(data[0]).filter(function(key) {
+			return key != "words" && key != "id";
+		});
+
+		d3.selectAll("thead td").data(atts).on("click", function(k) {
+			tr.sort(function(a, b) {
+				return b[k] - a[k];
+			});
+		});
+
+		var tr = d3.select("tbody").selectAll("tr").data(data).enter().append(
+				"tr");
+
+		tr.append("th").text(function(d) {
+			var words = d.words;
+			var txt = " ";
+			for(var i=0; i<3; i++){
+				txt+= words[i].text + " ";
+			}
+			txt += d.id;
+			return txt;
+		});
+
+		tr.selectAll("td").data(function(d) {
+			return atts.map(function(k) {
+				if (k == "corpusdist")
+					return scale_corspusdist(d[k]);
+				else
+					return d[k]
+			});
+		}).enter().append("td").append("svg").attr("width", 51).attr("height",
+				12).append("rect").attr("height", 12).attr("width",
+				function(d) {
+					return d * 51;
+				});
+	});
+</script>

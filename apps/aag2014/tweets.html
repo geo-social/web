@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script type="text/javascript"
+	src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<style type="text/css">
+html,body,#map {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.stations,.stations svg {
+	position: absolute;
+}
+
+.stations svg {
+	width: 200px;
+	height: 200px;
+	padding-right: 100px;
+	font: 10px sans-serif;
+}
+
+.stations circle {
+	fill: brown;
+	stroke: black;
+	stroke-width: 0.5px;
+	opacity:0.7;
+}
+
+.wrapper {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+</style>
+</head>
+<body>
+	<div id="map"></div>
+	<div id="timeslider" class="wrapper">
+		<span id="slidertext">0</span>
+	</div>
+	<script type="text/javascript">
+		// Create the Google Map…
+		var myStyle = [ {
+			featureType : "administrative",
+			elementType : "labels",
+			stylers : [ {
+				visibility : "off"
+			} ]
+		}, {
+			"featureType" : "administrative",
+			"elementType" : "geometry.stroke",
+			"stylers" : [ {
+				"visibility" : "on"
+			}, {
+				"lightness" : 50
+			} ]
+		}, {
+			featureType : "poi",
+			elementType : "labels",
+			stylers : [ {
+				visibility : "off"
+			} ]
+		}, {
+			featureType : "water",
+			elementType : "labels",
+			stylers : [ {
+				visibility : "off"
+			} ]
+		}, {
+			featureType : "road",
+			elementType : "labels",
+			stylers : [ {
+				visibility : "off"
+			} ]
+		}, {
+			"featureType" : "road",
+			"elementType" : "geometry.fill",
+			"stylers" : [ {
+				"visibility" : "off"
+			} ]
+		} ];
+		var map = new google.maps.Map(d3.select("#map").node(), {
+			mapTypeControlOptions : {
+				mapTypeIds : [ 'mystyle', google.maps.MapTypeId.TERRAIN ]
+			},
+			center : new google.maps.LatLng(40, 35),
+			zoom : 6,
+			mapTypeId : 'mystyle'
+		});
+
+		map.mapTypes.set('mystyle', new google.maps.StyledMapType(myStyle, {
+			name : 'My Style'
+		}));
+
+		map.controls[google.maps.ControlPosition.TOP_CENTER].push(timeslider);
+
+		var time = 0;
+
+		// Load the station data. When the data comes back, create an overlay.
+		d3.json("data/tweets.json", function(data) {
+			var overlay = new google.maps.OverlayView();
+
+			// Add the container when the overlay is added to the map.
+			overlay.onAdd = function() {
+				var layer = d3.select(this.getPanes().overlayLayer).append(
+						"div").attr("class", "stations");
+
+				// Draw each marker as a separate SVG element.
+				// We could use a single SVG, but what size would it have?
+				overlay.draw = function() {
+					var projection = this.getProjection();
+
+					var marker = layer.selectAll("svg").data(d3.entries(data))
+							.each(transform) // update existing markers
+							.enter().append("svg:svg").each(transform).attr(
+									"class", "marker");
+
+					//var delayattr = 1000 * data[3][1];
+
+					// Add a circle.
+
+					marker.append("svg:circle").attr("r", function(d) {
+						var array = d.value;
+						var sizearray = array[2];
+						var size = Math.sqrt(sizearray[0]) / 10;
+						return size;
+					}).attr("cx", 50).attr("cy", 50);
+
+					// 					.transition().attr("r",
+					// 							function(d) {
+					// 								var array = d.value;
+					// 								var sizearray = array[2];
+					// 								var size = Math.sqrt(sizearray[10]) / 8;
+					// 								return size;
+					// 							}).duration(5000).delay(1000);
+					// Add a label.
+					// 					marker.append("svg:text").attr("x", 33).attr("dy", 28)
+					// 							.text(function(d) {
+					// 								return d.key;
+					// 							});
+
+					$("#timeslider").slider({
+						min : 0, // there are 71 months between 1/1/04 and 12/31/09, 0 is all events
+						max : 30,
+						value : 0, //default slider value
+						step : 1, // step is the allow increments the slider can move. 1 = one month
+						slide : function(event, ui) {
+							d3.select("#slidertext").text(ui.value);
+							time = ui.value;
+							d3.selectAll('circle').each(transform);
+						}
+					});
+
+					function transform(d) {
+						var size = 0;
+						if (typeof d != 'undefined') {
+							size = d.value[2][time];
+
+							d = new google.maps.LatLng(d.value[1], d.value[0]);
+							d = projection.fromLatLngToDivPixel(d);
+							return d3.select(this).style("left",
+									(d.x - 50) + "px").style("top",
+									(d.y - 50) + "px").attr("r",
+									Math.sqrt(size) / 10);
+						} else
+							return null;
+
+					}
+				};
+			};
+
+			// Bind our overlay to the map…
+			overlay.setMap(map);
+		});
+	</script>
+</body>
+</html>
