@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Consensus Regions</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="assets/css/ol.css">
+    <link rel="stylesheet" href="assets/css/colorbrewer.css">
+    <link rel="stylesheet" href="assets/css/consensusregions.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Menu.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Dark-Clean.css">
+    <link rel="stylesheet" href="assets/css/MoveFromPage.compiled.css">
+</head>
+
+<body>
+		<div>
+		    <nav class="navbar navbar-dark navbar-expand-md bg-dark navigation-clean" style="height: 5%;">
+		        <div class="container" style="margin: 0; max-width: none; width:100%">
+		        <a class="navbar-brand" href="#" style="font-size: 1.4em; margin-right: 2em;">Consensus Regions</a>
+		        <ul class="navbar-nav ml-auto" style="margin: 0;list-style-type: none;padding: 0;font-size:0.88em;">
+		        	<li class="nav-item" href="#" style="font-size: 1em; margin-right: 2em;">Number of regions: <span id="NumOfRegions-Span"></span> </li>
+		        	<li class="nav-item" href="#" style="font-size: 1em; margin-right: 2em;">Modularity: <span id="Modularity-Span"></span></li>
+		        	<li class="nav-item" href="#" style="font-size: 1em;" >Transparency: 0% <input type="range" id="Transparency-Input"  min="0" max="100" value="0"> 100%</li>
+		        </ul>
+		        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="navbar-toggler-icon"></span>
+		        </button>
+		            <div class="collapse navbar-collapse" id="navcol-1" style="font-size:0.88em;">
+		            	<ul class="navbar-nav ml-auto">
+				            <li class="nav-item dropdown" id="ExportMap-Dropdown" data-toggle="dropdown">
+				            	<a aria-expanded="false" class="nav-link" style="padding-top: 0;">Export Map</a>
+						        <div class="dropdown-menu" style="text-align: center;" id ="ExportMap-Menu">
+						            <button class="btn btn-primary" id="ExportJPG-Btn" type="button" style="background-color: transparent;border: 0px;">Export JPG</button>
+				                    <button class="btn btn-primary" id="ExportTIF-Btn" type="button" style="background-color: transparent;border: 0;">Export TIF</button>
+						        </div>
+						    </li>
+						    <li class="nav-item dropdown" >
+						    	<a class="nav-link" id="DownloadData-A" type="button" style="padding: 0; padding-right:18px;">Download Data</a>
+						    </li>
+						    <li class="nav-item dropdown inline-popups" >
+						    	<a class="nav-link" id="Methods-A" href="#Methods-Block" data-effect="mfp-zoom-in" style="padding: 0;">Methods</a>
+						    </li>
+					    </ul>
+					</div>
+		        </div>
+		     </nav>
+		</div>
+		<div id ="Weights-Menu">
+		    <label id="WeightTitle-Label" >Select Weights</label>
+		    <table class="table" style="background-color: transparent; color:white; border-color: transparent;">
+			  <tbody>
+			  	<tr>
+			  		<th scope="row" class="text-center WeightNames" colspan="3">Commuters</th>
+			  	</tr>
+			    <tr>
+			      <td><label>Low</label></td>
+			      <td width="130px"><input type="range" id="Commuters-Input" list="steplist" class="Slider" min="0" max="4" value="0" >
+						<div class="sliderticks" >
+						    <p>0</p>
+						    <p>1</p>
+						    <p>2</p>
+						    <p>3</p>
+						    <p>4</p>
+					  	</div>
+			      </td>
+			      <td><label>High</label></td>
+			    </tr>
+			    
+			    <tr>
+			  		<th scope="row" class="text-center WeightNames" colspan="3">Migrants</th>
+			  	</tr>
+			    <tr>
+			      <td><label>Low</label></td>
+			      <td><input type="range" id="Migrants-Input" class="Slider" min="0" max="4" value="0">
+			      		<div class="sliderticks" >
+							    <p>0</p>
+							    <p>1</p>
+							    <p>2</p>
+							    <p>3</p>
+							    <p>4</p>
+					  	</div>
+				</td>
+			      <td><label>High</label></td>
+			    </tr>
+			    
+			    <tr>
+			  		<th scope="row" class="text-center WeightNames" colspan="3">GPS Trips</th>
+			  	</tr>
+			    <tr>
+			      <td><label>Low</label></td>
+			      <td><input type="range" id="Trips-Input" class="Slider" min="0" max="4" value="0">
+				      <div class="sliderticks" >
+							    <p>0</p>
+							    <p>1</p>
+							    <p>2</p>
+							    <p>3</p>
+							    <p>4</p>
+					  	</div>
+				</td>
+			      <td><label>High</label></td>
+			    </tr>
+			    
+			    <tr>
+			  		<th scope="row" class="text-center WeightNames" colspan="3">States</th>
+			  	</tr>
+			    <tr>
+			      <td><label>Low</label></td>
+			      <td><input type="range" id="States-Input" class="Slider" min="0" max="4" value="0">
+			      		<div class="sliderticks" >
+							    <p>0</p>
+							    <p>1</p>
+							    <p>2</p>
+							    <p>3</p>
+							    <p>4</p>
+					  	</div>
+				  </td>
+			      <td><label>High</label></td>
+			    </tr>
+			  </tbody>
+			</table>
+	    </div>
+		<div id="UserOverlay"  style="position:fixed"></div>
+        <div id="map"></div>
+        <div id="AttributeBox-Block"></div>
+        <a id="MapDownload-A" href="#" download="map.png" style="display: none;">Link</a><a id="SVGDownload-A" href="#" style="display: none;">Link</a>
+        <div id="Methods-Block" class="white-popup mfp-with-anim mfp-hide info-blocks" style="width: 65%;height: fit-content; top:17vh;">
+        	<button class="btn btn-primary mfp-close" type="button">X</button>
+            <h5 class="text-left">&nbsp; &nbsp; &nbsp; &nbsp; Comprehensive methods and data sources can be found <a href="" style="color: rgb(62,113,170);">here</a>.</h5>
+            <p class="text-left" style="font-size: 20px;font-family: Times New Roman;">&nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: bold;">Step 1: </span>Initial modules are computed using various input networks: a separate set of modules is created for networks of commuters, migrants, trips, and social media relationships (Twitter and Facebook-based), using the Fast-Greedy community detection method.</p>
+        	<p class="text-left" style="font-size: 20px;font-family: Times New Roman;">&nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: bold;">Step 2: </span>An adjacency matrix of counties is created using a Delaunay triangulation-based triangular irregular network (TIN) to connect adjacent county centroids. Each edge is weighted so that if nodes are both in the same module from step 1, they receive a ‘point’. The modules of interest in Step 2 are: commuters, migrants, trips and states (determined by state boundaries). Social media modules are not included due to low performance in encapsulating COVID-19 cases (see arxiv paper).</p>
+        	<p class="text-left" style="font-size: 20px;font-family: Times New Roman;">&nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: bold;">Step 3: </span>The adjacency matrix is re-weighted where each ‘point’ can be weighted from 0-4 in the agreement matrix. For instance, if two counties are in the same module for commuters and migrants only, and the unweighted version their agreement weight would be 2. However, in the weighted version (taking user input weights), if commuters and states are each weighted 1 and 1 and migrants and trips are weighted 0 and 0, the weighted agreement would be 1 (weights can range from 0 – 16).</p>
+        	<p class="text-left" style="font-size: 20px;font-family: Times New Roman;">&nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: bold;">Step 4: </span>Community detection is then performed on the weighted adjacency matrix, and the output is returned based on the user inputs.</p>
+        </div>
+        <div id="LoadingProgress-Block" class="info-blocks white-popup mfp-with-anim mfp-hide InfoBoxes">
+			<h1 class="text-center">Loading</h1>
+            <p id="LoadingProgress-P" class="text-center"><progress id="Loading-Progress" value="0" max="100"></progress><label id="Progress-Label" style="margin-left: 10px;">0%</label></p>
+        </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/support/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/support/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/support/jquery-ui.min.js"></script>
+    <script src="assets/js/support/d3.js"></script>
+    <script src="assets/js/support/d3-geo-projection.v1.min.js"></script>
+    <script src="assets/js/support/d3.v4.js"></script>
+    <script src="assets/js/support/d3-legend.min.js"></script>
+    <script src="assets/js/support/topojson.min.js"></script>
+    <script src="assets/js/support/simple-statistics.min.js"></script>
+    <script src="assets/js/support/ol.js"></script>
+    <script src="assets/js/support/proj4.js"></script>
+    <script src="assets/js/support/canvastotiff.min.js"></script>
+    <script src="assets/js/support/colorbrewer.js"></script>
+    <script src="assets/js/PageControl.js"></script>
+    <script src="assets/js/BaseMapInit.js"></script>
+    <script src="assets/js/Map.js"></script>
+    <script src="assets/js/LoadMap.js"></script>
+    <script src="assets/js/DrawMap.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+.sliderticks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  top: -20px; 
+  position: relative;
+  height: 0px;
+  z-index: -1;
+}
+
+.sliderticks p {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 1px;
+  background: black;
+  height: 21px;
+  line-height: 58px;
+  margin: 0 0 20px 0;
+}
+
+#OnlineBaseMap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  background-color: green;
+}
+
+#BaseMap {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#Legend-Btn {
+  width: 98px;
+  height: 37px;
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  z-index: 1;
+}
+
+#map {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.table td, .table th {
+	padding-top: 0px !important;
+    border: transparent;
+    padding: 5px;
+    height: 35px;
+}
+
+label{
+	margin: 0;
+}
+
+.WeightNames{
+    padding-bottom: 0px ! important;
+    vertical-align: bottom !important;
+    margin: 0;
+    padding-top: 0px !important;
+}
+
+#AttributeBox-Block {
+  position: absolute;
+  text-align: center;
+  padding: 0.5rem;
+  background: #FFFFFF;
+  color: rgb(49, 54, 57);
+  border: 1px solid #313639;
+  border-radius: 8px;
+  pointer-events: none;
+  font-size: 0.8rem;
+  z-index: 2;
+  opacity: 0;
+}
+
+.Slider{
+	width: 100%;
+}
+
+.navbar.navbar-dark.navbar-expand-md.bg-dark.navigation-clean {
+  position: absolute;
+  height: 88px;
+  width: 100%;
+  z-index: 2;
+}
+
+.open {
+  display: block;
+}
+
+.Slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1px;
+  border-radius: 5px;
+  background: black;
+  outline: none;
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.Slider:hover {
+  opacity: 1;
+}
+
+.Slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
+
+
+.mfp-hide {
+  display: none;
+}
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 10px;
+  width: 90%;
+  height: 95vh;
+  margin: 0 auto;
+  top: 5vh;
+  background: rgba(204, 204, 204,0.83);
+  align-content: center;
+}
+
+.mfp-container {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.mfp-content {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: left;
+  z-index: 1045;
+  width: 100%;
+}
+
+.mfp-wrap {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1043;
+  position: fixed;
+  outline: none !important;
+  -webkit-backface-visibility: hidden;
+}
+
+.mfp-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1042;
+  overflow: hidden;
+  position: fixed;
+  background: #0b0b0b;
+  opacity: 0.8;
+}
+
+.mfp-close {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0.65;
+  padding: 0 0 18px 10px;
+  color: #FFF;
+  font-style: normal;
+  font-size: 28px;
+  font-family: Arial, Baskerville, monospace;
+}
+
+#Weights-Menu{
+	text-align: center;
+	width: 18vw;
+	height: fit-content; 
+	padding: 5px; 
+	position: absolute; 
+	bottom: 0px; 
+	right: 0px; 
+	margin: 5px; 
+	background-color: gray; 
+	z-index: 1; 
+	border-radius: 9px; 
+	border: 1px solid white; 
+}
+
+#WeightTitle-Label{
+	color: white; 
+	font-size:1.4em; 
+	font-weight: bold;
+}
+
+@media screen and (max-width: 1280px) {
+	#WeightTitle-Label{
+		color: white; 
+		font-size:0.95em; 
+		font-weight: bold;
+	}
+	
+	table{
+		font-size: 0.8em;
+	}
+	
+	.WeightNames{
+		font-size: 0.91em;
+	}
+	
+	.table th{
+		height:29px;
+	}
+	
+	.sliderticks p {
+	  height: 18px;
+	  line-height: 55px;
+	  margin: 4px 0 18px 0;
+	}
+	
+	.Slider::-webkit-slider-thumb {
+	  width: 10px;
+	  height: 10px;
+	}
+}
+
+.InfoBoxes{
+	font-family: "Roboto";
+	font-size: 16px;
+}
+
+.mfp-container{
+	display: flex;
+	align-items: center;
+}
+
+#LoadingProgress-Block{
+	width: 300px;
+	height: auto;
+	top:unset;
+}
+
+#LoadingProgress-Block h1{
+	font-size: 25px;
+}
+
+#LoadingProgress-Block p{
+	margin-bottom: 0px;
+}
