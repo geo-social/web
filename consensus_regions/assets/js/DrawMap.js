@@ -113,7 +113,8 @@ function drawCounties(counties){
             .duration(200)
             .style("opacity", 1);
     		
-    		textBox.html(`GEOID: ` + +d.properties["FIPS"] + "</br>" + `Value: ` + IdValueMap.get(+d.properties["FIPS"])[valueField])
+    		//textBox.html(`GEOID: ` + +d.properties["FIPS"] + "</br>" + `Value: ` + IdValueMap.get(+d.properties["FIPS"])[valueField])
+    		textBox.html(d.properties["NAME"] + ` County, ` + d.properties["STATE_NAME"] + "</br>" + `Region ID: ` + IdValueMap.get(+d.properties["FIPS"])[valueField])
             .style("left", (d3.event.pageX + 10) + "px")
             .style("top", (d3.event.pageY - 15) + "px");
 		})
