@@ -6,7 +6,7 @@ var scaleControl;
 var zoomControl;
 
 var CSVData, cbData, pointData;
-//// The CSV values for the Choropleth map. 
+//// The CSV values for the Choropleth map.
 //var commutesValues = [], migrantsValues = [], fbValues = [], twValues = [], tripsValues = [], cwValues = [], cnwValues = [];
 //// The hash map from id to the CSV value of Choropleth map.
 //var commutesMap, migrantsMap, fbMap, twMap, tripsMap, cwMap, cnwMap;
@@ -57,7 +57,7 @@ function init() {
 //    	  target: document.getElementById('mouse-position'),
 //    	  undefinedHTML: '&nbsp;'
 //    	});
-    
+
     map = new ol.Map({
         controls: ol.control.defaults({
             zoom : true,
@@ -79,9 +79,9 @@ function init() {
     map.addLayer(onlineLayer);
     baseMap.overlay = new ol.Overlay({id: "UserOverlay", element: document.getElementById('UserOverlay'), stopEvent: false, insertFirst: false, autoPan: false});
     map.addOverlay(baseMap.overlay);
-    
+
     baseMap.projection = registerProjection("ESRI:102003", "+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m+no_defs");
-    
+
     baseMap.view = new ol.View({
     	center:ol.proj.transform([-96, 38], "EPSG:4326", baseMap.projection),
     	zoom: 5.3,
@@ -196,7 +196,7 @@ function switchBaseMapLayer(defaultLayer){
   	  };
   	  default:
   		  break;
-	  }; 
+	  };
 }
 
 progressValue = 0;
@@ -222,7 +222,7 @@ function magnificPopupWindow(id, type){
 		  a.setAttribute("id", "PopupTrigger-A");
 		  document.body.appendChild(a);
 		  a.click();
-		
+
 		 $('#PopupTrigger-A').magnificPopup({
 	        items: {
 	            src: '#' + id
@@ -233,7 +233,7 @@ function magnificPopupWindow(id, type){
 	               this.st.mainClass = type;
 	            }
 	        },
-	        removalDelay: 500, 
+	        removalDelay: 500,
 	        showCloseBtn:false,
 	        closeBtnInside: false,
 	        closeOnBgClick: false
@@ -262,7 +262,7 @@ d3.csv("./data/consensusregion_v0.csv", function(data) {
 	makeHashMap(data, "fips");
 	progressValue += 10;
 	loadProgressBar(progressValue);
-	
+
 	d3.csv("./data/consensusregion.csv", function(data) {
 		makeColorMap(data, "fips");
 		progressValue += 10;
@@ -274,7 +274,7 @@ d3.csv("./data/consensusregion_v0.csv", function(data) {
 			loadProgressBar(progressValue);
 		});
 	});
-	
+
 	d3.json("./data/states_latlon.json", function(data) {
 	    drawStateBoundary(data);
 	    progressValue += 10;
