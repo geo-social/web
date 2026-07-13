@@ -1,1228 +1,342 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<html lang="en">
 <head>
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48892967-1"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'UA-48892967-1');
-</script>
-
-<title>Geo-Social Lab</title>
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="description" content="Geo-Social Lab">
-<meta name="author" content="themecube">
-
-<!-- viewport settings -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-<!-- CSS -->
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/jquery.countdown.css">
-<link rel="stylesheet" href="css/magnific-popup.css">
-<link rel="stylesheet" href="css/flipCard.css">
-<link rel="stylesheet" href="css/owl.carousel.css">
-<link rel="stylesheet" href="css/owl.theme.css">
-
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/color/darkblue.css"><!-- Choose your color, green, blue, yellow, red, darkblue, purple -->
-<link rel="stylesheet" href="css/slideshow.css">
-
-<!-- Font -->
-<link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet' type='text/css'>
-
-<!-- Favicon -->
-<link rel="shortcut icon" href="img/LogoSquare.png">
-
-<style type="text/css">
-
-.trFonts
-{
-	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-	font-size: 20px;
-}
-
-</style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Geo-Social Lab | GIScience, GeoAI &amp; Geovisual Analytics</title>
+<meta content="The Geo-Social Lab at the University of Iowa advances GIScience, GeoAI, geovisual analytics, human mobility and migration, public health mapping, and population-scale spatial-social networks." name="description"/>
+<meta content="Geo-Social Lab, University of Iowa" name="author"/>
+<meta content="#173a63" name="theme-color"/>
+<link href="https://www.geo-social.com/" rel="canonical"/>
+<link href="img/logo/LogoSquare.png" rel="icon" type="image/png"/>
+<link href="css/site.css" rel="stylesheet"/>
 </head>
-
 <body>
-
-	<!-- PRELOADING  -->
-	<div id="preload">
-		<div class="preload">
-			<div class="loader">
-				Loading...
-			</div>
-		</div>
-	</div>
-
-	<!-- NAVIGATION -->
-	<nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
-		<!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
-		<div class="container">
-			<div data-scroll-header class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="index.html"><img src="img/logo/LogoOneLineWhite.png" alt="logo" width="150" height="60"></a>
-			</div>
-
-			<div class="collapse navbar-collapse" id="nav">
-				<ul class="nav navbar-nav navbar-right uppercase">
-					<li><a data-scroll href="#top">Home</a></li>
-					<li><a data-scroll href="#overview">About</a></li>
-					<li><a data-scroll href="#news">News</a></li>
-					<li><a data-scroll href="#team">Team</a></li>
-					<li><a data-scroll href="#research">Research</a></li>
-					<li><a data-scroll href="#apply">Apply</a></li>
-					<li><a data-scroll href="publications.html">Publications</a></li>
-					<li><a data-scroll href="#demo">FlowMapper</a></li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div>
-	</nav>
-
-	<!-- TOP -->
-	<section id="top" data-stellar-background-ratio="0.5">
-		<div class="countdown">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2 text-right">
-						<h1><b>Geo-Social Lab</b></h1>
-						<h3>Connecting Nodes to Knowledge</h3><br><br>
-						<h4></h4>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- OVERVIEW -->
-	<section id="overview">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-10 col-lg-offset-1 text-center">
-					<img src="img/logo/LogoSquare.png" width="120" height="120"/>
-					<p><b>The Geo-Social Lab</b> is home to research projects aimed at analyzing and understanding massive and complex geo-social networks
-						and processes that drive our economy, society, and the environment.
-					</p>
-					<p>
-						We develop innovative computational algorithms and geovisualization techniques to help address real-world problems in diverse areas such as
-						human mobility and migration, demography, kinship networks, public health, hazards and social vulnerability, and sustainability.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="news">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-10 col-lg-offset-1 text-left">
-					<h2 class="uppercase text-center">News</h2>
-					<h4>June, 2025</h4>
-					<p>
-						New paper: Koylu, C., Kasakoff, A.B., & Torkashvand, M. (2025). US migration from 1850 to 1920: A comparison of family trees with linked census data
-						<a href="docs/Koylu_Kasakoff_Torkashvand_Historical_Methods_preprint_2025.pdf" target="_blank">PDF</a>
-						<a href="https://doi.org/10.1080/01615440.2025.2516022" target="_blank">https://doi.org/10.1080/01615440.2025.2516022</a>
-					</p>
-					<br>
-					<h4>April, 2025</h4>
-					<p>
-						We are excited to announce the launch of the<a href="https://shri.public-health.uiowa.edu/cancer-data/interactive-iowa-data-tools/iowa-cancer-maps/" target="_blank">Cancer Analytics & Maps for Small Areas (CAMSA)</a> in Iowa Cancer Registry. <br>
-						Funded by the National Cancer Institute (NCI), CAMSA is an interactive mapping tool to visualize cancer data at the ZIP code and county levels based on user-centered design.
-					</p>
-					<p>
-						New collaborative paper:
-						<a href="docs/Frazier_et_al_2025.pdf" target="_blank">Rethinking GIScience Education in an Age of Disruptions</a>
-						<a href="https://doi.org/10.1111/tgis.70048" target="_blank">https://doi.org/10.1111/tgis.70048</a>
-					</p>
-					<br>
-					<h4>December, 2024</h4>
-					<p>
-						New paper: Koylu, C., & Kasakoff, A. B. (2025). Ethical Challenges in Analyzing and Mapping Historical Demographic Changes and Migration Using Population-Scale Family Trees
-						<a href="docs/Koylu_Kasakoff_CP_2025.pdf" target="_blank">PDF</a>
-						<a href="https://doi.org/10.14714/CP105.1945" target="_blank">https://doi.org/10.14714/CP105.1945</a>
-					</p>
-					<br>
-					<h4>November, 2024</h4>
-					<p>
-						<b>Caglar</b> presented a paper at SSHA 2024 in Toronto, CA:
-						<a href="http://ssha2024.ssha.org/abstracts/240427" target="_blank">Proximity of Parents to Their Adult Children in the United States in 1880: Evidence from Family Trees</a>
-					</p>
-					<br>
-					<h4>October, 2024</h4>
-					<p>
-						<b>Loretta</b> presented Roots & Migrants: A user-centered story map application for understanding and teaching
-						historical population dynamics and migration in the U.S. at NACIS 2024 in Tacoma, WA.
-					</p>
-					<p>
-						New collaborative paper:
-						<a href="https://doi.org/10.1080/13658816.2024.2405191" target="_blank">A research agenda for GIScience in a time of disruptions</a>
-					</p>
-					<br>
-					<h4>September, 2024</h4>
-					<p>
-						<a href="https://www.lehman.cuny.edu/directory/Earth-Environmental-And-Geospatial-Sciences/Kwon-Hoeyun.php" target="_blank">Dr. Kwon started as an Assistant Professor of Geospatial Science at Lehman College! </a>
-					</p>
-					<br>
-					<h4>August, 2024</h4>
-					<p>
-						As part of the NSF-funded BluGAP project, <b>Maryam</b> developed the
-						<a href="https://storymaps.arcgis.com/stories/64211237ea99456ab8b2de09aa9a35f9">“Rivers and Risks” interactive story map</a>
-						to bridge the gap between spatial analysts and watershed communities and foster collaboration in river protection.
-					</p>
-					<br>
-					<h4>July, 2024 </h4>
-					<div>
-						<p><b>Ariana Luan</b>, <b>Devesh Aggarwal</b>, and <b>Sumin Bae</b>, our high school researchers, joined our lab this summer to participate in the Secondary Student Training Program (SSTP) at the University of Iowa.</p>
-						<div class="image-container" style="display: flex; flex-wrap: nowrap; justify-content: space-between; margin-left: 0;">
-							<img src="../img/sstp/sstp2024.jpg" class="img-responsive" style="object-fit: cover; width: 100%; height: 200px; margin: 0 5px;" />
-							<a href="../docs/sstp/ariana_sstp_2024.pdf" target="_blank">
-								<img src="../docs/sstp/ariana.png" class="img-responsive" style="object-fit: cover; width: 100%; height: 200px; margin: 0 5px;" />
-							</a>
-							<a href="../docs/sstp/devesh_sstp_2024.pdf" target="_blank">
-								<img src="../docs/sstp/devesh.png" class="img-responsive" style="object-fit: cover; width: 100%; height: 200px; margin: 0 5px;" />
-							</a>
-							<a href="../docs/sstp/sumin_sstp_2024.pdf" target="_blank">
-								<img src="../docs/sstp/sumin.png" class="img-responsive" style="object-fit: cover; width: 100%; height: 200px; margin: 0 5px;" />
-							</a>
-						</div>
-					</div>
-					<br>
-
-					<h4>June, 2024 </h4>
-					<div>
-						<p>On June 26, 2024, <b>The Geo-Social Lab</b> hosted the first NSF-sponsored workshop connecting high school teachers and students for the development of "Roots & Migrants", an online educational tool for enhancing public scientific literacy on U.S. history, migration, and kinship networks.</p>
-
-						<div class="image-container" style="margin-left: 0;">
-							<img src="../img/workshop/roots1.jpg" class="img-responsive" style="object-fit: cover; width: 18%; height: 200px; margin: 0 5px;" />
-							<img src="../img/workshop/roots2.jpg" class="img-responsive" style="object-fit: cover; width: 18%; height: 200px; margin: 0 5px;" />
-							<img src="../img/workshop/roots3.jpg" class="img-responsive" style="object-fit: cover; width: 18%; height: 200px; margin: 0 5px;" />
-							<img src="../img/workshop/roots4.jpg" class="img-responsive" style="object-fit: cover; width: 18%; height: 200px; margin: 0 5px;" />
-							<img src="../img/workshop/roots5.jpg" class="img-responsive" style="object-fit: cover; width: 18%; height: 200px; margin: 0 5px;" />
-						</div>
-					</div>
-					<br>
-					<P>
-						<b>CaGIS+UCGIS Symposium at The Ohio State University, Columbus, OH</b>
-					</P>
-					<p>
-						<b>Caglar</b> participated on a panel about the curriculum needs that can respond to and shape the direction of GIScience in an age of scientific disruption.
-					</p>
-					<p>
-						<b>Maryam</b> won the best student paper award with her paper on <a href="https://cartogis.org/docs/conferences/CaGIS_UCGIS_2024/Research%20Paper/CAGIS-UCGIS-2024_paper_41.pdf" target="_blank">
-							'A Hierarchical Approach for Geocoding Birthplaces in Temporally Continuous Crowd-Sourced Family Tree Data'.
-						</a>
-					<p>
-						<b>Jinyi</b> presented our research on <a href="https://cartogis.org/docs/conferences/CaGIS_UCGIS_2024/Research%20Paper/CAGIS-UCGIS-2024_paper_54.pdf" target="_blank">
-							'Social Vulnerability and Exposure to Private Well Nitrate Contamination in Iowa: An Interpretable Machine Learning Approach'.
-						</a>
-					</p>
-					<br>
-					<h4>April, 2024</h4>
-					<p>
-						<b>Caglar</b> presented our paper on <a href="https://submissions.mirasmart.com/PAA2024/Itinerary/PresentationDetail.aspx?evdid=893" target="_blank">Analysis of U.S. Internal Migration Using Population-Scale Family Tree Data, 1850–1920</a> at PAA 2024, April 18, Columbus, OH.
-					</p>
-					<br>
-					<h4>March, 2024</h4>
-					<p>
-						New article by Caglar and Alice: Population-scale kinship networks
-						<a href="docs/Koylu_Kasakoff_2024_Population-scale kinship networks_preprint.pdf" target="_blank">PDF</a>
-						<a href="https://doi.org/10.1002/9781118786352.wbieg2193" target="_blank">https://doi.org/10.1002/9781118786352.wbieg2193</a>
-					</p>
-					<br>
-					<h4>December, 2023</h4>
-					<p>
-						New paper: Andris, C., Koylu, C. & Porter, M.A. (2023). Human-network regions as effective geographic units for disease mitigation
-						<a href="docs/Andris_Koylu_Porter_2023.pdf" target="_blank">PDF</a>
-						<a href="https://doi.org/10.1140/epjds/s13688-023-00426-1" target="_blank">https://doi.org/10.1140/epjds/s13688-023-00426-1</a>
-					</p>
-					<br>
-					<h4>November, 2023</h4>
-					<p>
-						New paper: Kwon, H., Koylu, C. Revealing associations between spatial time series trends of COVID-19 incidence and human mobility: an analysis of bidirectionality and spatiotemporal heterogeneity
-						<a href="docs/Kwon_Koylu_2023.pdf" target="_blank">PDF</a>
-						<a href="https://doi.org/10.1186/s12942-023-00357-0" target="_blank">https://doi.org/10.1186/s12942-023-00357-0</a>
-					</p>
-
-					<p>
-						<b>Maryam</b> and <b>Caglar</b> presented papers at SSHA 2023:
-					<p>
-						<a href="https://ssha2023.ssha.org/abstracts/230465" target="_blank">Evaluation of the child-ladder method for studying migration using family trees: A comparison with linked U.S. census data, 1850 to 1920</a>
-					</p>
-					<p>
-						<a href="https://ssha2023.ssha.org/abstracts/230308" target="_blank">Linking family trees with the 1880 U.S. Census Records</a>
-					</p>
-					</p>
-					<br>
-					<h4>October, 2023</h4>
-					<p>
-						<b>Jinyi</b> presented her research on the Curriculum Design of Artificial Intelligence and Sustainability in Secondary School at the <a href="https://iguide.illinois.edu/forum-2023/agenda-of-i-guide-forum-2023/" target="_blank">I-GUIDE Forum 2023</a>, October 4, 2023, New York, NY.
-						<a href="https://docs.lib.purdue.edu/iguide/2023/presentations/17/" target="_blank">Read the conference proceeding</a>
-					</p>
-					<p>
-						<b>Hoeyun</b> published the first paper of her dissertation,
-						<a href="https://doi.org/10.1080/15230406.2023.2264751" target="_blank">
-							"Natural language processing meets spatial time series analysis and geovisualization:
-							Identifying and visualizing spatio-topical sentiment trends on Twitter",
-						</a> in Cartography and Geographic Information Science.<a href="docs/Kwon_Koylu_Dietrich_2023.pdf" target="_blank">Preprint available</a>
-					</p>
-
-					<p>
-						<b>Caglar</b> presented FlowMapper.org: Flow Mapping Made Easy! at NACIS 2023 Practical Cartography Day in Pittsburgh, PA.
-						<a href="https://www.youtube.com/watch?v=OaeT8UkM7E0&t=32s" target="_blank">Watch the presentation on YouTube</a>
-					</p>
-					<br>
-					<h4>September, 2023</h4>
-					<p>
-						<b>Caglar</b> gave a seminar “Giant Family Trees in Human Geography: Preliminary Results from US 1789 to 1930”, at University College London, UK.
-					</p>
-
-					<p>
-						<b>Caglar</b> presented the paper co-authored with Maryam "The effect of disruptive events on spatial and social interactions:
-						An assessment of structural changes in pre-and post-COVID-19 pandemic networks” at the
-						GIScience 2023 Workshop on Disruptive Movement Analysis (DMA’23), Leeds, UK.
-					</p>
-					<br>
-					<h4>August, 2023</h4>
-					<p>
-						<b>Kelvin Liu</b> and <b>Kevin (Rongxuan) Zhu</b>, our high school interns, joined our lab this summer to participate in the Secondary Student Training Program (SSTP) at the University of Iowa.
-					<p><a href="blogs/research poster_LIU_MT.pdf" target="_blank">Click for Kelvin's research poster!</a></p>
-					<p><a href="blogs/ResearchPoster-Kevin_MT.pdf" target="_blank">Click for Kevin's research poster!</a></p>
-					</p>
-					<br>
-
-					<h4>May, 2023</h4>
-					<p>
-						Hoeyun succesfully defended her Ph.D. on May 8, 2023, and is now a Ph.D! Congrats Dr. Kwon!
-						Dr. Kwon will continue her journey as a postdoc in University of Colorado Boulder!
-						<a href="https://www.hoeyunkwon.com/" target="_blank">Learn more about Hoeyun!</a>
-					</p>
-					<p><img src="../img/woody.jpg" width="30%" height="30%" /></p>
-					<br>
-
-					<h4>January, 2023</h4>
-					<p>
-						Caglar was elected as the Vice President of Cartography and Geographic Information Society (CaGIS)!
-						<a href="https://cartogis.org/2023/01/03/2023-cagis-officer-election-results/" target="_blank">Read More</a>
-					</p>
-					<br>
-					<h4>November, 2022</h4>
-					<p>
-						<b>Hoeyun Kwon</b> presented our research on the unequal impact of COVID-19 by analyzing the mobility behaviors of socially vulnerable populations at the AutoCarto 2022 conference held at Redlands, CA.
-						<a href="https://www.youtube.com/watch?v=LHZB5Y7MBZ0" target="_blank">Watch the presentation on YouTube</a>
-					</p>
-					<p>
-						<b>Maryam</b> presented our research on mapping migration regions and their evolution from population-scale family trees at The 6th ACM SIGSPATIAL Workshop on Geospatial Humanities (GeoHumanities’22), November 1, 2022, Seattle, WA.
-						<a href="https://doi.org/10.1145/3557919.3565814" target="_blank">Read the conference proceeding</a>
-					</p>
-					<br>
-					<h4>October, 2022</h4>
-					<p>
-						<b>Caglar</b> presented FlowMapper at NACIS 2022 in Minneapolis.
-						<a href="	https://www.youtube.com/watch?v=pbiDSY7G2jA" target="_blank">Watch the presentation on YouTube</a>
-					</p>
-					<p>
-						Caglar participated on a panel about multigenerational households on ABC/Channel 9 on "Ethical Perspectives On the News" moderated by Leon Tabak.
-						<a href="https://www.youtube.com/watch?v=R_Q2p1NwjHk&t=310s" target="_blank">Watch the panel on YouTube!</a>
-					</p>
-					<br>
-					<h4>September, 2022</h4>
-					<p>
-						Super excited to announce NSF funding ($477,734) of our project on population-scale kinship networks and migration!
-						<a href="https://t.co/OvcfccroIn" target="_blank">Public abstract</a>
-					</p>
-					<br>
-					<h4>August, 2022</h4>
-					<p>Welcome to Fall 2022 and our new Ph.D. Student, Maryam Torkashvand!</p>
-					<p><img src="../img/people/august2022.jpg" width="60%" height="60%" /></p>
-					<br>
-					<h4>July, 2022</h4>
-					<p>
-						<b>Adelina Chau</b> and <b>Jonathan Fan</b>, our high school interns, joined our lab this summer to participate in the Secondary Student Training Program (SSTP) at the University of Iowa.
-					<p><a href="blogs/Adelina_poster_2022.pdf" target="_blank">Click for Adelina's research poster!</a></p>
-					<p><a href="blogs/Jonathan_poster_2022.pdf" target="_blank">Click for Jonathan's research poster!</a></p>
-					</p>
-					<br>
-					<h4>June, 2022</h4>
-					<p>
-						<td>
-							Our paper <a href="https://doi.org/10.1177/00111287221106946" target="_blank">
-								"Recreating Human Mobility Patterns Through the Lens of Social Media:
-								Using Twitter to Model the Social Ecology of Crime"
-							</a> has been published in Crime & Delinquency.<a href="docs/Wo_et_al_2022.pdf" target="_blank">Preprint available</a>
-						</td>
-					</p>
-					<br>
-					<h4>May, 2022</h4>
-					<p>
-						Very excited to collaborate with Jacob Oleson (Biostatistics) on National Cancer Institute (NCI) funded project ($1,188,804), "Development of Small Area Interactive Risk Maps for Cancer Control Efforts".
-						<a href="https://reporter.nih.gov/search/ajayPPYcTkqsXt0msV1Ybw/project-details/10416454" target="_blank">Public abstract</a>
-					</p>
-					<br>
-					<h4>April, 2022</h4>
-					<p>
-						Hoeyun Kwon won the prestigious <a href="https://cartogis.org/awards/students/" target="_blank">Doctoral Scholarship Award of 2022 by the Cartography and Geographic Information Society (CaGIS)!</a> Congrats Hoeyun!
-					</p>
-					<br>
-					<h4>March, 2022</h4>
-					<p>
-						Hoeyun Kwon won the second place in GIS Specialty Group Student Honors Paper Competition at AAG 2022! Congrats Hoeyun!
-					</p>
-					<br>
-					<h4>February, 2022</h4>
-					<p>
-						<td>
-							Our paper "Measuring and mapping long-term changes in migration flows using population-scale family tree data" have been featured on the cover of Cartography and Geographic Information Science!
-						</td>
-					</p>
-					<p>
-						<td>
-							<a href="https://doi.org/10.1080/15230406.2021.2011419" target="_blank"><img src="../img/pubs/cagis2022_cover.jfif" width="40%" height="40%" /></a>
-						</td>
-					</p>
-					<br>
-					<h4>January, 2022</h4>
-					<p>
-						Our papers <a href="https://doi.org/10.1080/15230406.2021.2011419" target="_blank">"Measuring and mapping long-term changes in migration flows using population-scale family tree data"</a> and
-						<a href="https://doi.org/10.1080/17445647.2021.1996479" target="_blank">"FlowMapper.org: A web-based framework for designing origin-destination flow maps"</a>
-						have been published in Cartography and Geographic Information Science and Journal of Maps!
-					</p>
-					<br>
-					<h4>December, 2021</h4>
-					<p>
-						Congrats for Hoeyun Kwon for successfully defending her dissertation proposal and becoming a Ph.D. candidate!
-					</p>
-					<br>
-					<h4>November, 2021</h4>
-					<p>
-						Our paper "Measuring and mapping long-term changes in migration flows using population-scale family tree data" has been accepted for publication in Cartography and Geographic Information Science!<a href="docs/Koylu_Kasakoff_2021_CAGIS.pdf" target="_blank">Preprint available</a>
-					</p>
-					<br>
-					<h4>October, 2021</h4>
-					<p>
-						Our paper "FlowMapper.org: A web-based framework for designing origin-destination flow maps" has been accepted for publication in Journal of Maps! Check <a href="https://flowmapper.org" target="_blank">Flowmapper!</a>
-						<a href="docs/Koylu_Tian_Windsor_2021_FlowMapper.pdf" target="_blank">Check out the preprint!</a>
-					</p>
-					<br>
-					<h4>September, 2021</h4>
-					<p>
-						<b>Hoeyun Kwon</b> presented our research on the relationship between human mobility and COVID-19 prevalence at GIScience 2021 workshop on Advancing Movement Data Science (AMD’21).
-						<a href="/blogs/amd21.html" target="_blank">Click for Hoeyun's blog post!</a>
-					</p>
-					<p>
-						<b>Geng Tian</b> updates us on how he is doing in China, working on a very cool project - unmanned vehicles delivering food!
-						<a href="/blogs/gengtian.html" target="_blank">Click for Geng's blog post!</a>
-					</p>
-					<br>
-					<h4>August, 2021</h4>
-					<p>
-						<b>Kaitlyn Hom</b> and <b>Mark Rifkin</b>, both senior high school students, joined our lab this summer to participate in the Secondary Student Training Program (SSTP) at the University of Iowa.
-					<p><a href="blogs/kaitlynsstp.html" target="_blank">Click for Kaitlyn's blog post!</a></p>
-					<p><a href="blogs/marksstp.html" target="_blank">Click for Mark's blog post!</a></p>
-					</p>
-					<br>
-					<p>
-						<b>Angelina Evans</b> worked as an intern in the US Department of Energy's prestigious Science Undergraduate Laboratory Internship (SULI)
-						program in the Geospatial Science and Human Security Division at Oak Ridge National Laboratory (ORNL).
-						<a href="/blogs/evansornl.html" target="_blank">Click for Angelina's blog post!</a>
-					</p>
-				</div>
-								</div>
-							</div>
-						</section>
-
-						<!-- DOCUMENTS
-						<section id="documents">
-						<div class="container">
-						<div class="row">
-						<div class="col-lg-10 col-lg-offset-1 text-center">
-						<i class="fa fa-3x fa-file"></i>
-
-						<h2 class="uppercase">Documents</h2>
-						<li> <a href="docs/poster.pdf" target="_blank"><b>Project Poster</b></a> </li>
-						<br>
-						<li> <a href="docs/kickoff.pdf" target="_blank"><b>Project Kickoff Document</b></a> </li>
-						<br>
-						<li> <a href="docs/proposal.pdf" target="_blank"><b>Project Proposal Document</b></a> </li>
-						<br>
-						<li> <a href="docs/designOverviewDocument.pdf" target="_blank"><b>Project Design Overview Document</b></a> </li>
-						<br>
-						<li> <b> Project Retrospective Documents: [</b>
-						<a href="docs/retro1.pdf" target="_blank"><b>1</b></a>,
-						<a href="docs/retro2.pdf" target="_blank"><b>2</b></a>,
-						<a href="docs/retro3.pdf" target="_blank"><b>3</b></a>,
-						<a href="docs/retro4.pdf" target="_blank"><b>4</b></a>,
-						<a href="docs/retro5.pdf" target="_blank"><b>5</b></a>,
-						<a href="docs/retro6.pdf" target="_blank"><b>6</b></a>,
-						<a href="docs/retro7.pdf" target="_blank"><b>7</b></a>,
-						<a href="docs/retro8.pdf" target="_blank"><b>8</b></a>,
-						<a href="docs/retro9.pdf" target="_blank"><b>9</b></a><b>]</b>
-					</li>
-				</div>
-			</div>
-		</div>
-	</section>
--->
-
-<!-- SPEAKERS -->
-<section id="team">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-10 col-lg-offset-1">
-				<h2 class="uppercase text-center">Team</h2>
-
-				<div class="row">
-					<div class="speaker col-xs-12 col-sm-4 col-md-3 col-lg-3" style="margin-left: 113px;"></div>
-					<!-- Supervisor -->
-					<div class="speaker col-xs-12 col-sm-4 col-md-3 col-lg-3">
-						<figure>
-							<img class="img-responsive" src="img/people/koylu_2023.jpg" alt="">
-							<figcaption>
-								<h4>Dr. Caglar Koylu</h4>
-								<p>Associate Professor</p>
-								<p>Geographical and Sustainability Sciences</p>
-								<p>University of Iowa</p>
-								<div class="social">
-									<a href="https://www.linkedin.com/in/caglarkoylu/" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
-									<a href="https://twitter.com/caglarkoylu" target="_blank"><i class="fa fa-2x fa-twitter-square"></i></a>
-								</div>
-							</figcaption>
-						</figure>
-						<center>
-							<h4>Caglar Koylu</h4>
-							<span class="title">Director</span>
-						</center>
-					</div>
-
-					<!-- Member 1 -->
-					<!-- <div class="speaker col-xs-12 col-sm-4 col-md-3 col-lg-3">
-					<figure>
-					<img class="img-responsive" src="img/people/alice.png" alt="">
-					<figcaption>
-					<h4>Alice Kasakoff, Ph.D.</h4>
-					<p>Collaborator</p>
-					<div class="social">
-				</div>
-			</figcaption>
-		</figure>
-		<center>
-		<h4>Alice Kasakoff, Ph.D.</h4>
-		<span class="title">Collaborator</span>
-	</center>
-</div> -->
-
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header" data-site-header="">
+<div class="nav-shell">
+<a aria-label="Geo-Social Lab home" class="brand" href="index.html">
+<img alt="Geo-Social Lab" height="68" src="img/logo/LogoOneLineWhite.png" width="250"/>
+</a>
+<button aria-controls="site-nav" aria-expanded="false" class="nav-toggle" data-nav-toggle="" type="button">
+<span class="sr-only">Toggle navigation</span><span></span><span></span><span></span>
+</button>
+<nav aria-label="Primary" class="site-nav" data-site-nav="" id="site-nav">
+<a aria-current="page" href="index.html">Home</a>
+<a href="index.html#research">Research</a>
+<a href="news.html">News</a>
+<a href="index.html#team">Team</a>
+<a href="publications.html">Publications</a>
+<a href="index.html#join">Join</a>
+<a class="nav-cta" href="https://flowmapper.org" rel="noopener noreferrer" target="_blank">FlowMapper</a>
+</nav>
 </div>
-				<div class="row">
-					<!-- Member 1 -->
-					<div class="speaker col-xs-12 col-sm-4 col-md-3 col-lg-3">
-						<figure>
-							<img class="img-responsive" src="img/people/maryam.jpg" alt="">
-							<figcaption>
-								<h4>Maryam Torkashvand</h4>
-								<p>Ph.D. in Geography / GIScience</p>
-								<div class="social">
-									<a href="https://linkedin.com/in/maryam-torkashvand" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
-									<a href="https://www.researchgate.net/profile/Maryam-Torkashvand" target="_blank"><i class="fa fa-2x fa-github-square"></i></a>
-								</div>
-							</figcaption>
-						</figure>
-						<center>
-							<h4>Maryam Torkashvand</h4>
-							<span class="title">Ph.D. Student</span>
-						</center>
-					</div>
-
-					<!-- Member 2 -->
-					<div class="speaker col-xs-12 col-sm-4 col-md-3 col-lg-3">
-						<figure>
-							<img class="img-responsive" src="img/people/jinyi.jpg" alt="">
-							<figcaption>
-								<h4>Jinyi Cai</h4>
-								<p>Ph.D. in Geography / GIScience</p>
-								<div class="social">
-									<a href="https://www.linkedin.com/in/jinyi-cai/" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
-									<a href="" target="_blank"><i class="fa fa-2x fa-github-square"></i></a>
-								</div>
-							</figcaption>
-						</figure>
-						<center>
-							<h4>Jinyi Cai</h4>
-							<span class="title">Ph.D. Student</span>
-						</center>
-					</div>
-
-					<!-- Member 3 -->
-					<div class="speaker col-xs-12 col-sm-4 col-md-3 col-lg-3">
-						<figure>
-							<img class="img-responsive" src="img/people/loretta.jpg" alt="">
-							<figcaption>
-								<h4>Loretta L. Nwajiaku</h4>
-								<p>Ph.D. in Geography / GIScience</p>
-								<div class="social">
-									<a href="" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
-									<a href="" target="_blank"><i class="fa fa-2x fa-github-square"></i></a>
-								</div>
-							</figcaption>
-						</figure>
-						<center>
-							<h4>Loretta L. Nwajiaku</h4>
-							<span class="title">Ph.D. Student</span>
-						</center>
-					</div>
-
-
-					<!-- Member 4 -->
-					<div class="speaker col-xs-12 col-sm-4 col-md-3 col-lg-3">
-						<figure>
-							<img class="img-responsive" src="img/people/elif_korkmaz.jpeg" alt="">
-							<figcaption>
-								<h4>Elif Korkmaz</h4>
-								<p>Ph.D. in Geography / GIScience</p>
-								<div class="social">
-									<a href="https://www.linkedin.com/in/elif-korkmaz-2a16b3176" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
-								</div>
-							</figcaption>
-						</figure>
-						<center>
-							<h4>Elif Korkmaz</h4>
-							<span class="title">Ph.D. Student</span>
-						</center>
-					</div>
-</div>
-					<div class="row">
-						<!-- Member 1 -->
-						<div class="speaker col-xs-12 col-sm-4 col-md-3 col-lg-3">
-						<figure>
-							<img class="img-responsive" src="img/people/Henry.JPEG" alt="">
-							<figcaption>
-								<h4>Chun Hang Chan (Henry)</h4>
-								<p>M.S. in Informatics, Geoinformatics</p>
-								<div class="social">
-									<a href="https://www.linkedin.com/in/chun-hang-chan" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
-									<a href="https://github.com/chunhchan" target="_blank"><i class="fa fa-2x fa-github-square"></i></a>
-								</div>
-							</figcaption>
-						</figure>
-						<center>
-							<h4>Chun Hang Chan (Henry)</h4>
-							<span class="title">M.S. Student</span>
-						</center>
-					</div>
-					<!-- Member 2 -->
-						<div class="speaker col-xs-12 col-sm-4 col-md-3 col-lg-3">
-							<figure>
-								<img class="img-responsive" src="img/people/hoeyun.jpeg" alt="">
-								<figcaption>
-									<h4>Hoeyun Kwon</h4>
-									<p>Ph.D. in Geography / GIScience</p>
-									<div class="social">
-										<a href="https://www.linkedin.com/in/hoeyun-kwon-1074a4119/" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
-										<a href="https://twitter.com/kwonhy71" target="_blank"><i class="fa fa-2x fa-twitter-square"></i></a>
-										<a href="https://www.hoeyunkwon.com" target="_blank"></a>
-									</div>
-								</figcaption>
-							</figure>
-							<center>
-								<h4>Hoeyun Kwon</h4>
-								<span class="title">Alumni Asst.Prof. Lehman College, CUNY</span>
-							</center>
-						</div>
-
-						<!-- Member 3 -->
-						<div class="speaker col-xs-12 col-sm-4 col-md-3 col-lg-3">
-							<figure>
-								<img class="img-responsive" src="img/people/geng.jpg" alt="">
-								<figcaption>
-									<h4>Geng Tian</h4>
-									<p>M.A. in Geography / GIScience</p>
-									<div class="social">
-										<a href="https://www.linkedin.com/in/gengtian/" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
-										<a href="https://github.com/gengtianuiowa" target="_blank"><i class="fa fa-2x fa-github-square"></i></a>
-									</div>
-								</figcaption>
-							</figure>
-							<center>
-								<h4>Geng Tian</h4>
-								<span class="title">Alumni at Amazon</span>
-							</center>
-						</div>
-						<!-- Member 4 -->
-						<div class="speaker col-xs-12 col-sm-4 col-md-3 col-lg-3">
-							<figure>
-								<img class="img-responsive" src="img/people/angelina.jpg" alt="">
-								<figcaption>
-									<h4>Angelina Evans</h4>
-									<p>B.S. in Geography / Minor in Computer Science & M.S. in Geoinformatics</p>
-									<div class="social">
-										<a href="https://linkedin.com/in/angelina-evans" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
-										<a href="https://geog3540.github.io/angevans/index.html" target="_blank"><i class="fa fa-2x fa-github-square"></i></a>
-									</div>
-								</figcaption>
-							</figure>
-							<center>
-								<h4>Angelina Evans</h4>
-								<span class="title">Alumni</span>
-							</center>
-						</div>
- 		</div>
- 		<div class="row">
-						<!-- Member 5 -->
-						<div class="speaker col-xs-12 col-sm-4 col-md-3 col-lg-3">
-							<figure>
-								<img class="img-responsive" src="img/people/tyler.jpg" alt="">
-								<figcaption>
-									<h4>Tyler Watters</h4>
-									<p>B.S. in Geography, Geographic Information Science</p>
-									<div class="social">
-										<a href="https://www.linkedin.com/in/tyler-watters-473a5618b/" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
-										<a href="https://geog3540.github.io/tylerwatters/" target="_blank"><i class="fa fa-2x fa-github-square"></i></a>
-									</div>
-								</figcaption>
-							</figure>
-							<center>
-								<h4>Tyler Watters</h4>
-								<span class="title">Alumni</span>
-							</center>
-						</div>
-			
-
-					<!-- Member 6 -->
-					<div class="speaker col-xs-12 col-sm-4 col-md-3 col-lg-3">
-						<figure>
-							<img class="img-responsive" src="img/people/binzhang.jpeg" alt="">
-							<figcaption>
-								<h4>Bin Zhang</h4>
-								<p>B.S. in Geography / Geographic Information Science</p>
-								<div class="social">
-									<a href="https://www.linkedin.com/in/bin-zhang-885058135/" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
-								</div>
-							</figcaption>
-						</figure>
-						<center>
-							<h4>Bin Zhang</h4>
-							<span class="title">Alumni</span>
-						</center>
-					</div>
-
-					<!-- Member 7 -->
-					<div class="speaker col-xs-12 col-sm-4 col-md-3 col-lg-3">
-						<figure>
-							<img class="img-responsive" src="img/people/ryan.jpeg" alt="">
-							<figcaption>
-								<h4>Ryan Larson</h4>
-								<p>B.S. in Informatics</p>
-								<div class="social">
-									<a href="https://github.com/ryan-p-larson" target="_blank"><i class="fa fa-2x fa-github-square"></i></a>
-									<a href="https://twitter.com/ryan_p_larson" target="_blank"><i class="fa fa-2x fa-twitter-square"></i></a>
-								</div>
-							</figcaption>
-						</figure>
-						<center>
-							<h4>Ryan Larson</h4>
-							<span class="title">Alumni</span>
-						</center>
-					</div>
-
-				</div>
-
-<div class="row">
-	<center>
-		<h3>
-			High School Summer Interns (SSTP)
-		</h3>
-	</center>
-	<div class="col-xs-6 col-xs-offset-3">
-		<table class="table">
-			<tbody>
-				<tr>
-					<td>2025</td>
-					<td><a href="mailto:rithikvir@gmail.com" target="_blank">Rithik Vir</a>
-					</td>
-				</tr>
-				<tr>
-					<td>2024</td>
-					<td><a href="mailto:ariana.jx.luan@gmail.com" target="_blank">Ariana Luan,
-					</a><a href="https://www.linkedin.com/in/devesh-aggarwal-4b0825288" target="_blank">Devesh Aggarwal</a>,
-					</a><a href="https://www.linkedin.com/in/sumin-bae-178207258/" target="_blank">Sumin Bae</a>
-					</td>
-				</tr>
-				<tr>
-					<td>2023</td>
-					<td><a href="https://www.linkedin.com/in/kelvin-liu-01b583280" target="_blank">Kelvin Liu,</a><a href="mailto:lslsks_060420@163.com" target="_blank">Rongxuan Zhu</a></td>
-				</tr>
-				<tr>
-					<td>2022</td>
-					<td><a href="https://www.linkedin.com/in/adelinac13/" target="_blank">Adelina Chau,</a><a href="https://www.linkedin.com/in/jonathanfaniowa/" target="_blank">Jonathan Fan</a></td>
-				</tr>
-				<tr>
-					<td>2021</td>
-					<td>Kaitlyn Hom, Mark Rifkin</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-</div>
-</div>
+</header>
+<main id="main-content">
+<section aria-labelledby="hero-title" class="hero">
+<div class="hero-overlay"></div>
+<div class="container hero-content">
+<p class="eyebrow hero-eyebrow">University of Iowa · GIScience Research</p>
+<h1 id="hero-title">Connecting Nodes to Knowledge</h1>
+<p class="hero-lead">Advancing GeoAI, geovisual analytics, human mobility and migration, and population-scale spatial-social networks.</p>
+<div class="button-row">
+<a class="button button-primary" href="#research">Explore research</a>
+<a class="button button-ghost" href="publications.html">View publications</a>
 </div>
 </div>
 </section>
-
-<!-- Research topics -->
-<section id="research">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-10 col-lg-offset-1">
-				<div class="panel-group" id="faq">
-					<center>
-						<h2 class="uppercase">Research</h2>
-						<br>
-						<div class="slideshow-container">
-
-							<div class="mySlides">
-								<a href="docs/Koylu_Tian_Windsor_2021_FlowMapper.pdf" style="width:80%">
-									<img class="img-responsive" src="img/slideshow/flowmapper.png">
-								</a>
-								<div class="text">FlowMapper.org: A web‐based framework for designing origin‐destination flow maps</div>
-							</div>
-
-							<div class="mySlides">
-								<a href="docs/Xi_Guo_Koylu_Chen_2019_Density-based multi-scale flow mapping and generalization.pdf" target="_blank" style="width:80%">
-									<img class="img-responsive" src="img/slideshow/flowdensity.png"></a>
-									<div class="text">Flow density estimation for multi-scale flow mapping and generalization</div>
-								</div>
-
-								<div class="mySlides">
-									<a href="docs/Xi_Guo_Koylu_Chen_2019_Density-based multi-scale flow mapping and generalization.pdf" target="_blank" style="width:80%">
-										<img class="img-responsive" src="img/slideshow/flowdensity2.png"></a>
-										<div class="text">Flow density estimation for multi-scale flow mapping and generalization</div>
-									</div>
-
-									<div class="mySlides">
-										<a href="docs/Koylu_Guo_2017_Design and evaluation of line symbolization for origin-destination flow maps.pdf" target="_blank" style="width:80%">
-											<img class="img-responsive" src="img/slideshow/flowmaptest2.png"></a>
-											<div class="text">Understanding how people perceive and use flow maps</div>
-										</div>
-
-										<div class="mySlides">
-											<a href="docs/Zhang_Koylu_autocarto2020_R1.pdf" target="_blank" style="width:80%">
-												<img class="img-responsive" src="img/slideshow/foodvulnerability.png"></a>
-												<div class="text">Network measures to calculate vulnerability in spatial networks</div>
-											</div>
-
-											<div class="mySlides">
-												<a href="docs/Koylu_Guo_2013_Smoothing locational measures in spatial interaction networks.pdf" target="_blank" style="width:80%">
-													<img class="img-responsive" src="img/slideshow/smoothing.png"></a>
-													<div class="text">Smoothing spatial networks to identify locational characteristics</div>
-												</div>
-
-												<div class="mySlides">
-													<a href="docs/Koylu_2019_Modeling and visualizing semantic and spatio temporal evolution of topics in interpersonal communication on Twitter.pdf" target="_blank" style="width:80%">
-														<img class="img-responsive" src="img/slideshow/geosocialmodeling.png">
-													</a>
-													<div class="text">Geo-social network modeling for understanding interpersonal online communication patterns</div>
-												</div>
-
-												<div class="mySlides">
-													<a href="docs/Koylu_2018_Discovering multi-scale community structures from the interpersonal communication network on Twitter.pdf" target="_blank" style="width:80%">
-														<img class="img-responsive" src="img/slideshow/reciprocalmentions.png">
-													</a>
-													<div class="text">Reciprocal mention network on Twitter</div>
-												</div>
-
-												<div class="mySlides">
-													<a href="docs/Koylu_et_al_2020_Connecting family trees to construct a population scale and longitudinal geo social network for the U S.pdf" target="_blank" style="width:80%">
-														<img class="img-responsive" src="img/slideshow/rootsweb.png">
-													</a>
-													<div class="text">Comparing population pyramids: Rootsweb family trees vs 1880 Census</div>
-												</div>
-
-												<div class="mySlides">
-													<a href="docs/Koylu_et_al_2020_Connecting family trees to construct a population scale and longitudinal geo social network for the U S.pdf" target="_blank" style="width:80%">
-														<img class="img-responsive" src="img/slideshow/rootsweb2.png">
-													</a>
-													<div class="text">Representativeness of Rootsweb family trees for population demographics</div>
-												</div>
-
-												<div class="mySlides">
-													<a href="docs/Koylu_et_al_2014_Mapping family connectedness across space and time.pdf" target="_blank" style="width:80%">
-														<img class="img-responsive" src="img/slideshow/familyconnectedness.png">
-													</a>
-													<div class="text">Measuring and visualizing connectedness from family trees</div>
-												</div>
-
-												<div class="mySlides">
-													<a href="docs/Koylu_Kasakoff_2020.pdf" target="_blank" style="width:80%">
-														<img class="img-responsive" src="img/slideshow/familymigration.png"></a>
-														<div class="text">Extracting family migration from population-scale family trees</div>
-													</div>
-
-													<div class="mySlides">
-														<a href="docs/Koylu_et_al_2019_CarSenToGram geovisual text analytics for exploring spatiotemporal variation in public discourse on Twitter.pdf" target="_blank" style="width:80%">
-															<img class="img-responsive" src="img/slideshow/carsentogram2.png">
-														</a>
-														<div class="text">CarSenToGram: Geovisual analytics for understanding the evolution of public discourse and sentiment</div>
-													</div>
-
-													<div class="mySlides">
-														<a href="docs/Koylu_et_al_2019_CarSenToGram geovisual text analytics for exploring spatiotemporal variation in public discourse on Twitter.pdf" target="_blank" style="width:80%">
-															<img class="img-responsive" src="img/slideshow/carsentogram.png">
-														</a>
-														<div class="text">CarSenToGram: Geovisual analytics for understanding the evolution of public discourse and sentiment</div>
-													</div>
-
-													<div class="mySlides">
-														<a href="docs/Koylu_2019_Modeling and visualizing semantic and spatio temporal evolution of topics in interpersonal communication on Twitter.pdf" target="_blank" style="width:80%">
-															<img class="img-responsive" src="img/slideshow/spacetimetopics.png">
-														</a>
-														<div class="text">Geovisual analytics to track evolution of topics on Twitter</div>
-													</div>
-
-													<div class="mySlides">
-														<a href="docs/Koylu_et_al_2018_Analysis of big patient mobility data for identifying medical regions, spatio‑temporal characteristics and care demands of patients on the move.pdf" target="_blank" style="width:80%">
-															<img class="img-responsive" src="img/slideshow/patientmobility.png">
-														</a>
-														<div class="text">Flow visual analytics for evaluating the efficiency of health care systems</div>
-													</div>
-
-													<div class="mySlides">
-														<a href="docs/Xu_Demir_Koylu_Muste_2019_A web-based geovisual analytics platform for identifying potential contributors to culvert sedimentation.pdf" target="_blank" style="width:50%">
-															<img class="img-responsive" src="img/slideshow/geovisualanalytics.png">
-														</a>
-														<div class="text">Geovisual analytics for environmental decision-making</div>
-													</div>
-
-													<div class="mySlides">
-														<a href="docs/Sit_Koylu_Demir_2019_Identifying disaster-related tweets and their semantic, spatial and temporal context using deep learning, natural language processing and spatial analysis - a case study of Hurricane Irma.pdf" target="_blank" style="width:80%">
-															<img class="img-responsive" src="img/slideshow/deeplearning2.png">
-														</a>
-														<div class="text">Deep learning for disaster management</div>
-													</div>
-
-													<div class="mySlides">
-														<a href="docs/Sit_Koylu_Demir_2019_Identifying disaster-related tweets and their semantic, spatial and temporal context using deep learning, natural language processing and spatial analysis - a case study of Hurricane Irma.pdf" target="_blank" style="width:80%">
-															<img class="img-responsive" src="img/slideshow/deeplearning.png">
-														</a>
-														<div class="text">Deep learning for disaster management</div>
-													</div>
-
-													<div class="mySlides">
-														<a href="docs/Sit_Koylu_Demir_2019_Identifying disaster-related tweets and their semantic, spatial and temporal context using deep learning, natural language processing and spatial analysis - a case study of Hurricane Irma.pdf" target="_blank" style="width:80%">
-															<img class="img-responsive" src="img/slideshow/irma.png">
-														</a>
-														<div class="text">Big social media data analytics for disaster management</div>
-													</div>
-
-													<div class="mySlides">
-														<a href="docs/Koylu_Zhao_Shao_2019_Deep Neural Networks and Kernel Density Estimation for Detecting Human Activity Patterns from Geo-Tagged Images A Case Study of Birdwatching on Flickr.pdf" target="_blank" style="width:80%">
-															<img class="img-responsive" src="img/slideshow/birding.png">
-														</a>
-														<div class="text">Image object detection and kernel density estimation for detecting human activity patterns</div>
-													</div>
-
-													<div class="mySlides">
-														<a href="docs/Koylu_Zhao_Shao_2019_Deep Neural Networks and Kernel Density Estimation for Detecting Human Activity Patterns from Geo-Tagged Images A Case Study of Birdwatching on Flickr.pdf" target="_blank" style="width:80%">
-															<img class="img-responsive" src="img/slideshow/birding2.png">
-														</a>
-														<div class="text">Image object detection and kernel density estimation for detecting human activity patterns</div>
-													</div>
-
-
-													<br>
-													<div style="text-align:center">
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-														<span class="dot"></span>
-													</div>
-
-												</div><!--slideshow-->
-											</center>
-
-											<br>
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													<h4 class="panel-title">
-														<a data-toggle="collapse" data-parent="#faq" href="#collapseOne" class="collapsed">
-															<i class="fa fa-2x fa-plus-circle"></i>Spatial interactions and flow mapping
-														</a>
-													</h4>
-												</div>
-												<div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
-													<div class="panel-body">
-														<p>Spatial interactions are the movements of tangible and intangible phenomena such as people, goods, vehicles and information between locations.
-															Spatial interactions form location-to-location networks. Analysis of spatial interaction networks is critical for diverse domains such as migration,
-															epidemics, health care, transportation, and economy. Flow maps are commonly used to visualize spatial interactions and facilitate the understanding
-															of patterns of spatial flows and the corresponding spatial context.</p>
-														</div>
-													</div>
-												</div>
-
-												<div class="panel panel-default">
-													<div class="panel-heading">
-														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#faq" href="#collapseTwo" class="collapsed">
-																<i class="fa fa-2x fa-plus-circle"></i>Population-scale family trees / geo-social networks
-															</a>
-														</h4>
-													</div>
-													<div id="collapseTwo" class="panel-collapse collapse">
-														<div class="panel-body">
-															<p>Understand the spatial, temporal and relational (network) aspects of dynamic spatial-social networks.
-																A dynamic geo-social network evolves (changes) over space and time as the actors of the network move (migrate), new actors are added or removed,
-																and relationships between the actors develop and change over time.</p>
-															</div>
-														</div>
-													</div>
-
-													<div class="panel panel-default">
-														<div class="panel-heading">
-															<h4 class="panel-title">
-																<a data-toggle="collapse" data-parent="#faq" href="#collapseThree" class="collapsed">
-																	<i class="fa fa-2x fa-plus-circle"></i>Geovisual analytics and human-computer interaction
-																</a>
-															</h4>
-														</div>
-														<div id="collapseThree" class="panel-collapse collapse">
-															<div class="panel-body">
-																<p>Support a human-centered process for pattern searching and knowledge construction through geovisual analytics and usability evaluation.</p>
-															</div>
-														</div>
-													</div>
-
-													<div class="panel panel-default">
-														<div class="panel-heading">
-															<h4 class="panel-title">
-																<a data-toggle="collapse" data-parent="#faq" href="#collapseFour" class="collapsed">
-																	<i class="fa fa-2x fa-plus-circle"></i>GeoAI
-																</a>
-															</h4>
-														</div>
-														<div id="collapseFour" class="panel-collapse collapse">
-															<div class="panel-body">
-																<p>Provide a data-driven understanding of the complex system of human society and the physical environment through
-																	the novel implementation and application of geospatial artificial intelligence.</p>
-																</div>
-															</div>
-														</div>
-
-														<div class="panel panel-default">
-															<div class="panel-heading">
-																<h4 class="panel-title">
-																	<a data-toggle="collapse" data-parent="#faq" href="#collapseFive" class="collapsed">
-																		<i class="fa fa-2x fa-plus-circle"></i>Big data analytics for social media
-																	</a>
-																</h4>
-															</div>
-															<div id="collapseFive" class="panel-collapse collapse">
-																<div class="panel-body">
-																	<p>Big data analytics for social media and networking applications, e.g., geospatial semantics, natural language processing,
-																		topic modeling, sentiment analysis, machine learning and deep learning methods.</p>
-																	</div>
-																</div>
-															</div>
-
-														</div>
-
-													</div>
-												</div>
-											</div>
-										</div>
-									</section>
-
-									<section id="apply">
-										<div class="container">
-											<div class="row">
-												<div class="col-lg-10 col-lg-offset-1 text-left">
-													<h2>Applications and Funding</h2>
-													<p>
-														We offer a diverse set of degrees and research experiences for graduate, undergraduate and high school students through the Department of Geographical and Sustainability Sciences, and
-														the Interdisciplinary Graduate Program at Informatics (IGPI), and the Secondary Student Training Program (SSTP) at the University of Iowa</a>.
-													</p>
-													<ol>
-														<li>
-															<a href="https://clas.uiowa.edu/geography/graduate-program/admission" target="_blank">Geography graduate degrees</a>
-															are classified as STEM with the CIP code 45.0702 (Cartography and Geographic Information Systems).<a href="https://t.co/mjYO7WgMad?amp=1" target="_blank">APPLY TO GEOGRAPHY</a>
-														</li>
-														<li>For students from Computer Science and other related disciplinary background,
-															<a href="https://informatics.grad.uiowa.edu/programs/geoinformatics" target="_blank">Interdisciplinary Graduate Program in Informatics (IGPI)</a>is a great fit.<a href="https://t.co/mmfNPsNJd3?amp=1" target="_blank">APPLY TO INFORMATICS</a>
-														</li>
-														<li>For undergraduate students we offer a 5-year
-															<a href="https://clas.uiowa.edu/geography/undergraduate-program/u2g-geoinformatics-5-year-bachelors-and-masters-degree-program" target="_blank">U2G Program</a>with a B.S. Geography/GIScience and M.S. degree in Informatics.
-														</li>
-														<li>For high school students we offer<a href="https://belinblank.education.uiowa.edu/students/sstp/" target="_blank">a multi-week residential summer research program.
-														</a>
-													</li>
-												</ol>
-												<p>
-													Graduate teaching and research fellowships, and assistantships are available for competitive students.
-													Before applying, please contact <a href="mailto:caglar-koylu@uiowa.edu">Caglar Koylu</a>with your brief research interests and CV attached.
-													Competitive students will be invited for a Skype interview. The interview starts with a 6 minute, 40 second, a Pecha Kucha style presentation.
-													Your presentation should focus on your current work, future research goals and interests, and how those intersect with the Lab's research agenda.
-												</p>
-												<br>
-												<h4>
-													We are always looking for MS / PhD or PhD students with a variety of research interests such as:
-												</h4>
-												<br>
-												<ul>
-													<li>
-														Human mobility and migration
-													</li>
-													<li>
-														Population-scale family trees and spatial-social networks	</li>
-														<li>
-															Spatial interaction analysis and visualization (e.g., network measures, spatial community detection, spatial interaction modeling and diffusion models, flow mapping and clustering
-														</li>
-														<li>Spatial data mining (e.g., clustering, association rule mining, machine learning and deep learning)</li>
-														<li>Geovisual analytics and human computer interaction (e.g., interactive cartography, flow mapping, coordinated views, and utility and usability evaluation)	</li>
-														<li>Big data analytics for social media and networking applications (e.g., geospatial semantics, natural language processing, topic modeling and sentiment analysis)	</li>
-														<li>Other application areas such as social media analytics, patient mobility, human communication, movement and pass networks in sports (e.g., soccer, basketball), and social sensing for disaster response, recovery and resilience	</li>
-													</ul>
-													<p>
-														In addition to the above research interests, students should have, or be interested in developing, ability in:
-													</p>
-													<ul>
-														<li>Geospatial programming in Java and/or Python</li>
-														<li>Web-based GIS and Geovisualization: JavaScript, D3, React, etc.</li>
-														<li>Statistical computing in Python or R</li>
-														<li>Interactive computing using Jupyter and<a href="https://observablehq.com/">Observable</a>Notebooks</li>
-														<li>GIS Software such as ArcGIS Pro or QGIS</li>
-														<li>Database management systems such as PostgreSQL/PostGIS</li>
-														<li>High performance computing, Spark, and big data storage and management systems (MongoDB)</li>
-													</ul>
-												</p>
-											</div>
-										</div>
-									</div>
-								</section>
-
-								<!-- flowmapper -->
-								<section id="demo">
-									<div class="container">
-										<div class="row">
-											<div class="col-lg-10 col-lg-offset-1 text-left">
-												<h3>Check out<a href="https://flowmapper.org" target="_blank">FlowMapper</a></h3>
-												<div class="video-container">
-													<iframe src="https://www.youtube.com/embed/w_UbZE5HgxM" title="YouTube video player" frameborder="0"
-													allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-												</div>
-											</div>
-										</div>
-									</section>
-
-									<section id="applications">
-										<div class="container">
-											<div class="row">
-												<div class="col-lg-10 col-lg-offset-1 text-center">
-													<!--
-													<h3>Check out <a href="https://flowmapper.org" target="_blank">FlowMapper</a>!</h3>
-													<center>
-													<iframe width="560" height="315" src="https://www.youtube.com/embed/PtiDzT2Mjpo" title="YouTube video player" frameborder="0"
-													allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-												</center>
-											-->
-										</div>
-									</div>
-								</section>
-
-
-								<section id="twitter">
-									<div class="container">
-										<div class="row">
-											<div class="col-lg-6 col-lg-offset-1 text-center">
-												<a class="twitter-timeline" href="https://twitter.com/geosocial12?ref_src=twsrc%5Etfw">Tweets by geo-social</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-											</div>
-										</div>
-									</section>
-
-									<section id="courses">
-										<div class="container">
-											<div class="row">
-												<div class="col-lg-10 col-lg-offset-1 text-center">
-													<!--
-													<h3>Check out <a href="https://flowmapper.org" target="_blank">FlowMapper</a>!</h3>
-													<center>
-													<iframe width="560" height="315" src="https://www.youtube.com/embed/PtiDzT2Mjpo" title="YouTube video player" frameborder="0"
-													allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-												</center>
-											-->
-										</div>
-									</div>
-								</section>
-
-								<!-- modernizr -->
-								<script src="js/modernizr.custom.00695.js"></script>
-
-								<script src="js/jquery-1.11.0.min.js"></script>
-								<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-								<script src="js/bootstrap.min.js"></script>
-								<script src="js/jquery.countdown.js"></script>
-								<script src="js/owl.carousel.min.js"></script>
-								<script src="js/jquery.magnific-popup.min.js"></script>
-								<script src="js/jquery.countTo.js"></script>
-								<script src="js/flipCard.js"></script>
-								<script src="js/jquery.stellar.min.js"></script>
-								<script src="js/smooth-scroll.js"></script>
-								<script src="js/retina-1.1.0.min.js"></script>
-
-								<script src="js/main.js"></script>
-
-								<!-- SLIDESHOW -->
-								<script>
-								var slideIndex = 0;
-								showSlides();
-
-								function showSlides() {
-									var i;
-									var slides = document.getElementsByClassName("mySlides");
-									var dots = document.getElementsByClassName("dot");
-									for (i = 0; i < slides.length; i++) {
-										slides[i].style.display = "none";
-									}
-									slideIndex++;
-									if (slideIndex > slides.length) {slideIndex = 1}
-									for (i = 0; i < dots.length; i++) {
-										dots[i].className = dots[i].className.replace(" active", "");
-									}
-									slides[slideIndex-1].style.display = "block";
-									dots[slideIndex-1].className += " active";
-									setTimeout(showSlides, 5000); // Change image every 2 seconds
-								}
-								</script>
-
-							</body>
-							</html>
+<section class="section section-intro" id="about">
+<div class="container split-intro">
+<div class="intro-mark"><img alt="Geo-Social Lab network logo" height="180" src="img/logo/LogoSquare.png" width="180"/></div>
+<div>
+<p class="eyebrow">About the lab</p>
+<h2>We study how people, places, and networks interact across space and time.</h2>
+<p class="lead">The Geo-Social Lab develops computational methods, GeoAI, spatial network analysis, and geovisualization techniques to understand massive and complex geo-social systems and support real-world decisions.</p>
+<p>Our research spans human mobility and migration, demography and kinship networks, public health, hazards and social vulnerability, spatial interaction, cartography, and human-centered visualization.</p>
+</div>
+</div>
+</section>
+<section aria-labelledby="research-title" class="section section-tint" id="research">
+<div class="container">
+<div class="section-heading">
+<div><p class="eyebrow">Current directions</p><h2 id="research-title">Featured research</h2></div>
+<p>Five interconnected areas define the lab's current research program, including NSF- and NIH-funded projects spanning kinship networks, GeoAI, geovisualization, CAMSA, and human mobility and flow mapping.</p>
+</div>
+<div class="research-grid">
+<article class="research-card">
+<a class="research-image research-image-funded" href="publications.html?topic=migration-kinship"><span class="funding-badge">NSF funded</span>
+<img alt="Flow map showing nineteenth-century U.S. migration patterns from population-scale family tree data" decoding="async" height="250" loading="lazy" src="img/slideshow/kinship_migration_figure6.jpg" width="450"/>
+</a>
+<div class="research-body">
+<h3>Population-Scale Kinship Networks &amp; Migration</h3>
+<p>Our NSF-funded project constructs and analyzes large longitudinal family-tree networks to study migration, kinship, demographic change, representativeness, and historical spatial processes.</p>
+<a class="text-link" href="publications.html?topic=migration-kinship">Explore related publications <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article class="research-card">
+<a class="research-image" href="publications.html?topic=geoai">
+<img alt="Visualization representing GeoAI and Spatial Data Science using social sensing data" decoding="async" height="250" loading="lazy" src="img/slideshow/deeplearning.png" width="450"/>
+</a>
+<div class="research-body">
+<h3>GeoAI &amp; Spatial Data Science</h3>
+<p>We use GeoAI, spatial data science, and social sensing data such as Twitter and other user-generated content to model patterns, detect events, discover semantics, and support spatial reasoning.</p>
+<a class="text-link" href="publications.html?topic=geoai">Explore related publications <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article class="research-card">
+<a class="research-image" href="publications.html?topic=geovisualization">
+<img alt="State-by-state small multiple geovisualization of tweet sentiments before and after the travel ban" decoding="async" height="250" loading="lazy" src="img/slideshow/geovisualization_koylu_figure6.png" width="450"/>
+</a>
+<div class="research-body">
+<h3>Geovisualization &amp; Human–Computer Interaction</h3>
+<p>We design and evaluate interactive visual systems that help people explore complex spatial data, understand uncertainty, and construct knowledge through geovisualization and human-centered interaction.</p>
+<a class="text-link" href="publications.html?topic=geovisualization">Explore related publications <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article class="research-card research-card-camsa">
+<a aria-label="Explore CAMSA research, publications, and media coverage" class="research-image camsa-visual" href="news.html#camsa">
+<span class="camsa-visual-funding">NIH / NCI funded</span>
+<strong>CAMSA</strong>
+<small>Cancer Analytics &amp; Maps for Small Areas</small>
+</a>
+<div class="research-body">
+<h3>Cancer Analytics &amp; Maps for Small Areas (CAMSA)</h3>
+<p>Our NIH/NCI-funded CAMSA project develops small-area cancer estimates and user-centered interactive mapping tools to support public health professionals, researchers, patients, advocates, and communities.</p>
+<a class="text-link" href="news.html#camsa">Explore CAMSA research &amp; coverage <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article class="research-card">
+<a class="research-image" href="publications.html?topic=mobility-networks">
+<img alt="Visualization representing Human Mobility and Flow Mapping" decoding="async" height="250" loading="lazy" src="img/slideshow/flowdensity.png" width="450"/>
+</a>
+<div class="research-body">
+<h3>Human Mobility &amp; Flow Mapping</h3>
+<p>We model human mobility, regions, flows, and spatial interaction across geographic scales, and develop methods and tools for analyzing and visualizing origin–destination movement patterns.</p>
+<a class="text-link" href="publications.html?topic=mobility-networks">Explore related publications <span aria-hidden="true">→</span></a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section aria-labelledby="news-title" class="section" id="news">
+<div class="container">
+<div class="section-heading">
+<div><p class="eyebrow">Updates</p><h2 id="news-title">Latest news</h2></div>
+<p>Recent publications, awards, presentations, student research, and lab activities.</p>
+</div>
+<div class="news-grid"><article class="news-card"><p class="eyebrow">June, 2026</p><div class="news-content"><p>New paper: Wisler Gerdes, E. O., Cai, J., Mahoney, C., Brown, G. D., Clark, J., Charlton, M. E., Koylu, C., Roberts, E., McKelvey, B., Wiggins, C. L., Meisner, A. W., Christian, W. J., Huang, B., Oleson, J. J., &amp; Nash, S. H. (2026). Estimating Small Area Statistics and Developing a Novel Mapping Tool to Display Them Using a User-Centered Design Process. <i>JCO Clinical Cancer Informatics</i>, 10(2). <a href="https://doi.org/10.1200/CCI-25-00139" rel="noopener noreferrer" target="_blank">DOI</a></p></div></article><article class="news-card">
+<p class="eyebrow">February, 2026</p>
+<div class="news-content">
+<p><b>CAMSA received extensive press and TV coverage</b> for bringing cancer estimates and interactive mapping to small areas, including ZIP codes. <a href="news.html#camsa">Explore the CAMSA project, publications, press coverage, and videos.</a></p>
+</div>
+</article><article class="news-card"><p class="eyebrow">December, 2025</p><div class="news-content"><p>New paper by lab alumnus <b>Dr. Hoeyun Kwon</b> and <b>Dr. Caglar Koylu</b>: Kwon, H., &amp; Koylu, C. (2026). How We Measure Mobility Matters: Comparing Mobility Change Metrics and Their Associations with Social Vulnerability During the COVID-19 Pandemic. <i>Annals of the American Association of Geographers</i>, 116(3), 697–719. <a href="https://doi.org/10.1080/24694452.2025.2589287" rel="noopener noreferrer" target="_blank">DOI</a></p></div></article><article class="news-card"><p class="eyebrow">November, 2025</p><div class="news-content"><p>New paper: Koylu, C., Kasakoff, A. B., &amp; Torkashvand, M. (2025). Settlement and the intergenerational dispersion of kin as a spatial process in the nineteenth century US. <i>The History of the Family</i>. <a href="https://doi.org/10.1080/1081602X.2025.2583972" rel="noopener noreferrer" target="_blank">DOI</a></p></div></article><article class="news-card"><p class="eyebrow">October, 2025</p><div class="news-content"><p>New paper by <b>Jinyi Cai</b> and collaborators: Cai, J., Wisler Gerdes, E. O., Mahoney, C., Brown, G. D., Clark, J., Charlton, M. E., Roberts, E., McKelvey, B., Wiggins, C. L., Meisner, A. W., Christian, W. J., Huang, B., Oleson, J. J., Nash, S. H., &amp; Koylu, C. (2025). Understanding Users in Small Area Cancer Mapping: Insights from the Early Stages of a User-Centered Design Process. <i>Advances in Cartography and GIScience of the International Cartographic Association</i>, 5, 7. <a href="https://doi.org/10.5194/ica-adv-5-7-2025" rel="noopener noreferrer" target="_blank">DOI</a></p></div></article><article class="news-card"><p class="eyebrow">July, 2025</p><div class="news-content"><p><b>Rithik Vir</b>, our high school researcher, joined the Geo-Social Lab this summer through the Secondary Student Training Program (SSTP) at the University of Iowa. He presented his poster, <i>The Anatomy of Crowdsourced Family Trees: Discovering Structure in Large-Scale Genealogical Graphs</i>. <a href="docs/sstp/rithik_vir_sstp_2025.pdf" rel="noopener noreferrer" target="_blank">Poster PDF</a></p></div></article><article class="news-card">
+<p class="eyebrow">June, 2025</p>
+<div class="news-content"><p>
+						New paper: Koylu, C., Kasakoff, A.B., &amp; Torkashvand, M. (2025). US migration from 1850 to 1920: A comparison of family trees with linked census data
+						<a href="docs/Koylu_Kasakoff_Torkashvand_Historical_Methods_preprint_2025.pdf" rel="noopener noreferrer" target="_blank">PDF</a>
+<a href="https://doi.org/10.1080/01615440.2025.2516022" rel="noopener noreferrer" target="_blank">https://doi.org/10.1080/01615440.2025.2516022</a>
+</p></div>
+</article><article class="news-card">
+<p class="eyebrow">April, 2025</p>
+<div class="news-content"><p>
+						We are excited to announce the launch of the<a href="https://shri.public-health.uiowa.edu/cancer-data/interactive-iowa-data-tools/iowa-cancer-maps/" rel="noopener noreferrer" target="_blank">Cancer Analytics &amp; Maps for Small Areas (CAMSA)</a> in Iowa Cancer Registry. <br/>
+						Funded by the National Cancer Institute (NCI), CAMSA is an interactive mapping tool to visualize cancer data at the ZIP code and county levels based on user-centered design.
+					</p><p>
+						New collaborative paper:
+						<a href="docs/Frazier_et_al_2025.pdf" rel="noopener noreferrer" target="_blank">Rethinking GIScience Education in an Age of Disruptions</a>
+<a href="https://doi.org/10.1111/tgis.70048" rel="noopener noreferrer" target="_blank">https://doi.org/10.1111/tgis.70048</a>
+</p></div>
+</article></div>
+<div class="section-action"><a class="button button-secondary" href="news.html">View full news archive</a></div>
+</div>
+</section>
+<section aria-labelledby="team-title" class="section section-dark" id="team">
+<div class="container">
+<div class="section-heading light-heading">
+<div><p class="eyebrow">People</p><h2 id="team-title">Team</h2></div>
+<p>Researchers with backgrounds in GIScience, geography, informatics, computation, cartography, and spatial data science.</p>
+</div>
+<h3 class="team-subheading">Current researchers</h3>
+<div class="people-grid current-grid">
+<article class="person-card">
+<img alt="Portrait of Dr. Caglar Koylu" decoding="async" height="1320" loading="lazy" src="img/people/koylu_2023.jpg" width="1320"/>
+<div class="person-body">
+<h3>Dr. Caglar Koylu</h3>
+<p class="person-role">Director · Associate Professor</p>
+<p>Geographical and Sustainability Sciences, University of Iowa</p>
+<div class="person-links"><a href="https://www.linkedin.com/in/caglar-koylu-37749410/" rel="noopener noreferrer" target="_blank">LinkedIn</a><a href="https://twitter.com/caglarkoylu" rel="noopener noreferrer" target="_blank">X</a></div>
+</div>
+</article>
+<article class="person-card">
+<img alt="Portrait of Maryam Torkashvand" decoding="async" height="2023" loading="lazy" src="img/people/maryam.jpg" width="2023"/>
+<div class="person-body">
+<h3>Maryam Torkashvand</h3>
+<p class="person-role">Ph.D. Student</p>
+<p>Geography / GIScience</p>
+<div class="person-links"><a href="https://linkedin.com/in/maryam-torkashvand" rel="noopener noreferrer" target="_blank">LinkedIn</a><a href="https://www.researchgate.net/profile/Maryam-Torkashvand" rel="noopener noreferrer" target="_blank">ResearchGate</a></div>
+</div>
+</article>
+<article class="person-card">
+<img alt="Portrait of Jinyi Cai" decoding="async" height="1491" loading="lazy" src="img/people/jinyi.jpg" width="1491"/>
+<div class="person-body">
+<h3>Jinyi Cai</h3>
+<p class="person-role">Ph.D. Student</p>
+<p>Geography / GIScience</p>
+<div class="person-links"><a href="https://www.linkedin.com/in/jinyi-cai/" rel="noopener noreferrer" target="_blank">LinkedIn</a></div>
+</div>
+</article>
+<article class="person-card">
+<img alt="Portrait of Loretta L. Nwajiaku" decoding="async" height="512" loading="lazy" src="img/people/loretta.jpg" width="512"/>
+<div class="person-body">
+<h3>Loretta L. Nwajiaku</h3>
+<p class="person-role">Ph.D. Student</p>
+<p>Geography / GIScience</p>
+</div>
+</article>
+<article class="person-card">
+<img alt="Portrait of Elif Korkmaz" decoding="async" height="1600" loading="lazy" src="img/people/elif_korkmaz.jpeg" width="1600"/>
+<div class="person-body">
+<h3>Elif Korkmaz</h3>
+<p class="person-role">Ph.D. Student</p>
+<p>Geography / GIScience</p>
+<div class="person-links"><a href="https://www.linkedin.com/in/elif-korkmaz-2a16b3176" rel="noopener noreferrer" target="_blank">LinkedIn</a></div>
+</div>
+</article>
+</div>
+<details class="alumni-panel">
+<summary>View alumni</summary>
+<div class="people-grid alumni-grid">
+<article class="person-card">
+<img alt="Portrait of Chun Hang Chan (Henry)" decoding="async" height="1231" loading="lazy" src="img/people/Henry.JPEG" width="1231"/>
+<div class="person-body">
+<h3>Chun Hang Chan (Henry)</h3>
+<p class="person-role">M.S. in Informatics / Geoinformatics</p>
+<p>Alumnus</p>
+<div class="person-links"><a href="https://www.linkedin.com/in/chun-hang-chan" rel="noopener noreferrer" target="_blank">LinkedIn</a><a href="https://github.com/chunhchan" rel="noopener noreferrer" target="_blank">GitHub</a></div>
+</div>
+</article><article class="person-card">
+<img alt="Portrait of Hoeyun Kwon" decoding="async" height="160" loading="lazy" src="img/people/hoeyun.jpeg" width="160"/>
+<div class="person-body">
+<h3>Hoeyun Kwon</h3>
+<p class="person-role">Ph.D. in Geography / GIScience</p>
+<p>Assistant Professor, Lehman College, CUNY</p>
+<div class="person-links"><a href="https://www.linkedin.com/in/hoeyun-kwon-1074a4119/" rel="noopener noreferrer" target="_blank">LinkedIn</a><a href="https://twitter.com/kwonhy71" rel="noopener noreferrer" target="_blank">X</a><a href="https://www.hoeyunkwon.com" rel="noopener noreferrer" target="_blank">Website</a></div>
+</div>
+</article>
+<article class="person-card">
+<img alt="Portrait of Geng Tian" decoding="async" height="900" loading="lazy" src="img/people/geng.jpg" width="900"/>
+<div class="person-body">
+<h3>Geng Tian</h3>
+<p class="person-role">M.A. in Geography / GIScience</p>
+<p>Alumnus · Amazon</p>
+<div class="person-links"><a href="https://www.linkedin.com/in/gengtian/" rel="noopener noreferrer" target="_blank">LinkedIn</a><a href="https://github.com/gengtianuiowa" rel="noopener noreferrer" target="_blank">GitHub</a></div>
+</div>
+</article>
+<article class="person-card">
+<img alt="Portrait of Angelina Evans" decoding="async" height="746" loading="lazy" src="img/people/angelina.jpg" width="746"/>
+<div class="person-body">
+<h3>Angelina Evans</h3>
+<p class="person-role">B.S. Geography · M.S. Geoinformatics</p>
+<p>Alumna</p>
+<div class="person-links"><a href="https://linkedin.com/in/angelina-evans" rel="noopener noreferrer" target="_blank">LinkedIn</a></div>
+</div>
+</article>
+<article class="person-card">
+<img alt="Portrait of Tyler Watters" decoding="async" height="1488" loading="lazy" src="img/people/tyler.jpg" width="1488"/>
+<div class="person-body">
+<h3>Tyler Watters</h3>
+<p class="person-role">B.S. Geography / GIScience</p>
+<p>Alumnus</p>
+<div class="person-links"><a href="https://www.linkedin.com/in/tyler-watters-473a5618b/" rel="noopener noreferrer" target="_blank">LinkedIn</a></div>
+</div>
+</article>
+<article class="person-card">
+<img alt="Portrait of Bin Zhang" decoding="async" height="600" loading="lazy" src="img/people/binzhang.jpeg" width="600"/>
+<div class="person-body">
+<h3>Bin Zhang</h3>
+<p class="person-role">B.S. Geography / GIScience</p>
+<p>Alumnus</p>
+<div class="person-links"><a href="https://www.linkedin.com/in/bin-zhang-885058135/" rel="noopener noreferrer" target="_blank">LinkedIn</a></div>
+</div>
+</article>
+<article class="person-card">
+<img alt="Portrait of Ryan Larson" decoding="async" height="400" loading="lazy" src="img/people/ryan.jpeg" width="400"/>
+<div class="person-body">
+<h3>Ryan Larson</h3>
+<p class="person-role">B.S. Informatics</p>
+<p>Alumnus</p>
+<div class="person-links"><a href="https://github.com/ryan-p-larson" rel="noopener noreferrer" target="_blank">GitHub</a><a href="https://twitter.com/ryan_p_larson" rel="noopener noreferrer" target="_blank">X</a></div>
+</div>
+</article></div>
+</details>
+<div class="interns-panel">
+<h3>High School Summer Interns (SSTP)</h3>
+<dl class="intern-list">
+<div><dt>2025</dt><dd><a href="mailto:rithikvir@gmail.com">Rithik Vir</a></dd></div>
+<div><dt>2024</dt><dd><a href="mailto:ariana.jx.luan@gmail.com">Ariana Luan</a>, <a href="https://www.linkedin.com/in/devesh-aggarwal-4b0825288" rel="noopener noreferrer" target="_blank">Devesh Aggarwal</a>, <a href="https://www.linkedin.com/in/sumin-bae-178207258/" rel="noopener noreferrer" target="_blank">Sumin Bae</a></dd></div>
+<div><dt>2023</dt><dd><a href="https://www.linkedin.com/in/kelvin-liu-01b583280" rel="noopener noreferrer" target="_blank">Kelvin Liu</a>, <a href="mailto:lslsks_060420@163.com">Rongxuan Zhu</a></dd></div>
+<div><dt>2022</dt><dd><a href="https://www.linkedin.com/in/adelinac13/" rel="noopener noreferrer" target="_blank">Adelina Chau</a>, <a href="https://www.linkedin.com/in/jonathanfaniowa/" rel="noopener noreferrer" target="_blank">Jonathan Fan</a></dd></div>
+<div><dt>2021</dt><dd>Kaitlyn Hom, Mark Rifkin</dd></div>
+</dl>
+</div>
+</div>
+</section>
+<section aria-labelledby="join-title" class="section" id="join">
+<div class="container join-layout">
+<div>
+<p class="eyebrow">Opportunities</p>
+<h2 id="join-title">Join the Geo-Social Lab</h2>
+<p class="lead">We offer graduate, undergraduate, and high-school research experiences in Geographic Information Science through the School of Earth, Environment, and Sustainability at the University of Iowa.</p>
+<p>Graduate teaching and research fellowships and assistantships may be available for competitive students. Prospective graduate students can pursue Geographic Information Science research through the Geography degree program. Students should contact <a href="mailto:caglar-koylu@uiowa.edu">Caglar Koylu</a> with a brief description of research interests and a CV.</p>
+<div class="button-row">
+<a class="button button-primary" href="https://clas.uiowa.edu/geography/graduate-program/admission" rel="noopener noreferrer" target="_blank">Geographic Information Science graduate study</a>
+<a class="button button-secondary" href="https://informatics.grad.uiowa.edu/" rel="noopener noreferrer" target="_blank">Geoinformatics</a>
+</div>
+</div>
+<div class="interest-panel">
+<h3>Research interests</h3>
+<ul class="check-list"><li>Human mobility and flow mapping</li><li>Cancer mapping</li><li>Population-scale kinship networks and migration</li><li>GeoAI and spatial data science</li><li>Geovisualization, usability, and human–computer interaction</li></ul>
+<h3>Skills</h3>
+<p>Python · JavaScript, D3, React, and web development · Eye-tracking and usability evaluation · GeoAI, machine learning, and deep learning · Large language models, retrieval-augmented generation (RAG), and agentic AI · R and Jupyter · ArcGIS Pro and QGIS · PostgreSQL/PostGIS · high-performance and big-data computing</p>
+</div>
+</div>
+</section>
+<section aria-labelledby="flowmapper-title" class="section flowmapper-section" id="flowmapper">
+<div class="container flowmapper-layout">
+<div>
+<p class="eyebrow">Open research software</p>
+<h2 id="flowmapper-title">Design origin–destination flow maps with FlowMapper</h2>
+<p>FlowMapper is a web-based framework for creating and exploring flow maps without requiring local software installation.</p>
+<a class="button button-primary" href="https://flowmapper.org" rel="noopener noreferrer" target="_blank">Open FlowMapper</a>
+</div>
+<div class="video-frame">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/w_UbZE5HgxM" title="FlowMapper demonstration video"></iframe>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<img alt="Geo-Social Lab" height="57" src="img/logo/LogoOneLineWhite.png" width="210"/>
+<p>GIScience, GeoAI, geovisual analytics, human mobility, migration, and spatial-social networks at the University of Iowa.</p>
+</div>
+<div>
+<h2 class="footer-heading">Explore</h2>
+<a href="index.html#research">Research</a>
+<a href="publications.html">Publications</a>
+<a href="news.html">News archive</a>
+</div>
+<div>
+<h2 class="footer-heading">Connect</h2>
+<a href="mailto:caglar-koylu@uiowa.edu">caglar-koylu@uiowa.edu</a>
+<a href="https://www.linkedin.com/in/caglar-koylu-37749410/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a href="https://flowmapper.org" rel="noopener noreferrer" target="_blank">FlowMapper</a>
+</div>
+</div>
+<div class="container footer-bottom"><p>© 2026 Geo-Social Lab. University of Iowa.</p></div>
+</footer>
+<script defer="" src="js/site.js"></script>
+</body>
+</html>
