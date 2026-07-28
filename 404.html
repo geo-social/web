@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Page not found | Geo-Social Lab</title>
+<meta name="robots" content="noindex, follow"/>
+<link href="https://www.geo-social.com/404.html" rel="canonical"/>
+<link href="img/logo/LogoSquare.png" rel="icon" type="image/png"/>
+<link href="css/site.css" rel="stylesheet"/>
+<script>
+(function () {
+  var path = window.location.pathname;
+  var query = new URLSearchParams(window.location.search);
+  var q = query.get('q');
+  var redirects = {
+    'teaching': '/',
+    'caglarkoylu': '/#team',
+    'taxonomy/term/5': '/',
+    'node/14': '/news.html',
+    '/node/15': '/news.html',
+    'treets': '/apps/treets/'
+  };
+  if (q && redirects[q]) window.location.replace(redirects[q]);
+  if (/Sit_Koylu_Demir_2019_Identifying.*Hurricane.*Irma\.pdf/i.test(path)) window.location.replace('/docs/Sit_Koylu_Demir_2019_Hurricane_Irma.pdf');
+  if (/Koylu_et_al_2018_Analysis.*Patient.*Mobility.*\.pdf/i.test(path)) window.location.replace('/docs/Koylu_et_al_2018_Patient_Mobility.pdf');
+})();
+</script>
+</head>
+<body class="inner-page"><main id="main-content"><section class="page-hero compact-hero"><div class="container"><p class="eyebrow">Geo-Social Lab</p><h1>Page not found</h1><p>The page may have moved during the website redesign. Try the homepage, publications page, news archive, or tools page.</p><div class="button-row"><a class="button button-primary" href="/">Home</a><a class="button button-secondary" href="/publications.html">Publications</a><a class="button button-secondary" href="/tools.html">Tools</a></div></div></section></main></body></html>

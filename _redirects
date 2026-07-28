@@ -1,0 +1,10 @@
+# Geo-Social Lab SEO redirects. Use only on Netlify-compatible hosting.
+/index.html  /  301
+/?q=teaching  /  301
+/?q=caglarkoylu  /#team  301
+/?q=treets  /apps/treets/  301
+/?q=node/14  /news.html  301
+/?q=/node/15  /news.html  301
+/?q=taxonomy/term/5  /news.html  301
+/docs/Sit_Koylu_Demir_2019_Identifying*Hurricane*Irma.pdf  /docs/Sit_Koylu_Demir_2019_Hurricane_Irma.pdf  301
+/docs/Koylu_et_al_2018_Analysis*Patient*Mobility*.pdf  /docs/Koylu_et_al_2018_Patient_Mobility.pdf  301

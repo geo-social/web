@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /*?q=
+Disallow: /*?q=*
+Disallow: /*?topic=
+Disallow: /*?topic=*
 
 Sitemap: https://www.geo-social.com/sitemap.xml
